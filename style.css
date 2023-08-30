@@ -1,0 +1,58 @@
+* {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+body, h1, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, footer, aside, article {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+
+header {
+    background-color: #f0f0f0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+aside {
+    background-color: #f8f8f8;
+    width: 200px;
+}
+
+article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    text-align: center;
+    margin: 10px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    clear: both;
+}
