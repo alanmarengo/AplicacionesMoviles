@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: #707070;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    height: 70px ;
+}
+
+#Buscador {
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
