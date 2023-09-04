@@ -22,7 +22,7 @@ body {
 
 .mainContainer {
     grid-area: mainContainer;
-    background-color: #707070;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,6 +69,9 @@ body {
 .logo img{
     height: 50px ;
 }
+.logoFooter{
+  height: 50PX;
+}
 
 #Buscador {
     height: 30px;
@@ -89,7 +92,7 @@ article{
 }
 .categoriesContainer {
   grid-area: categoriesContainer;
-  background-color: #707070;
+  background-color: #ffffff;
   display: flex;
   text-align: start;
 }
@@ -101,16 +104,12 @@ ul{
     list-style: none;
 }
 
-.banerContainer{
-    text-align: center;
-	background-size: contain;
-	background-position: center center;
-    grid-area: banerContainer;
-}
+
 
 
 
 .footer {
+    color: #28FF0D;
   grid-area: footer;
   background-color: #707070;
 }
@@ -119,7 +118,6 @@ ul{
   display: grid;
   grid-template:
     "header"  100px
-    "banerContainer" 0px
     "categoriesContainer"  0px
     "mainContainer"    auto
     "footer"  50px;
@@ -130,9 +128,8 @@ ul{
     .grid-container {
         grid-template:
           "header  header header"  70px
-          "banerContainer banerContainer banerContainer" 120px
           "categoriesContainer  mainContainer   mainContainer" auto
-          "footer  footer footer"  40px /
+          "footer  footer footer"  70px /
           200px    auto   200px;
       }
     
@@ -143,7 +140,6 @@ ul{
     .grid-container {
         grid-template:
           "header  header" 100px
-          "banerContainer banerContainer" 0px
           "categoriesContainer  mainContainer" auto
           "footer  footer" 50px /
           200px    auto;
@@ -156,9 +152,8 @@ ul{
     .grid-container {
       grid-template:
         "header  header" 10px
-        "banerContainer banerContainer" 0px
         "categoriesContainer  mainContainer   mainContainer" auto
-        "footer  footer" 50px /
+        "footer  footer" 10px /
         200px    auto;
     }
   }
