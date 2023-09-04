@@ -111,6 +111,7 @@ ul{
 
 
 .footer {
+    color: #28FF0D;
   grid-area: footer;
   background-color: #707070;
 }
