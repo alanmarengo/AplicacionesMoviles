@@ -68,7 +68,11 @@ body {
 
 .logo img{
     height: 50px ;
+    position: absolute;
+    left: 43%;
+    transform: translate(-50%, -50%);
 }
+
 .logoFooter{
   height: 50PX;
 }
@@ -76,7 +80,27 @@ body {
 #Buscador {
     height: 30px;
     margin: 0 auto;
-    margin-top: 15px;
+    display: flex;
+    position: absolute;
+    left: 49.3%;
+    top:4%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    border-color: #28FF0D;
+}
+
+.BotonBuscador{
+  height: 29px;
+  width: 29px;
+  display: flex;
+  position: absolute;
+  left: 53.30%;
+  top:2.5%;
+}
+
+.BotonBuscador img{
+  height: 100%;
+  width: 100%;
 }
 
 article img{
