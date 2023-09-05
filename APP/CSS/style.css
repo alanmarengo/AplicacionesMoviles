@@ -67,7 +67,7 @@ body {
 }
 
 .logo img{
-    height: 50px ;
+    height: 60px ;
     position: absolute;
     left: 43%;
     transform: translate(-50%, -50%);
@@ -79,29 +79,44 @@ body {
 
 #Buscador {
     height: 30px;
+    width: 10%;
     margin: 0 auto;
     display: flex;
     position: absolute;
-    left: 49.3%;
+    left: 51%;
     top:4%;
     transform: translate(-50%, -50%);
     border-radius: 2px;
     border-color: #28FF0D;
 }
 
-.BotonBuscador{
+.imagenBuscador{
   height: 29px;
   width: 29px;
   display: flex;
   position: absolute;
-  left: 53.30%;
+  left: 54.3%;
   top:2.5%;
 }
 
-.BotonBuscador img{
-  height: 100%;
-  width: 100%;
+.imagenCarrito{
+  height: 29px;
+  width: 29px;
+  display: flex;
+  position: absolute;
+  left: 56.5%;
+  top:2.5%;
 }
+
+.imagenUsuario{
+  height: 29px;
+  width: 29px;
+  display: flex;
+  position: absolute;
+  left: 58.3%;
+  top:2.5%;
+}
+
 
 article img{
     height: 280px;
