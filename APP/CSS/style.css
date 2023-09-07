@@ -24,19 +24,76 @@
   transform: translate(-50%, -50%);
 }
 .imagenHamburguesa{
+  height: 38px;
+  width: 38px;
   position: absolute;
   margin-left: -350px;
 }
 .imagenUsuario{
+  height: 38px;
+  width: 38px;
   position: absolute;
   margin-left: -260px;
 }
 
 .imagenBuscador{
+  height: 38px;
+  width: 38px;
   position: absolute;
   margin-left :350px;
 }
 .imagenCarrito{
+  height: 38px;
+  width: 38px;
   position: absolute;
   margin-left :260px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  margin-top: 926px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #707070;
 }
