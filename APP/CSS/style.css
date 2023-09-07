@@ -1,0 +1,146 @@
+*{
+  max-height: 71px;
+  max-width: 428px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #707070;
+  margin-top: -8px;
+
+}
+
+.logo{
+  display: flex;
+}
+
+.logo img{
+  height: 60px ;
+  margin-left: 50%;
+  margin-top: 23%;
+  transform: translate(-50%, -50%);
+}
+.imagenHamburguesa{
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  margin-left: -350px;
+}
+.imagenUsuario{
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  margin-left: -260px;
+}
+
+.imagenBuscador{
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  margin-left :350px;
+}
+.imagenCarrito{
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  margin-left :260px;
+}
+
+.mainContainer {
+  grid-area: mainContainer;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  max-width: 428px;
+  max-height: 900px;
+}
+
+.productsContainer{ 
+  grid-template-columns: repeat(4, 1fr);
+  width: 428px;
+  max-height: auto;
+}
+
+article img{
+  height: 280px;
+  width: 290px;
+  background-size: cover;
+  background-position: center center;
+}
+.productImage{
+position: relative;
+display: inline-block;
+text-align: start;
+}
+.productImage h1{
+position: absolute;
+bottom: 10px;
+left: 10px;
+background-color: #28FF0D;
+border-radius: 1%;
+}
+
+
+article{
+align-items: center;
+background-color: #cecbcb;
+display: flex;
+flex-direction: column;
+  height: 298px;
+  width: 408px;
+}
+.product{
+transition: box-shadow .3s;
+width: 300px;
+height: 500px;
+margin: 50px;
+border-radius:10px;
+border: 1px solid #ccc;
+background: #fff;
+float: left;
+}
+.product:hover{
+box-shadow: 0 0 11px #7200FF; 
+}
+
+article button{
+width: 80%;
+color: #040404;
+border: 2px solid #7200FF;
+border-radius: 110px;
+padding: 18px 36px;
+display: inline-block;
+font-family: "Lucida Console", Monaco, monospace;
+font-size: 14px;
+letter-spacing: 1px;
+cursor: pointer;
+box-shadow: inset 0 0 0 0 #28FF0D;
+-webkit-transition: ease-out 0.4s;
+-moz-transition: ease-out 0.4s;
+transition: ease-out 0.4s;
+}
+article button:hover{
+border: #7200FF;
+box-shadow: inset 0 0 0 50px #28FF0D;
+}
+article h3 {
+word-break: break-all;
+}
+article h3 {
+word-break: break-all;
+}
+article h4 {
+color:#5B21A5 ;
+}
+
+
+.footer{
+  margin-top: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #707070;
+}
