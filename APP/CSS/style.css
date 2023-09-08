@@ -1,39 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 *{
-  max-height: 71px;
-  max-width: 428px;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header {
   grid-area: header;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #707070;
   margin-top: -8px;
-
 }
 
 .logo{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .logo img{
   height: 60px ;
-  margin-left: 50%;
-  margin-top: 23%;
-  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .imagenHamburguesa{
   height: 38px;
   width: 38px;
   position: absolute;
   margin-left: -350px;
+  cursor: pointer;
 }
 .imagenUsuario{
   height: 38px;
   width: 38px;
   position: absolute;
   margin-left: -260px;
+  cursor: pointer;
 }
 
 .imagenBuscador{
@@ -41,40 +47,53 @@
   width: 38px;
   position: absolute;
   margin-left :350px;
+  cursor: pointer;
 }
 .imagenCarrito{
   height: 38px;
   width: 38px;
   position: absolute;
   margin-left :260px;
+  cursor: pointer;
 }
+
 
 .mainContainer {
   grid-area: mainContainer;
+  padding-top: 50px;
   background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid blue ;
+  width: 100%;
+  position: relative;
+  
+}
+
+.productsContainer{
   display: flex;
-  flex-direction: column;
-  max-width: 428px;
-  max-height: 900px;
-}
-
-.productsContainer{ 
-  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly; 
+  flex-wrap: wrap;
   width: 428px;
-  max-height: auto;
+  width: 100%;
+  position: relative;
 }
 
-article img{
-  height: 280px;
-  width: 290px;
-  background-size: cover;
-  background-position: center center;
+.productImage img{
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
 }
+
+
+
 .productImage{
 position: relative;
 display: inline-block;
 text-align: start;
 }
+
+
+
 .productImage h1{
 position: absolute;
 bottom: 10px;
@@ -84,24 +103,19 @@ border-radius: 1%;
 }
 
 
-article{
+
+.product{
 align-items: center;
 background-color: #cecbcb;
 display: flex;
 flex-direction: column;
-  height: 298px;
-  width: 408px;
-}
-.product{
 transition: box-shadow .3s;
-width: 300px;
-height: 500px;
-margin: 50px;
-border-radius:10px;
+width: 155px;
 border: 1px solid #ccc;
 background: #fff;
-float: left;
 }
+
+
 .product:hover{
 box-shadow: 0 0 11px #7200FF; 
 }
@@ -113,7 +127,7 @@ border: 2px solid #7200FF;
 border-radius: 110px;
 padding: 18px 36px;
 display: inline-block;
-font-family: "Lucida Console", Monaco, monospace;
+white-space: nowrap;
 font-size: 14px;
 letter-spacing: 1px;
 cursor: pointer;
@@ -138,9 +152,9 @@ color:#5B21A5 ;
 
 
 .footer{
-  margin-top: 500%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #707070;
+  width: 100%;
 }
