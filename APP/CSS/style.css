@@ -76,6 +76,7 @@
   height: 90%;
   width: 90%;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 
@@ -105,10 +106,7 @@ box-shadow: 0 0 11px #7200FF;
 }
 
 
-article button:hover{
-border: #7200FF;
-box-shadow: inset 0 0 0 50px #28FF0D;
-}
+
 article h3 {
 word-break: break-all;
 text-align: center;
@@ -152,11 +150,102 @@ article h6 {
   margin-left: 10px;
   grid-area: categoriesContainer;
 }
+.listCategories a{
+  text-decoration: none;
+
+}
+ul{
+  list-style: none;
+}
 /*Responsive ====================================================================================================================================================*/
 
 
+@media (min-width: 1181px) {
+  .separador{
+    grid-area: Separador;
+    background-color: #28FF0D;
+  }
+  .Banner{
+   grid-area: Banner;
+   text-align: center;
+   background-image: url(../IMAGES/Banner_1920x500.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .grid-container {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 5% 32.6px 1.2fr 0.6fr 1fr 1fr 5%; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header header header header header"
+    "Separador Separador Separador Separador Separador Separador Separador"
+    "derecho Banner Banner Banner Banner Banner isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "footer footer footer footer footer footer footer"; 
+  }
+  }
+  .productsContainer{
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items:  center; 
+    width: 100%;
+    position: relative;
+  }
 
-@media (min-width: 1024 ), screen{
+  .categories h3{
+    color: -webkit-link;
+    cursor: pointer;
+    
+    margin: 5px 5px;
+    color: #7200FF;
+  }
+  .product{
+    border-radius: 20px;
+    align-items: center;
+    background-color: #cecbcb;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .3s;
+    width: 95%;
+    border: 1px solid #ccc;
+    background: #fff;
+    }
+    .a{
+      text-decoration: none;
+    }
+    article button{
+      background-color: #28FF0D;
+      width: 80%;
+      color: #040404;
+      border: 2px solid #7200FF;
+      border-radius: 110px;
+      padding: 10px 20px;
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+       box-shadow: inset 0 0 0 0 #28FF0D; 
+       -webkit-transition: ease-out 0.4s;
+      -moz-transition: ease-out 0.4s;
+      transition: ease-out 0.4s;
+      margin-bottom: 5px;
+      }
+
+      article button:hover{
+        border: #7200FF;
+        box-shadow: inset 0 0 0 50px #7200FF;
+        }
+    #logoHamburguesa{
+        display: none;
+   }
+@media (max-width: 1180px){
 
   .separador{
     grid-area: separador;
@@ -181,7 +270,6 @@ article h6 {
   
     .productsContainer{
       justify-items: center;
-      margin-left: calc();
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 15px;
@@ -233,7 +321,7 @@ article h6 {
           display: none;
         }
   }
-@media (min-width: 767),screen and (orientation: portrait)  {
+  @media (max-width: 767px)  {
   
   #logoHamburguesa{
     display: block;
