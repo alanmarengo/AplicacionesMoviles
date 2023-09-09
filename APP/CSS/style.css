@@ -161,6 +161,11 @@ ul{
 
 
 @media (min-width: 1181px) {
+.categoriesContainer ul{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
   .separador{
     grid-area: Separador;
     background-color: #28FF0D;
@@ -176,7 +181,7 @@ ul{
   .grid-container {
     display: grid;  
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 5% 32.6px 1.2fr 0.6fr 1fr 1fr 5%; 
+    grid-template-rows: auto 20px 1.2fr 0.6fr 1fr 1fr 5%; 
     gap: 0px 0px; 
     grid-template-areas: 
     "header header header header header header header"
@@ -196,12 +201,12 @@ ul{
     align-items:  center; 
     width: 100%;
     position: relative;
+    margin-bottom: 10px;
   }
 
   .categories h3{
     color: -webkit-link;
     cursor: pointer;
-    
     margin: 5px 5px;
     color: #7200FF;
   }
@@ -220,7 +225,7 @@ ul{
       text-decoration: none;
     }
     article button{
-      background-color: #28FF0D;
+      
       width: 80%;
       color: #040404;
       border: 2px solid #7200FF;
@@ -240,7 +245,7 @@ ul{
 
       article button:hover{
         border: #7200FF;
-        box-shadow: inset 0 0 0 50px #7200FF;
+        box-shadow: inset 0 0 0 50px #28FF0D;
         }
     #logoHamburguesa{
         display: none;
@@ -281,7 +286,6 @@ ul{
     .categories h3{
       color: -webkit-link;
       cursor: pointer;
-      
       margin: 5px 5px;
       color: #7200FF;
     }
