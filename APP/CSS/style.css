@@ -23,6 +23,58 @@
   padding: 10px;
 }
 
+.filtro{
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #5B21A5;
+  margin-top: -0px;
+  width: 100%;
+  height: auto;
+  justify-content:left;
+  display: none;
+  
+}
+
+.filtros-list{
+  margin-left: 5%;
+  padding-top: 20px;
+}
+
+.filtro ul li img{ 
+  width: 30px;
+}
+
+
+.CategoriaDeplegable{
+  font-size:25px;
+  color: #08FF0D;
+}
+.MarcaDesplegable{
+  font-size:25px;
+  color: #08FF0D;
+}
+
+.categoria{
+  color: #ccc;
+}
+
+.marca{
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .logo img{
   height: 60px ;
   cursor: pointer;
@@ -33,6 +85,14 @@
   position: absolute;
   margin-left: -350px;
   cursor: pointer;
+}
+.imagenhamburguesacerrar{
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  margin-left: -350px;
+  cursor: pointer;
+  display: none;
 }
 .imagenUsuario{
   height: 38px;
@@ -105,8 +165,6 @@
   cursor: pointer;
   width: 100%;
   display: block;
-  
-  
 }
 
 .productsContainer{

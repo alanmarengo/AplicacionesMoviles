@@ -35,6 +35,23 @@ $(function() {
     $(".productsContainer").css("padding-top","50px");
   });
 
+  $(".cerrarDesplegable").on('click', function(){  
+    $(".CarritoDesplegable").css("display","none");
+    $(".mainContainer").css("filter","brightness(100%)");
+    $(".productsContainer").css("padding-top","50px");
+  });
 
+  $(".imagenHamburguesa").on('click', function(){  
+    $(".filtro").css("display","grid");
+    $(".imagenHamburguesa").css("display","none");
+    $(".imagenhamburguesacerrar").css("display","flex");
+    $(".mainContainer").css("filter","brightness(50%)");
+  });
 
+  $(".imagenhamburguesacerrar").on('click', function(){  
+    $(".imagenhamburguesacerrar").css("display","none");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".filtro").css("display","none");
+    $(".mainContainer").css("filter","brightness(100%)");
+  });
 });
