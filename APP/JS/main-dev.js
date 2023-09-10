@@ -42,7 +42,7 @@ $(function() {
   });
 
   $(".imagenHamburguesa").on('click', function(){  
-    $(".filtro").css("display","grid");
+    $(".filtro").css("margin-top","00px");
     $(".imagenHamburguesa").css("display","none");
     $(".imagenhamburguesacerrar").css("display","flex");
     $(".mainContainer").css("filter","brightness(50%)");
@@ -51,7 +51,7 @@ $(function() {
   $(".imagenhamburguesacerrar").on('click', function(){  
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
-    $(".filtro").css("display","none");
+    $(".filtro").css("margin-top","-800px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
 });

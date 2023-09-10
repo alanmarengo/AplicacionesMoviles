@@ -24,21 +24,23 @@
 }
 
 .filtro{
-  position: relative;
-  top: 0;
+  display: grid;
+  position: absolute;
+  z-index: 1;
   left: 0;
   background-color: #5B21A5;
-  margin-top: -0px;
   width: 100%;
   height: auto;
   justify-content:left;
-  display: none;
-  
+  transition: 250ms;
+  margin-top: -800px;
 }
+
 
 .filtros-list{
   margin-left: 5%;
   padding-top: 20px;
+  transition: 20050ms;
 }
 
 .filtro ul li img{ 
