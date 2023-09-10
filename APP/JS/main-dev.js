@@ -23,20 +23,14 @@ $(function() {
 
 
   $(".imagenCarrito").on('click', function(){  
-    $(".CarritoDesplegable").css("display","flex");
+    $(".CarritoDesplegable").css("margin-top","0px");
     $(".mainContainer").css("filter","brightness(50%)");
     $(".productsContainer").css("padding-top","10px");
 
   });
 
   $(".cerrarDesplegable").on('click', function(){  
-    $(".CarritoDesplegable").css("display","none");
-    $(".mainContainer").css("filter","brightness(100%)");
-    $(".productsContainer").css("padding-top","50px");
-  });
-
-  $(".cerrarDesplegable").on('click', function(){  
-    $(".CarritoDesplegable").css("display","none");
+    $(".CarritoDesplegable").css("margin-top","-800px");
     $(".mainContainer").css("filter","brightness(100%)");
     $(".productsContainer").css("padding-top","50px");
   });

@@ -120,10 +120,14 @@
 }
 
 .CarritoDesplegable{
+  position: absolute;
+  margin-top: -800px;
+  z-index: 1;
   width: 100%;
   height: 300px;
-  display: none;
+  display: grid;
   background-color: #8c8c8c;
+  transition: 250ms;
 }
 .cerrarDesplegable{
   height: 38px;
