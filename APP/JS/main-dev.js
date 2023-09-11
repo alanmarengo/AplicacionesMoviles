@@ -48,4 +48,18 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
+
+
+
+  $(".categoria").on('click', function(){  
+    window.location = "www.google.com"
+  });
+
+
+
+
+
+
+
+
 });
