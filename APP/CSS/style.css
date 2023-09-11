@@ -507,6 +507,7 @@ ul{
 
 
 .paginador{
+  grid-area: paginador;
   margin-left: 39%;
   margin-top: 10px;
   margin-bottom: 10px;
