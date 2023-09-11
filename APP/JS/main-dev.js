@@ -7,7 +7,7 @@ $(function() {
     $(".imagenHamburguesa").css("display","none");
     $(".imagenBuscador").css("display","none");
     $(".logo").css("display","none");
-    $(".BuscadorDiv").css("display","flex");
+    $(".BuscadorDiv").css("display","grid");
     $(".mainContainer").css("filter","brightness(50%)");
   });
 
@@ -45,7 +45,7 @@ $(function() {
   $(".imagenhamburguesacerrar").on('click', function(){  
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
-    $(".filtro").css("margin-top","-800px");
+    $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
 });

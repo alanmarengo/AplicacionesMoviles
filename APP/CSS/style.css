@@ -34,7 +34,7 @@
   height: auto;
   justify-content:left;
   transition: 250ms;
-  margin-top: -800px;
+  margin-top: -8000px;
 }
 
 
@@ -145,9 +145,13 @@
   display: none;
   height: 80px;
   position: relative;
+  display: flex;
+  margin-left: -270px;
 }
 
 .buscador-input{
+  position: absolute;
+
   display: flex;
   height: 40%;
   width: 300px;
@@ -155,10 +159,13 @@
   border-color: #28FF0D;
 }
 .imagenBuscadorInput{
-  margin-left: -30px;
+  position: absolute;
+  margin-left: 270px;
   height: 32px;
 }
 .flechabuscador{
+  position: absolute;
+  margin-left: -42px;
   height: 45px;
   width: 45px;
 }
