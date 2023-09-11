@@ -10,7 +10,6 @@
 }
 .header {
   grid-area: header;
-  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,8 +40,8 @@
 
 .filtros-list{
   margin-left: 5%;
-  padding-top: 20px;
-  transition: 20050ms;
+  padding-top: 2px;
+  transition: 250ms;
 }
 
 .filtro ul li img{ 
@@ -140,13 +139,12 @@
 
 
 .BuscadorDiv{
-  position: sticky;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #707070;
   display: none;
   height: 80px;
+  position: relative;
 }
 
 .buscador-input{

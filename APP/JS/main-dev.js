@@ -23,7 +23,7 @@ $(function() {
 
 
   $(".imagenCarrito").on('click', function(){  
-    $(".CarritoDesplegable").css("margin-top","0px");
+    $(".CarritoDesplegable").css("margin-top","70px");
     $(".mainContainer").css("filter","brightness(50%)");
     $(".productsContainer").css("padding-top","10px");
 
@@ -36,7 +36,7 @@ $(function() {
   });
 
   $(".imagenHamburguesa").on('click', function(){  
-    $(".filtro").css("margin-top","00px");
+    $(".filtro").css("margin-top","70px");
     $(".imagenHamburguesa").css("display","none");
     $(".imagenhamburguesacerrar").css("display","flex");
     $(".mainContainer").css("filter","brightness(50%)");
