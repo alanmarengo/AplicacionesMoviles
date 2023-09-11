@@ -5,7 +5,9 @@
   padding: 0px;
   font-family: 'Roboto', sans-serif;
 }
-
+.separador{
+  grid-area: separador;
+}
 .header {
   grid-area: header;
   position: sticky;
@@ -187,6 +189,7 @@
   height: 90%;
   width: 90%;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 
@@ -216,13 +219,11 @@ box-shadow: 0 0 11px #7200FF;
 }
 
 
-article button:hover{
-border: #7200FF;
-box-shadow: inset 0 0 0 50px #28FF0D;
-}
+
 article h3 {
 word-break: break-all;
 text-align: center;
+margin: 3px 3px;
 }
 
 article h4 {
@@ -236,22 +237,234 @@ article h6 {
 
 
 .footer{
+  grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #707070;
   width: 100%;
 }
+
+.pageIndex{
+  margin: 10px 10px;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+  padding: 0px 5px;
+}
+.pageIndex ul li {
+  display: inline;
+  padding: 2px;
+}
+.categoriesContainer{
+  margin-left: 10px;
+  grid-area: categoriesContainer;
+}
+.listCategories a{
+  text-decoration: none;
+
+}
+ul{
+  list-style: none;
+}
 /*Responsive ====================================================================================================================================================*/
 
-@media (min-width: 767),screen and (orientation: portrait)  {
+
+@media (min-width: 1181px) {
   
+  .categories h3{
+    color: -webkit-link;
+    cursor: pointer;
+    margin: 5px 5px;
+    color: #7200FF;
+  }
+  .product{
+    border-radius: 20px;
+    align-items: center;
+    background-color: #cecbcb;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .3s;
+    width: 95%;
+    border: 1px solid #ccc;
+    background: #fff;
+    }
+
+    .a{
+      text-decoration: none;
+    }
+    article button{
+      
+      width: 80%;
+      color: #040404;
+      border: 2px solid #7200FF;
+      border-radius: 110px;
+      padding: 10px 20px;
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+       box-shadow: inset 0 0 0 0 #28FF0D; 
+       -webkit-transition: ease-out 0.4s;
+      -moz-transition: ease-out 0.4s;
+      transition: ease-out 0.4s;
+      margin-bottom: 5px;
+      }
+
+      article button:hover{
+        border: #7200FF;
+        box-shadow: inset 0 0 0 50px #28FF0D;
+        }
+    #logoHamburguesa{
+        display: none;
+   }
+.categoriesContainer ul{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  .separador{
+    grid-area: Separador;
+    background-color: #28FF0D;
+  }
+  .Banner{
+   grid-area: Banner;
+   text-align: center;
+   background-image: url(../IMAGES/Banner_1920x500.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .productsContainer{
     justify-items: center;
-    margin-left: calc();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items:  center; 
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .grid-container {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: auto 20px 1.2fr 0.6fr 1fr 1fr 5%; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header header header header header"
+    "Separador Separador Separador Separador Separador Separador Separador"
+    "derecho Banner Banner Banner Banner Banner isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "footer footer footer footer footer footer footer"; 
+  }
+  }
+  
+
+@media (max-width: 1180px){
+.isquierdo{
+  display: none;
+}
+.derecho{
+  display: none;
+}
+.Banner{
+  display: none;
+}
+  .separador{
+    grid-area: separador;
+    height: 20px;
+    background-color: #28FF0D;
+  }
+  
+    .grid-container{
+      display: grid;
+      grid-template-columns: 20% 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 10% 30px 1fr 1fr 1fr 10%; 
+      grid-template: 
+        "header header header header header "
+        "separador separador separador separador separador"
+        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"   
+        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"  
+        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"   
+        "categoriesContainer mainContainer mainContainer mainContainer mainContainer" 
+        "footer footer footer footer footer" 
+        ;
+    }
+  
+    .productsContainer{
+      justify-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 15px;
+      align-items:  center; 
+      width: 100%;
+      position: relative;
+    }
+  
+    .categories h3{
+      color: -webkit-link;
+      cursor: pointer;
+      margin: 5px 5px;
+      color: #7200FF;
+    }
+    .product{
+      border-radius: 20px;
+      align-items: center;
+      background-color: #cecbcb;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .3s;
+      width: 95%;
+      border: 1px solid #ccc;
+      background: #fff;
+      }
+      .a{
+        text-decoration: none;
+      }
+      article button{
+        background-color: #28FF0D;
+        width: 80%;
+        /* color: #040404; */
+        /* border: 2px solid #7200FF; */
+        border-radius: 110px;
+        padding: 10px 20px;
+        /* display: inline-block; */
+        white-space: nowrap;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        /* box-shadow: inset 0 0 0 0 #28FF0D; */
+        /* -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s; */
+        margin-bottom: 5px;
+        }
+        #logoHamburguesa{
+          display: none;
+        }
+  }
+
+@media (max-width: 767px)  {
+  
+  #logoHamburguesa{
+    display: block;
+  }
+  .separador{
+    display: none;
+  }
+  .categoriesContainer{
+    width: 0px;
+  }
+  .productsContainer{
+    justify-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
     align-items:  center; 
     width: 100%;
     position: relative;
