@@ -1,30 +1,42 @@
 $(function() {
-    RenderizarProductos(1);
+    RenderizarContenido(1);
 });
 
-async function RenderizarProductos(numeropagina){
+async function RenderizarContenido(numeropagina){
+    var productos = await ObtenerProductosInicial(numeropagina);
+    renderizarProductos(productos.product);
+    renderizarCategoriasDesplegable(productos.metadata.categoryFilters.categorys);
+    renderizarMarcasDesplegable( productos.metadata.tradeMarkFilter);
+}
+
+function renderizarProductos(productos){
     var productsContainer = $('#ProductsContainer');
     productsContainer.html("");
-    var categoryContainer = $('#CategoriaList');
-    var trademarkContainer = $('#MarcasList');
-    var productos = await ObtenerProductosInicial(numeropagina);
-    productos.product.forEach(element => {     
-      var product = ConstruirHtmlProducto(element);
-      productsContainer.append(product);
-      });
+    productos.forEach(element => {     
+        var product = ConstruirHtmlProducto(element);
+        productsContainer.append(product);
+        });
+}
 
-    productos.metadata.categoryFilters.categorys.forEach(element => {   
+function renderizarCategoriasDesplegable(categorias){
+    var categoryContainer = $('#CategoriaList');
+    categoryContainer.html("");
+    categoryContainer.append('<H1 class="CategoriaDeplegable">Categorias</H1>');
+    categorias.forEach(element => {   
         var category = ConstruirHtmlCategoria(element);
         categoryContainer.append(category);
         });
-
-    productos.metadata.tradeMarkFilter.forEach(element => {  
-            var trademark = ConstruirHtmlMarca(element);
-            trademarkContainer.append(trademark);
-            });
-    
-   
 }
+function renderizarMarcasDesplegable(marcas){
+    var trademarkContainer = $('#MarcasList');
+    trademarkContainer.html("");
+    trademarkContainer.append('<H1 class="MarcaDesplegable">Marcas </H1>');
+    marcas.forEach(element => {  
+        var trademark = ConstruirHtmlMarca(element);
+        trademarkContainer.append(trademark);
+        });
+}
+
 
 
 async function ObtenerProductosInicial(numeropagina){
