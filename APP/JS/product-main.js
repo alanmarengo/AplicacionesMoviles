@@ -2,8 +2,8 @@ $(function() {
     RenderizarContenido(1);
 });
 
-async function RenderizarContenido(numeropagina){
-    var productos = await ObtenerProductosInicial(numeropagina);
+async function RenderizarContenido(numeropagina,marca,categoria){
+    var productos = await ObtenerProductosInicial(numeropagina,marca,categoria);
     renderizarProductos(productos.product);
     renderizarCategoriasDesplegable(productos.metadata.categoryFilters.categorys);
     renderizarMarcasDesplegable( productos.metadata.tradeMarkFilter);
@@ -39,10 +39,18 @@ function renderizarMarcasDesplegable(marcas){
 
 
 
-async function ObtenerProductosInicial(numeropagina){
-    var path = await ObtenerPathProduct("productosIniciales");
-    var products = $.getJSON(path+"PageNumber="+numeropagina+"&PageSize=12");
+async function ObtenerProductosInicial(numeropagina,marca,categoria){
+    var path= await ConstruirPathFiltro(numeropagina,marca,categoria);
+    var products = $.getJSON(path);
     return await products;
+}
+
+async function ConstruirPathFiltro(numeropagina,marca,categoria){
+    var path = await ObtenerPathProduct("productosIniciales");
+    path = numeropagina  !== null || numeropagina !== 'undefined' ? (path+"PageNumber="+numeropagina+"&PageSize=20") : (path+"PageNumber=1&PageSize=20");
+    path = (categoria > 0 ) ? ( path +"&Categorical="+categoria) : path ;
+    path = (marca > 0 ) ? ( path +"&TradeMark="+marca) : path ;
+    return path;
 }
 
 function ConstruirHtmlProducto(element){
@@ -74,7 +82,7 @@ function ConstruirHtmlProducto(element){
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
   `
-  <li id=${element.categoriaId}> <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a></li>
+  <li id=${element.categoriaId} onclick="RenderizarContenidoCategoriaDesplegable('${element.categoriaId}');" class ="categoriali"> <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a></li>
   `;
   return CategoriaDesplegable;
 }
@@ -82,10 +90,28 @@ function ConstruirHtmlCategoria(element){
 function ConstruirHtmlMarca(element){
     var MarcaDesplegable = 
     `
-    <li id=${element.id}> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <li id=${element.id} onclick="RenderizarContenidoMarcaDesplegable('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     `;
     return MarcaDesplegable;
   }
+
+async function RenderizarContenidoCategoriaDesplegable(idcategoria){
+    await RenderizarContenido(1,null,idcategoria);
+    $(".imagenhamburguesacerrar").css("display","none");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".filtro").css("margin-top","-8000px");
+    $(".mainContainer").css("filter","brightness(100%)");
+}
+
+async function RenderizarContenidoMarcaDesplegable(idMarca){
+    await RenderizarContenido(1,idMarca,null);
+    $(".imagenhamburguesacerrar").css("display","none");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".filtro").css("margin-top","-8000px");
+    $(".mainContainer").css("filter","brightness(100%)");
+}
+
+
 
 async function  ObtenerPathProduct(servicio){
     var JSONCONFIG = $.getJSON("./CONFIG/config.json");
