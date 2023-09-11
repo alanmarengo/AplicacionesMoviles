@@ -1,30 +1,35 @@
 $(function() {
+    RenderizarProductos(1);
+});
+
+async function RenderizarProductos(numeropagina){
     var productsContainer = $('#ProductsContainer');
+    productsContainer.html("");
     var categoryContainer = $('#CategoriaList');
     var trademarkContainer = $('#MarcasList');
-    var productos = ObtenerProductosInicial().then( data=>{ 
-      data.product.forEach(element => {     
+    var productos = await ObtenerProductosInicial(numeropagina);
+    productos.product.forEach(element => {     
       var product = ConstruirHtmlProducto(element);
       productsContainer.append(product);
       });
 
-      data.metadata.categoryFilters.categorys.forEach(element => {   
+    productos.metadata.categoryFilters.categorys.forEach(element => {   
         var category = ConstruirHtmlCategoria(element);
         categoryContainer.append(category);
         });
 
-        data.metadata.tradeMarkFilter.forEach(element => {  
+    productos.metadata.tradeMarkFilter.forEach(element => {  
             var trademark = ConstruirHtmlMarca(element);
             trademarkContainer.append(trademark);
             });
     
-    });   
-});
+   
+}
 
 
-async function ObtenerProductosInicial(){
+async function ObtenerProductosInicial(numeropagina){
     var path = await ObtenerPathProduct("productosIniciales");
-    var products = $.getJSON(path+"PageNumber=1&PageSize=40").then(data => {return data});
+    var products = $.getJSON(path+"PageNumber="+numeropagina+"&PageSize=12");
     return await products;
 }
 
@@ -71,7 +76,7 @@ function ConstruirHtmlMarca(element){
   }
 
 async function  ObtenerPathProduct(servicio){
-    var JSONCONFIG = $.getJSON("./CONFIG/config.json").then(data => {return data});
+    var JSONCONFIG = $.getJSON("./CONFIG/config.json");
     var BodyJson = await JSONCONFIG;
     switch(servicio){
         case "productosIniciales":
