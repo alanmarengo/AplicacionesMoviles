@@ -82,7 +82,7 @@ function ConstruirHtmlProducto(element){
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
   `
-  <li id=${element.categoriaId} onclick="RenderizarContenido(1,null,'${element.categoriaId}');" > <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a></li>
+  <li id=${element.categoriaId} onclick="RenderizarContenidoCategoriaDesplegable('${element.categoriaId}');" class ="categoriali"> <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a></li>
   `;
   return CategoriaDesplegable;
 }
@@ -90,10 +90,28 @@ function ConstruirHtmlCategoria(element){
 function ConstruirHtmlMarca(element){
     var MarcaDesplegable = 
     `
-    <li id=${element.id} onclick="RenderizarContenido(1,'${element.id}',null);"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <li id=${element.id} onclick="RenderizarContenidoMarcaDesplegable('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     `;
     return MarcaDesplegable;
   }
+
+async function RenderizarContenidoCategoriaDesplegable(idcategoria){
+    await RenderizarContenido(1,null,idcategoria);
+    $(".imagenhamburguesacerrar").css("display","none");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".filtro").css("margin-top","-8000px");
+    $(".mainContainer").css("filter","brightness(100%)");
+}
+
+async function RenderizarContenidoMarcaDesplegable(idMarca){
+    await RenderizarContenido(1,idMarca,null);
+    $(".imagenhamburguesacerrar").css("display","none");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".filtro").css("margin-top","-8000px");
+    $(".mainContainer").css("filter","brightness(100%)");
+}
+
+
 
 async function  ObtenerPathProduct(servicio){
     var JSONCONFIG = $.getJSON("./CONFIG/config.json");

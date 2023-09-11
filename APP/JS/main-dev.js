@@ -9,6 +9,7 @@ $(function() {
     $(".logo").css("display","none");
     $(".BuscadorDiv").css("display","grid");
     $(".mainContainer").css("filter","brightness(50%)");
+    $(".header").css("background-color","#5B21A5");
   });
 
   $(".flechabuscador").on('click', function(){  
@@ -19,6 +20,7 @@ $(function() {
     $(".logo").css("display","flex");
     $(".BuscadorDiv").css("display","none");
     $(".mainContainer").css("filter","brightness(100%)");
+    $(".header").css("background-color","#707070");
   });
 
 
@@ -26,6 +28,8 @@ $(function() {
     $(".CarritoDesplegable").css("margin-top","70px");
     $(".mainContainer").css("filter","brightness(50%)");
     $(".productsContainer").css("padding-top","10px");
+    $(".imagenCarrito").css("display","none");
+    $(".cerrarDesplegable").css("display","flex");
 
   });
 
@@ -33,6 +37,8 @@ $(function() {
     $(".CarritoDesplegable").css("margin-top","-800px");
     $(".mainContainer").css("filter","brightness(100%)");
     $(".productsContainer").css("padding-top","50px");
+    $(".cerrarDesplegable").css("display","none");
+    $(".imagenCarrito").css("display","flex");
   });
 
   $(".imagenHamburguesa").on('click', function(){  
@@ -51,8 +57,8 @@ $(function() {
 
 
 
-  $(".categoria").on('click', function(){  
-    window.location = "www.google.com"
+  $(".categoriali").on('click', function(){  
+    $(".filtro").css("margin-top","-8000px");
   });
 
 
