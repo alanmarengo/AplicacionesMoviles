@@ -504,3 +504,15 @@ ul{
       }
     
 }
+
+
+.paginador{
+  margin-left: 39%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.paginador a{
+  color: #08FF0D;
+}

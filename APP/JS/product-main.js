@@ -1,8 +1,13 @@
 $(function() {
+    RenderizarProductos(1);
+});
+
+function RenderizarProductos(numeropagina){
     var productsContainer = $('#ProductsContainer');
+    productsContainer.html("");
     var categoryContainer = $('#CategoriaList');
     var trademarkContainer = $('#MarcasList');
-    var productos = ObtenerProductosInicial().then( data=>{ 
+    var productos = ObtenerProductosInicial(numeropagina).then( data=>{ 
       data.product.forEach(element => {     
       var product = ConstruirHtmlProducto(element);
       productsContainer.append(product);
@@ -19,12 +24,12 @@ $(function() {
             });
     
     });   
-});
+}
 
 
-async function ObtenerProductosInicial(){
+async function ObtenerProductosInicial(numeropagina){
     var path = await ObtenerPathProduct("productosIniciales");
-    var products = $.getJSON(path+"PageNumber=1&PageSize=40").then(data => {return data});
+    var products = $.getJSON(path+"PageNumber="+numeropagina+"&PageSize=40").then(data => {return data});
     return await products;
 }
 
