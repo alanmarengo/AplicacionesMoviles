@@ -145,14 +145,11 @@
   display: none;
   height: 80px;
   position: relative;
-  display: flex;
   margin-left: -270px;
 }
 
 .buscador-input{
   position: absolute;
-
-  display: flex;
   height: 40%;
   width: 300px;
   border-radius: 50px;
