@@ -61,7 +61,7 @@ function ConstruirHtmlProducto(element){
         <img src= ${element.images[0].url} alt="">
         <h1>Oferta!</h1>
     </div>
-    <div>
+    <div class="DataProduct">
         <h3>${element.name}</h3>
         <br>    
         <h4>$${element.price}</h4>
@@ -81,8 +81,11 @@ function ConstruirHtmlProducto(element){
 
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
-  `
-  <li id=${element.categoriaId} onclick="RenderizarContenidoCategoriaDesplegable('${element.categoriaId}');" class ="categoriali"> <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a></li>
+  `<div class= contenedorCategoria>
+  <li id=${element.categoriaId} onclick="RenderizarContenidoCategoriaDesplegable('${element.categoriaId}');" class ="categoriali"> 
+  <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a>
+  </li>
+  <div>
   `;
   return CategoriaDesplegable;
 }
@@ -90,7 +93,9 @@ function ConstruirHtmlCategoria(element){
 function ConstruirHtmlMarca(element){
     var MarcaDesplegable = 
     `
+    <div class= contenedorCategoria>
     <li id=${element.id} onclick="RenderizarContenidoMarcaDesplegable('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <div>
     `;
     return MarcaDesplegable;
   }
