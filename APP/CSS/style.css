@@ -373,6 +373,18 @@ ul{
   
 
 @media (max-width: 1180px){
+  html{
+    width: 100% !important;
+  }
+  .imagenHamburguesa{
+    display: none !important;
+  }
+  .filtro{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    grid-area: categoriesContainer;
+  }
 .isquierdo{
   display: none;
 }
@@ -390,6 +402,7 @@ ul{
   
     .grid-container{
       display: grid;
+      gap: 10px;
       grid-template-columns: 20% 1fr 1fr 1fr 1fr; 
       grid-template-rows: 10% 30px 1fr 1fr 1fr 10%; 
       grid-template: 
@@ -402,38 +415,45 @@ ul{
         "footer footer footer footer footer" 
         ;
     }
-  
+  .mainContainer{
+    padding-top: 0px;
+  }
     .productsContainer{
+      padding-top: 0px;
       justify-items: center;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 15px;
       align-items:  center; 
       width: 100%;
       position: relative;
     }
   
-    .categories h3{
-      color: -webkit-link;
-      cursor: pointer;
-      margin: 5px 5px;
-      color: #7200FF;
-    }
     .product{
+      display: grid !important;
+      max-height: 390px ;
+      grid-template-rows: auto 1fr auto; 
       border-radius: 20px;
-      align-items: center;
+      align-items: center ;
+      justify-items: center;
       background-color: #cecbcb;
-      display: flex;
-      flex-direction: column;
       transition: box-shadow .3s;
       width: 95%;
+      height: 100%;
       border: 1px solid #ccc;
       background: #fff;
+      margin-bottom: 10px;
       }
-      .a{
-        text-decoration: none;
+      .productImage img{
+        width: 200px ;
+        
+      }
+      .product DataProduct{
+        display: flex;
       }
       article button{
+        position: relative;
+        vertical-align: text-bottom;
+        align-items: center;
         background-color: #28FF0D;
         width: 80%;
         /* color: #040404; */
@@ -451,12 +471,28 @@ ul{
         transition: ease-out 0.4s; */
         margin-bottom: 5px;
         }
+  
+    .categories h3{
+      color: -webkit-link;
+      cursor: pointer;
+      margin: 5px 5px;
+      color: #7200FF;
+    }
+      .a{
+        text-decoration: none;
+      }
         #logoHamburguesa{
           display: none;
         }
   }
 
 @media (max-width: 767px)  {
+  .imagenHamburguesa{
+    display: block;
+  }
+  .CarritoDesplegable{
+    display: block !important;
+  }
   .productImage img{
     width: 100px ;
   }
@@ -535,6 +571,7 @@ ul{
   .productsContainer{
     justify-items: center;
     display: grid;
+    gap: 15px;
     grid-template-columns: 1fr 1fr;
     align-items:  center; 
     width: 100%;
