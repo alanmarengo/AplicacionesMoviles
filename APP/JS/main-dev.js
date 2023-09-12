@@ -12,6 +12,19 @@ $(function() {
     $(".header").css("background-color","#5B21A5");
   });
 
+  $(".buscador-input").on('keyup', function(){
+    //recordar que aqui se debe preguntar si es != de resolucion mobile
+    var longidutPalabra = $(this).val().length;
+    if(longidutPalabra>=3){
+      $(".buscadorDesplegable").css("margin-top","70px");
+    }
+    else{
+      $(".buscadorDesplegable").css("margin-top","-8000px");
+    }
+  });
+
+
+
   $(".flechabuscador").on('click', function(){  
     $(".imagenCarrito").css("display","flex");
     $(".imagenUsuario").css("display","flex");
@@ -21,6 +34,7 @@ $(function() {
     $(".BuscadorDiv").css("display","none");
     $(".mainContainer").css("filter","brightness(100%)");
     $(".header").css("background-color","#707070");
+    $(".buscadorDesplegable").css("margin-top","-8000px");
   });
 
 
@@ -56,16 +70,8 @@ $(function() {
   });
 
 
-
   $(".categoriali").on('click', function(){  
     $(".filtro").css("margin-top","-8000px");
   });
-
-
-
-
-
-
-
 
 });
