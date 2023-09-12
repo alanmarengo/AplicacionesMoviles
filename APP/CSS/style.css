@@ -24,18 +24,7 @@
   padding: 10px;
 }
 
-.filtro{
-  display: grid;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  background-color: #5B21A5;
-  width: 100%;
-  height: auto;
-  justify-content:left;
-  transition: 250ms;
-  margin-top: -8000px;
-}
+
 /* background-color: #5B21A5; */
 
 .filtros-list{
@@ -468,7 +457,41 @@ ul{
   }
 
 @media (max-width: 767px)  {
-  
+  .filtros-list h1{
+    margin-bottom: 10px;
+  }
+  .contenedorCategoria li a{
+
+    padding-bottom: 14px;
+
+  }
+
+  .contenedorCategoria{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    vertical-align: middle;
+    align-items: center center;
+    justify-content: center center;
+    margin-bottom: 10px;
+
+  }
+  .filtro{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #5B21A5;
+    width: 100%;
+    height: auto;
+    justify-content:left;
+    transition: 250ms;
+    margin-top: -8000px;
+  }
+
   #logoHamburguesa{
     display: block;
   }
@@ -488,18 +511,26 @@ ul{
   }
 
   .product{
+    display: grid !important;
+    
+    grid-template-rows: auto 1fr auto; 
     border-radius: 20px;
-    align-items: center;
+    align-items: center ;
+    justify-items: center;
     background-color: #cecbcb;
-    display: flex;
-    flex-direction: column;
     transition: box-shadow .3s;
     width: 95%;
+    height: 100%;
     border: 1px solid #ccc;
     background: #fff;
     }
-
+    .product DataProduct{
+      display: flex;
+    }
     article button{
+      position: relative;
+      vertical-align: text-bottom;
+      align-items: center;
       background-color: #28FF0D;
       width: 80%;
       /* color: #040404; */
