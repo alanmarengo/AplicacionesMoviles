@@ -102,18 +102,22 @@ function ConstruirHtmlMarca(element){
 
 async function RenderizarContenidoCategoriaDesplegable(idcategoria){
     await RenderizarContenido(1,null,idcategoria);
+    if(screen.width <= 428){
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
+    }
 }
 
 async function RenderizarContenidoMarcaDesplegable(idMarca){
     await RenderizarContenido(1,idMarca,null);
+    if(screen.width <= 428){
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
+    }
 }
 
 
