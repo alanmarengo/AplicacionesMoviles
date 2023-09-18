@@ -27,14 +27,16 @@ $(function() {
 
   $(".flechabuscador").on('click', function(){  
     $(".imagenCarrito").css("display","flex");
-    $(".imagenUsuario").css("display","flex");
-    $(".imagenHamburguesa").css("display","flex");
     $(".imagenBuscador").css("display","flex");
+    $(".header").css("background-color","#707070");
+    $(".buscadorDesplegable").css("margin-top","-8000px");
     $(".logo").css("display","flex");
     $(".BuscadorDiv").css("display","none");
     $(".mainContainer").css("filter","brightness(100%)");
-    $(".header").css("background-color","#707070");
-    $(".buscadorDesplegable").css("margin-top","-8000px");
+    if(screen.width <= 428){
+    $(".imagenUsuario").css("display","flex");
+    $(".imagenHamburguesa").css("display","flex");
+    }
   });
 
 
@@ -68,10 +70,4 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
-
-
-  $(".categoriali").on('click', function(){  
-    $(".filtro").css("margin-top","-8000px");
-  });
-
 });
