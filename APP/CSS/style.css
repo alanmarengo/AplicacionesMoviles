@@ -16,23 +16,17 @@
   background-color: #707070;
   margin-top: -8px;
 }
-
 .logo{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
-
-
-/* background-color: #5B21A5; */
-
 .filtros-list{
   margin-left: 5%;
   padding-top: 2px;
   transition: 250ms;
 }
-
 .filtro ul li img{ 
   width: 30px;
 }
@@ -294,6 +288,17 @@ article h6 {
 ul{
   list-style: none;
 }
+.paginador{
+  grid-area: paginador;
+  margin-left: 39%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.paginador a{
+  color: #08FF0D;
+}
 /*Responsive ====================================================================================================================================================*/
 
 
@@ -459,90 +464,146 @@ ul{
   
 
 @media (max-width: 1180px){
-.isquierdo{
+.footer{
+  grid-area: footer;
+  width: 100vw;
+  position: relative;
+}
+  .imagenHamburguesa{
+    display: none;
+  }
+  .filtro{
+    position: absolute;
+    
+    flex-direction: column;
+    margin-top: 70px;
+    width: 100%;
+    grid-area: categoriesContainer;
+  }
+.isquierdo{ 
+  grid-area: isquierdo;
   display: none;
 }
-.derecho{
+.derecho{ 
+  grid-area: derecho;
   display: none;
 }
-.Banner{
+.Banner{ display: none; }
+.separador{
   display: none;
-}
-  .separador{
     grid-area: separador;
     height: 20px;
     background-color: #28FF0D;
   }
-  
+  .header{
+    grid-area: header;
+    width: 100vw;
+    position: relative;
+  }
     .grid-container{
+      width: 100vw;
       display: grid;
-      grid-template-columns: 20% 1fr 1fr 1fr 1fr; 
-      grid-template-rows: 10% 30px 1fr 1fr 1fr 10%; 
+      gap: 10px;
+      grid-template-columns: 20% 80% ; 
+      grid-template-rows: 10% 1fr 10%; 
       grid-template: 
-        "header header header header header "
-        "separador separador separador separador separador"
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"   
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"  
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer"   
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer" 
-        "footer footer footer footer footer" 
+        "header header"
+        "categoriesContainer mainContainer"     
+        "footer footer" 
         ;
     }
-  
+  .mainContainer{
+    width: 100%;
+    padding-top: 0px;
+  }
     .productsContainer{
+      padding-top: 0px;
       justify-items: center;
       display: grid;
+      gap: 14px;
+      grid-column-gap: 1px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 15px;
       align-items:  center; 
       width: 100%;
       position: relative;
     }
+    .DataProduct h3, .DataProduct h4 {
+      white-space: pre-wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   
+    .product{
+      display: grid !important;
+      max-height: 25em ;
+      grid-template-rows: auto 1fr auto; 
+      border-radius: 20px;
+      align-items: center ;
+      justify-items: center;
+      background-color: #cecbcb;
+      transition: box-shadow .3s;
+      width: 95%;
+      height: 100%;
+      border: 1px solid #ccc;
+      background: #fff;
+      }
+      .product DataProduct{
+        max-height: 1em;
+        overflow: hidden;
+        display: flex;
+      }
+      article button{
+        bottom: 0px;
+        position: relative;
+        vertical-align: text-bottom;
+        align-items: center;
+        background-color: #28FF0D;
+        width: 80%;
+        border-radius: 110px;
+        padding: 10px 20px;
+        white-space: nowrap;
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        }
+      .productImage img{
+        width: 150px ;  
+      }
+      
     .categories h3{
       color: -webkit-link;
       cursor: pointer;
       margin: 5px 5px;
       color: #7200FF;
-    }
-    .product{
-      border-radius: 20px;
-      align-items: center;
-      background-color: #cecbcb;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow .3s;
-      width: 95%;
-      border: 1px solid #ccc;
-      background: #fff;
       }
-      .a{
+    .a{
         text-decoration: none;
       }
-      article button{
-        background-color: #28FF0D;
-        width: 80%;
-        /* color: #040404; */
-        /* border: 2px solid #7200FF; */
-        border-radius: 110px;
-        padding: 10px 20px;
-        /* display: inline-block; */
-        white-space: nowrap;
-        font-size: 14px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        /* box-shadow: inset 0 0 0 0 #28FF0D; */
-        /* -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
-        transition: ease-out 0.4s; */
-        margin-bottom: 5px;
-        }
-        #logoHamburguesa{
+    #logoHamburguesa{
           display: none;
-        }
+      }
+
   }
 
 @media (max-width: 767px)  {
+  
+  .grid-container {
+    width: 100vw;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template:
+        "header header"
+        "mainContainer mainContainer"
+        "footer footer";
+
+  .imagenHamburguesa{
+    display: block;
+  }
+  .CarritoDesplegable{
+    display: block !important;
+  }
   .productImage img{
     width: 100px ;
   }
@@ -610,7 +671,7 @@ ul{
   }
 
   #logoHamburguesa{
-    display: block;
+    display: block ;
   }
   .separador{
     display: none;
@@ -621,6 +682,7 @@ ul{
   .productsContainer{
     justify-items: center;
     display: grid;
+    gap: 15px;
     grid-template-columns: 1fr 1fr;
     align-items:  center; 
     width: 100%;
@@ -645,7 +707,7 @@ ul{
       display: flex;
     }
     article button{
-      position: relative;
+      position: sticky;
       vertical-align: text-bottom;
       align-items: center;
       background-color: #28FF0D;
@@ -667,16 +729,6 @@ ul{
       }
     
 }
-
-
-.paginador{
-  grid-area: paginador;
-  margin-left: 39%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
 }
 
-.paginador a{
-  color: #08FF0D;
-}
+
