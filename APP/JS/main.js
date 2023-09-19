@@ -1,7 +1,5 @@
 $(function() {
   $(".imagenBuscador").on('click', function(){
-    //recordar que aqui se debe preguntar si es != de resolucion mobile
-    
     $(".imagenCarrito").css("display","none");
     $(".imagenUsuario").css("display","none");
     $(".imagenHamburguesa").css("display","none");
@@ -10,12 +8,9 @@ $(function() {
     $(".BuscadorDiv").css("display","grid");
     $(".mainContainer").css("filter","brightness(50%)");
     $(".header").css("background-color","#5B21A5");
-
-    
   });
 
   $(".buscador-input").on('keyup', async function(){
-    //recordar que aqui se debe preguntar si es != de resolucion mobile
     var longidutPalabra = $(this).val().length;
     if(longidutPalabra>=3){
       $(".buscadorDesplegable").css("margin-top","70px");
@@ -25,8 +20,6 @@ $(function() {
       $(".buscadorDesplegable").css("margin-top","-8000px");
     }
   });
-
-
 
   $(".flechabuscador").on('click', function(){  
     $(".imagenCarrito").css("display","flex");
@@ -58,8 +51,6 @@ $(function() {
     }
   });
 
-
-
   $(".imagenCarrito").on('click', function(){  
     $(".CarritoDesplegable").css("margin-top","70px");
     $(".mainContainer").css("filter","brightness(50%)");
@@ -90,7 +81,4 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
-
-
-
 });
