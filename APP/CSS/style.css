@@ -75,14 +75,13 @@
   background-color: #08FF00;
 }
 
-
 .map{
   position: fixed;
   display: block;
   height: 500px;
   width: 100%;
   z-index: 1;
-  margin-top: 18%;
+  margin-top: 16.5%;
   overflow-y: hidden;
 }
 .CerrarMapa{
@@ -283,7 +282,17 @@ article h6 {
 .footer div{
 position: absolute;
 color: #28FF0D;
-margin-left: 200px;
+margin-left: 250px;
+margin-top: 33px;
+}
+
+.logoubicacion{
+  display: flex;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: -20px;
 }
 
 .pageIndex{
