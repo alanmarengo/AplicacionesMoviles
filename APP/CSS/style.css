@@ -732,7 +732,7 @@ ul{
       display: flex;
     }
     article button{
-      position: sticky;
+      position: relative;
       vertical-align: text-bottom;
       align-items: center;
       background-color: #28FF0D;
