@@ -6,7 +6,6 @@ $(function() {
     $(".imagenBuscador").css("display","none");
     $(".logo").css("display","none");
     $(".BuscadorDiv").css("display","grid");
-    //$(".mainContainer").css("filter","brightness(50%)");
     $(".header").css("background-color","#5B21A5");
   });
 
