@@ -1,0 +1,18 @@
+.map{
+    position: fixed;
+    display: block;
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    margin-top: 16.5%;
+    overflow-y: hidden;
+  }
+  .CerrarMapa{
+    height: 44px;
+    width: 44px;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    margin-top: 12px;
+    right:2%;
+  }

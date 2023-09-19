@@ -1,0 +1,420 @@
+@media (min-width: 1181px) {
+    .imagenUsuario{
+      display: none;
+    }
+  
+  
+    .LogoBanner{
+      width: 100%;
+      height: 15px;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top:20.80%;
+    }
+  
+    .HeaderSecundario{
+      width: 100%;
+      height: 19px;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top:7%;
+      background-color: #08FF00;
+    }
+  
+    .footer{
+      grid-area: footer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #707070;
+      width: 100%;
+      position: absolute;
+      margin-top: 140%;
+    }
+  
+    .mainContainer {
+      grid-area: mainContainer;
+      padding-top: 0px;
+      background-color: #ffffff;
+      margin-left: 27.5%;
+      margin-top: 300px;
+      cursor: pointer;
+      z-index: -1;
+      width: 70%;
+      height: auto;
+      display: grid;
+      position: absolute;
+    }
+  
+    .filtro{
+      margin-bottom: 20px;
+      display: grid;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      z-index: -1;
+      left: 40px;
+      background-color: #ffffff;
+      width: 10%;
+      height: auto;
+      justify-content:left;
+      transition: 250ms;
+      margin-top: 330px;
+    }
+  
+    .CategoriaDeplegable{
+      font-size:25px;
+      color: #5B21A5;
+    }
+    .MarcaDesplegable{
+      font-size:25px;
+      color: #5B21A5;
+    }
+    
+    .categoria{
+      color: #28FF0D;
+    }
+    
+    .marca{
+      color: #28FF0D;
+    }
+    
+    
+  
+    .product{
+      border-radius: 20px;
+      align-items: center;
+      background-color: #cecbcb;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .3s;
+      width: 95%;
+      border: 1px solid #ccc;
+      background: #fff;
+      }
+  
+      .a{
+        text-decoration: none;
+      }
+      article button{
+        
+        width: 80%;
+        color: #040404;
+        border: 2px solid #7200FF;
+        border-radius: 110px;
+        padding: 10px 20px;
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+         box-shadow: inset 0 0 0 0 #28FF0D; 
+         -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+        margin-bottom: 5px;
+        }
+  
+        article button:hover{
+          border: #7200FF;
+          box-shadow: inset 0 0 0 50px #28FF0D;
+          }
+      #logoHamburguesa{
+          display: none;
+     }
+  
+    .separador{
+      grid-area: Separador;
+      background-color: #28FF0D;
+    }
+  
+    .productsContainer{
+      justify-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 15px;
+      align-items:  center; 
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .grid-container {
+      display: grid;  
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+      grid-template-rows: auto 20px 1.2fr 0.6fr 1fr 1fr 5%; 
+      gap: 0px 0px; 
+      grid-template-areas: 
+      "header header header header header header header"
+      "Separador Separador Separador Separador Separador Separador Separador"
+      "derecho Banner Banner Banner Banner Banner isquierdo"
+      "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+      "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+      "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+      "footer footer footer footer footer footer footer"; 
+    }
+    }
+    
+  
+  @media (max-width: 1180px){
+  .footer{
+    grid-area: footer;
+    width: 100vw;
+    position: relative;
+  }
+    .imagenHamburguesa{
+      display: none;
+    }
+    .filtro{
+      position: absolute;
+      
+      flex-direction: column;
+      margin-top: 70px;
+      width: 100%;
+      grid-area: categoriesContainer;
+    }
+  .isquierdo{ 
+    grid-area: isquierdo;
+    display: none;
+  }
+  .derecho{ 
+    grid-area: derecho;
+    display: none;
+  }
+  .Banner{ display: none; }
+  .separador{
+    display: none;
+      grid-area: separador;
+      height: 20px;
+      background-color: #28FF0D;
+    }
+    .header{
+      grid-area: header;
+      width: 100vw;
+      position: relative;
+    }
+      .grid-container{
+        width: 100vw;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 20% 80% ; 
+        grid-template-rows: 10% 1fr 10%; 
+        grid-template: 
+          "header header"
+          "categoriesContainer mainContainer"     
+          "footer footer" 
+          ;
+      }
+    .mainContainer{
+      width: 100%;
+      padding-top: 0px;
+    }
+      .productsContainer{
+        padding-top: 0px;
+        justify-items: center;
+        display: grid;
+        gap: 14px;
+        grid-column-gap: 1px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items:  center; 
+        width: 100%;
+        position: relative;
+      }
+      .DataProduct h3, .DataProduct h4 {
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    
+      .product{
+        display: grid !important;
+        max-height: 25em ;
+        grid-template-rows: auto 1fr auto; 
+        border-radius: 20px;
+        align-items: center ;
+        justify-items: center;
+        background-color: #cecbcb;
+        transition: box-shadow .3s;
+        width: 95%;
+        height: 100%;
+        border: 1px solid #ccc;
+        background: #fff;
+        }
+        .product DataProduct{
+          max-height: 1em;
+          overflow: hidden;
+          display: flex;
+        }
+        article button{
+          bottom: 0px;
+          position: relative;
+          vertical-align: text-bottom;
+          align-items: center;
+          background-color: #28FF0D;
+          width: 80%;
+          border-radius: 110px;
+          padding: 10px 20px;
+          white-space: nowrap;
+          font-size: 1em;
+          letter-spacing: 1px;
+          margin-bottom: 5px;
+          }
+        .productImage img{
+          width: 150px ;  
+        }
+        
+      .categories h3{
+        color: -webkit-link;
+        cursor: pointer;
+        margin: 5px 5px;
+        color: #7200FF;
+        }
+      .a{
+          text-decoration: none;
+        }
+      #logoHamburguesa{
+            display: none;
+        }
+  
+    }
+  
+  @media (max-width: 767px)  {
+    
+    .grid-container {
+      width: 100vw;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 10% 1fr 10%;
+      grid-template:
+          "header header"
+          "mainContainer mainContainer"
+          "footer footer";
+  
+    .imagenHamburguesa{
+      display: block;
+    }
+    .CarritoDesplegable{
+      display: block !important;
+    }
+    .productImage img{
+      width: 100px ;
+    }
+    .buscadorDesplegable{
+      position: absolute;
+      display: flex !important;
+      flex-direction: column;
+      height: 400px;
+      max-height: 400px;
+      direction: ltr;
+      overflow: hidden scroll;
+      /* height: -700px; */
+      background-color: white;
+      width: 90%;
+      padding: 20px;
+    }
+    .itemBusquedaData h3{
+      margin-top: 10px;
+      color: #7200FF;
+    }
+    .itemBusqueda img{
+      max-height: 100px ;
+    }
+    .itemBusqueda{
+      width: 100% !important;
+      gap: 10px; 
+      display: flex;
+      text-align: center;
+      align-items: center;
+      direction: 2tr;
+      height: 105px;
+      transition: all 0.2s ease 0s;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+    }
+    .buscadorDesplegable img{
+      width: 25%;
+    }
+  
+    .filtros-list h1{
+      margin-bottom: 10px;
+    }
+    .contenedorCategoria li a{
+  
+      padding-bottom: 14px;
+  
+    }
+  
+    .contenedorCategoria{
+      display: flex;
+      flex-direction: row;
+      align-items: center !important;
+      vertical-align: middle;
+      align-items: center center;
+      justify-content: center center;
+      margin-bottom: 10px;
+  
+    }
+    .filtro{
+      margin-bottom: 20px;
+      display: grid;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      background-color: #5B21A5;
+      width: 100%;
+      height: auto;
+      justify-content:left;
+      transition: 250ms;
+      margin-top: -8000px;
+    }
+  
+    #logoHamburguesa{
+      display: block ;
+    }
+    .separador{
+      display: none;
+    }
+    .categoriesContainer{
+      width: 0px;
+    }
+    .productsContainer{
+      justify-items: center;
+      display: grid;
+      gap: 15px;
+      grid-template-columns: 1fr 1fr;
+      align-items:  center; 
+      width: 100%;
+      position: relative;
+    }
+  
+    .product{
+      display: grid !important;
+      max-height: 390px ;
+      grid-template-rows: auto 1fr auto; 
+      border-radius: 20px;
+      align-items: center ;
+      justify-items: center;
+      background-color: #cecbcb;
+      transition: box-shadow .3s;
+      width: 95%;
+      height: 100%;
+      border: 1px solid #ccc;
+      background: #fff;
+      }
+      .product DataProduct{
+        display: flex;
+      }
+      article button{
+        position: relative;
+        vertical-align: text-bottom;
+        align-items: center;
+        background-color: #28FF0D;
+    }
+      
+  }
+  }
