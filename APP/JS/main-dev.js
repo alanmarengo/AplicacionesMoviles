@@ -10,6 +10,8 @@ $(function() {
     $(".BuscadorDiv").css("display","grid");
     $(".mainContainer").css("filter","brightness(50%)");
     $(".header").css("background-color","#5B21A5");
+
+    
   });
 
   $(".buscador-input").on('keyup', function(){
@@ -38,6 +40,23 @@ $(function() {
     $(".imagenHamburguesa").css("display","flex");
     }
   });
+
+  $(".CerrarMapa").on('click', function(){  
+    if(screen.width <= 428){
+    $(".imagenUsuario").css("display","flex");
+    $(".imagenHamburguesa").css("display","flex");
+    $(".imagenCarrito").css("display","flex");
+    $(".imagenBuscador").css("display","flex");
+    $(".logo").css({"align-items":"center","justify-content":"center"});
+    $(".logo").css("margin-left","5%");
+    $(".CerrarMapa").css("display","none");
+    $(".mainContainer").css("filter","brightness(100%)");
+    $(".map").css("display","none");
+    $('body,html').css({ "position": "", "overflow-y": "" });
+    map.remove();
+    }
+  });
+
 
 
   $(".imagenCarrito").on('click', function(){  
@@ -72,5 +91,5 @@ $(function() {
   });
 
 
-  $(".map").css("display","block");
+
 });
