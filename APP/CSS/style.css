@@ -77,11 +77,14 @@
 }
 
 
-
-
-
-
-
+.map{
+  position: absolute;
+  display: none;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  margin-top: 50%;
+}
 
 
 .logo img{
@@ -267,6 +270,12 @@ article h6 {
   align-items: center;
   background-color: #707070;
   width: 100%;
+}
+
+.footer div{
+position: absolute;
+color: #28FF0D;
+margin-left: 200px;
 }
 
 .pageIndex{

@@ -70,4 +70,7 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
+
+
+  $(".map").css("display","block");
 });
