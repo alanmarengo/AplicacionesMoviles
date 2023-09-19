@@ -293,7 +293,7 @@ ul{
   margin-left: 39%;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100%;
+
 }
 
 .paginador a{
@@ -464,47 +464,64 @@ ul{
   
 
 @media (max-width: 1180px){
-
+.footer{
+  grid-area: footer;
+  width: 100vw;
+  position: relative;
+}
   .imagenHamburguesa{
-    display: none !important;
+    display: none;
   }
   .filtro{
-    display: flex;
+    position: absolute;
+    
     flex-direction: column;
-    width: 100% !important;
+    margin-top: 70px;
+    width: 100%;
     grid-area: categoriesContainer;
   }
-.isquierdo{ display: none;}
-.derecho{ display: none;}
-.Banner{ display: none;}
+.isquierdo{ 
+  grid-area: isquierdo;
+  display: none;
+}
+.derecho{ 
+  grid-area: derecho;
+  display: none;
+}
+.Banner{ display: none; }
 .separador{
   display: none;
     grid-area: separador;
     height: 20px;
     background-color: #28FF0D;
   }
-  
+  .header{
+    grid-area: header;
+    width: 100vw;
+    position: relative;
+  }
     .grid-container{
+      width: 100vw;
       display: grid;
-      gap: 10px !important;
-      grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr; 
-      grid-template-rows: 10% 30px 1fr 1fr 1fr  10%; 
+      gap: 10px;
+      grid-template-columns: 20% 80% ; 
+      grid-template-rows: 10% 1fr 10%; 
       grid-template: 
-        "header header header header header header "
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer mainContainer"   
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer mainContainer"  
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer mainContainer"   
-        "categoriesContainer mainContainer mainContainer mainContainer mainContainer mainContainer" 
-        "footer footer footer footer footer footer" 
+        "header header"
+        "categoriesContainer mainContainer"     
+        "footer footer" 
         ;
     }
   .mainContainer{
+    width: 100%;
     padding-top: 0px;
   }
     .productsContainer{
       padding-top: 0px;
       justify-items: center;
       display: grid;
+      gap: 14px;
+      grid-column-gap: 1px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items:  center; 
       width: 100%;
@@ -518,7 +535,7 @@ ul{
   
     .product{
       display: grid !important;
-      max-height: 390px ;
+      max-height: 25em ;
       grid-template-rows: auto 1fr auto; 
       border-radius: 20px;
       align-items: center ;
@@ -531,7 +548,7 @@ ul{
       background: #fff;
       }
       .product DataProduct{
-        max-height: 10px;
+        max-height: 1em;
         overflow: hidden;
         display: flex;
       }
@@ -545,12 +562,12 @@ ul{
         border-radius: 110px;
         padding: 10px 20px;
         white-space: nowrap;
-        font-size: 14px;
+        font-size: 1em;
         letter-spacing: 1px;
         margin-bottom: 5px;
         }
       .productImage img{
-        width: 200px ;  
+        width: 150px ;  
       }
       
     .categories h3{
@@ -569,6 +586,18 @@ ul{
   }
 
 @media (max-width: 767px)  {
+  
+  .grid-container {
+    width: 100vw;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template:
+        "header header"
+        "mainContainer mainContainer"
+        "footer footer";
+
   .imagenHamburguesa{
     display: block;
   }
@@ -642,7 +671,7 @@ ul{
   }
 
   #logoHamburguesa{
-    display: block;
+    display: block ;
   }
   .separador{
     display: none;
@@ -700,6 +729,6 @@ ul{
       }
     
 }
-
+}
 
 
