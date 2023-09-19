@@ -49,15 +49,7 @@
 }
 
 
-.LogoBanner{
-  width: 100%;
-  height: 15px;
-  display: none;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  top:20.80%;
-}
+
 .HeaderSecundario{
   width: 100%;
   height: 15px;
@@ -192,10 +184,17 @@
   width: 45px;
 }
 
+.LogoBanner{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top:6.5%;
+}
 
 .mainContainer {
   grid-area: mainContainer;
   padding-top: 15px;
+  margin-top: 200px;
   background-color: #ffffff;
   left: -200px;
   cursor: pointer;
