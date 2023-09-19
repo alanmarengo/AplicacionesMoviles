@@ -72,4 +72,7 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").removeClass("mainContainer-lowbrightness");
   });
+
+
+  $(".map").css("display","block");
 });
