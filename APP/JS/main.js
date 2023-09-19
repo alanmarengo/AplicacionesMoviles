@@ -10,10 +10,12 @@ $(function() {
     $(".header").css("background-color","#5B21A5");
   });
 
-  $(".buscador-input").on('keyup', function(){
+  $(".buscador-input").on('keyup', async function(){
+    //recordar que aqui se debe preguntar si es != de resolucion mobile
     var longidutPalabra = $(this).val().length;
     if(longidutPalabra>=3){
       $(".buscadorDesplegable").css("margin-top","70px");
+      await RenderizarContenidoProductoDesplegable($(this).val());
     }
     else{
       $(".buscadorDesplegable").css("margin-top","-8000px");
