@@ -463,17 +463,17 @@ ul{
   }
   .grid-container {
     display: grid;  
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: auto 20px 1.2fr 0.6fr 1fr 1fr 5%; 
     gap: 0px 0px; 
     grid-template-areas: 
-    "header header header header header header header"
-    "Separador Separador Separador Separador Separador Separador Separador"
+    "header header header header"
+    "Separador Separador Separador "
     "derecho Banner Banner Banner Banner Banner isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
-    "footer footer footer footer footer footer footer"; 
+    "derecho categoriesContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer isquierdo"
+    "derecho categoriesContainer mainContainer isquierdo"
+    "footer footer footer footer"; 
   }
   }
   
