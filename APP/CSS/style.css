@@ -637,13 +637,20 @@ ul{
     display: flex !important;
     flex-direction: column;
     height: 400px;
-    max-height: 450px;
+    max-height: 400px;
     direction: ltr;
     overflow: hidden scroll;
     /* height: -700px; */
     background-color: white;
-    width: 100vw;
+    width: 90%;
     padding: 20px;
+  }
+  .itemBusquedaData h3{
+    margin-top: 10px;
+    color: #7200FF;
+  }
+  .itemBusqueda img{
+    max-height: 100px ;
   }
   .itemBusqueda{
     width: 100% !important;
@@ -732,7 +739,7 @@ ul{
       display: flex;
     }
     article button{
-      position: sticky;
+      position: relative;
       vertical-align: text-bottom;
       align-items: center;
       background-color: #28FF0D;

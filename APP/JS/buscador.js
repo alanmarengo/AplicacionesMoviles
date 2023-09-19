@@ -1,0 +1,3 @@
+function DibujarProductosPorCoincidencia(coincidencia){
+
+}
