@@ -54,6 +54,14 @@ async function ConstruirPathFiltro(numeropagina,marca,categoria){
 }
 
 function ConstruirHtmlProducto(element){
+    var maxChars = 40;
+    var textMax ="";
+    if(element.name.length > maxChars){
+        textMax = element.name.slice(0,maxChars)+"...";
+    }else{
+        textMax = element.name
+    }
+
     var product = 
     `
     <article class="product">
@@ -62,7 +70,7 @@ function ConstruirHtmlProducto(element){
         <h1>Oferta!</h1>
     </div>
     <div class="DataProduct">
-        <h3>${element.name}</h3>
+        <h3>${textMax}</h3>
         <br>    
         <h4>$${element.price}</h4>
 
