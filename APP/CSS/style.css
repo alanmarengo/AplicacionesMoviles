@@ -299,6 +299,12 @@ ul{
 .paginador a{
   color: #08FF0D;
 }
+.filtroUp{
+  margin-top: -800px;
+}
+.mainContainer-lowbrightness{
+  filter:brightness(50%);
+}
 /*Responsive ====================================================================================================================================================*/
 
 
@@ -474,9 +480,8 @@ ul{
   }
   .filtro{
     position: absolute;
-    
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 70px ;
     width: 100%;
     grid-area: categoriesContainer;
   }

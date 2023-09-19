@@ -8,7 +8,8 @@ $(function() {
     $(".imagenBuscador").css("display","none");
     $(".logo").css("display","none");
     $(".BuscadorDiv").css("display","grid");
-    $(".mainContainer").css("filter","brightness(50%)");
+    // $(".mainContainer").addClass("filter","brightness(50%)");
+    $(".mainContainer").addClass("mainContainer-lowbrightness");
     $(".header").css("background-color","#5B21A5");
   });
 
@@ -32,7 +33,7 @@ $(function() {
     $(".buscadorDesplegable").css("margin-top","-8000px");
     $(".logo").css("display","flex");
     $(".BuscadorDiv").css("display","none");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".mainContainer").addClass("mainContainer-lowbrightness");
     if(screen.width <= 428){
     $(".imagenUsuario").css("display","flex");
     $(".imagenHamburguesa").css("display","flex");
@@ -42,7 +43,7 @@ $(function() {
 
   $(".imagenCarrito").on('click', function(){  
     $(".CarritoDesplegable").css("margin-top","70px");
-    $(".mainContainer").css("filter","brightness(50%)");
+    $(".mainContainer").addClass("mainContainer-lowbrightness");
     $(".productsContainer").css("padding-top","10px");
     $(".imagenCarrito").css("display","none");
     $(".cerrarDesplegable").css("display","flex");
@@ -50,8 +51,9 @@ $(function() {
   });
 
   $(".cerrarDesplegable").on('click', function(){  
-    $(".CarritoDesplegable").css("margin-top","-800px");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".CarritoDesplegable").addClass("UpDiv");
+    // $(".CarritoDesplegable").css("margin-top","-800px");
+    $(".mainContainer").removeClass("mainContainer-lowbrightness");
     $(".productsContainer").css("padding-top","50px");
     $(".cerrarDesplegable").css("display","none");
     $(".imagenCarrito").css("display","flex");
@@ -61,13 +63,13 @@ $(function() {
     $(".filtro").css("margin-top","70px");
     $(".imagenHamburguesa").css("display","none");
     $(".imagenhamburguesacerrar").css("display","flex");
-    $(".mainContainer").css("filter","brightness(50%)");
+    $(".mainContainer").addClass("mainContainer-lowbrightness");
   });
 
   $(".imagenhamburguesacerrar").on('click', function(){  
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
     $(".filtro").css("margin-top","-8000px");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".mainContainer").removeClass("mainContainer-lowbrightness");
   });
 });
