@@ -6,7 +6,7 @@ $(function() {
     $(".imagenBuscador").css("display","none");
     $(".logo").css("display","none");
     $(".BuscadorDiv").css("display","grid");
-    $(".mainContainer").css("filter","brightness(50%)");
+    //$(".mainContainer").css("filter","brightness(50%)");
     $(".header").css("background-color","#5B21A5");
   });
 
@@ -15,9 +15,11 @@ $(function() {
     if(longidutPalabra>=3){
       $(".buscadorDesplegable").css("margin-top","70px");
       await RenderizarContenidoProductoDesplegable($(this).val());
+      $(".mainContainer").css("filter","brightness(50%)");
     }
     else{
       $(".buscadorDesplegable").css("margin-top","-8000px");
+      $(".mainContainer").css("filter","brightness(100%)");
     }
   });
 

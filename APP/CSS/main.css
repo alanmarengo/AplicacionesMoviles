@@ -184,8 +184,6 @@
   display: block;
 }
 
-
-
 .footer{
   grid-area: footer;
   display: flex;
