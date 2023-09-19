@@ -611,15 +611,22 @@ ul{
   }
 
 @media (max-width: 767px)  {
-  
+  .map{
+    width: 50%;
+  }
+  .LogoBanner{
+    grid-area: banner;
+    width: 100%;
+  }
   .grid-container {
     width: 100vw;
     display: grid;
     gap: 10px;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 10% 30% 1fr 10%;
     grid-template:
         "header header"
+        "banner banner"
         "mainContainer mainContainer"
         "footer footer";
 

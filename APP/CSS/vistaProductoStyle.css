@@ -1,0 +1,13 @@
+.productoDetails{
+    max-width: 70%;
+    border: solid 1px black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.productoDetails img{
+    max-width: 80%;
+}
+.productoDetails button{
+    max-width: 40%;
+}
