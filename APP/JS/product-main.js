@@ -107,9 +107,9 @@ function ConstruirHtmlProductoDesplegable(element){
    `        <div id=${element.productId} class="itemBusqueda">
                 <img src=${element.image} alt="">
                 <div class="itemBusquedaData">
-                    <h2>
+                    <h4>
                     ${element.name}
-                    </h2>
+                    </h4>
                     <h3>
                         $${element.price}
                     </h3>
