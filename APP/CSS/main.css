@@ -176,7 +176,7 @@
 .mainContainer {
   grid-area: mainContainer;
   padding-top: 15px;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   cursor: pointer;
   width: 100%;
   display: block;
