@@ -41,7 +41,6 @@
       padding-top: 0px;
       background-color: #ffffff;
       margin-left: 27.5%;
-      margin-top: 300px;
       cursor: pointer;
       z-index: -1;
       width: 70%;
@@ -282,18 +281,55 @@
     }
   
   @media (max-width: 767px)  {
-    
+    .mainContainer {
+      grid-area: mainContainer;
+      padding-top: 15px;
+      background-color: #ffffff;
+      cursor: pointer;
+      width: 100%;
+      display: block;
+    }
+    .LogoBanner {
+      max-width: 100%;
+      height: 30%;
+      grid-area: banner;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .LogoBanner img{
+
+        background-size: cover;
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      background-color: #707070;
+      margin-top: 0px;
+    }
     .grid-container {
-      width: 100vw;
-      display: grid;
+      width: 100%;
+      gap: 0px;
+      display: flex;
+      flex-direction: column;
+      /* display: grid;
       gap: 10px;
-      grid-template-columns: 20% 80%;
-      grid-template-rows: 10% 1fr 10%;
+      grid-template-rows: 10% 5% 1fr 10%;
       grid-template:
-          "header header"
-          "mainContainer mainContainer"
-          "footer footer";
-  
+          "header "
+          "banner"
+          "mainContainer "
+          "footer "; */
+    }
     .imagenHamburguesa{
       display: block;
     }
@@ -321,22 +357,23 @@
       color: #7200FF;
     }
     .itemBusqueda img{
-      max-height: 100px ;
+      max-height: 12vh ;
+    }
+    .buscadorDesplegable{
+      display: flex;
+      flex-direction: column;
     }
     .itemBusqueda{
       width: 100% !important;
-      gap: 10px; 
       display: flex;
-      text-align: center;
       align-items: center;
-      direction: 2tr;
-      height: 105px;
+      
+      text-align: center;
+      height: 400px !important;
       transition: all 0.2s ease 0s;
       border-bottom: 1px solid rgba(0, 0, 0, 0.196);
     }
-    .buscadorDesplegable img{
-      width: 25%;
-    }
+
   
     .filtros-list h1{
       margin-bottom: 10px;
@@ -417,4 +454,4 @@
     }
       
   }
-  }
+  

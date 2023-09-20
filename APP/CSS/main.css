@@ -176,9 +176,7 @@
 .mainContainer {
   grid-area: mainContainer;
   padding-top: 15px;
-  margin-top: 200px;
   background-color: #ffffff;
-  left: -200px;
   cursor: pointer;
   width: 100%;
   display: block;
@@ -247,7 +245,9 @@ ul{
 .paginador a{
   color: #08FF0D;
 }
-
+.mapShow{
+  display: block;
+}
 
 
 
