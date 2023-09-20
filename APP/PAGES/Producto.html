@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/APP/CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="/APP/CSS/mapa.css">
+    <link rel="stylesheet" type="text/css" href="/APP/CSS/responsive.css">
+    <title> MVP Layout Mobile </title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body class="grid-container">
+    <header class="header">
+        <img type="image" id="logoUsuario" class="imagenUsuario" src="../IMAGES/logousuario.svg">
+        <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="../IMAGES/iconohamburguesa.svg">
+        <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar"
+            src="../IMAGES/CerrarDesplegable.png">
+
+        <div class="BuscadorDiv">
+            <img type="image" id="flecha" class="flechabuscador" src="../IMAGES/flecha2.png">
+            <input id="buscador-boton" type="text" class="buscador-input" placeholder="Busca tu producto">
+            <img type="image" id="logobuscador" class="imagenBuscadorInput" src="../IMAGES/logobuscador.svg">
+            </input>
+        </div>
+        <div class="logo">
+            <img type="image" src="../IMAGES/LOGO.svg" alt="logo del proyecto">
+        </div>
+        <img type="image" id="logobuscador" class="imagenBuscador" src="../IMAGES/logobuscador.svg">
+        <img type="image" id="logocarrito" class="imagenCarrito" src="../IMAGES/logocarrito.svg">
+        <img class="cerrarDesplegable" src="../IMAGES/CerrarDesplegable.png">
+    </header>
+    <div class="HeaderSecundario"> APLICACIONES MOVILES</div>
+
+
+    <div class="map" id="map">
+    </div>
+    <img class="CerrarMapa" src="../IMAGES/CerrarDesplegable.png">
+    <div id="carritoHeaderDesplegable" class="CarritoDesplegable"></div>
+    <div id="filtrosDesplegables" class="filtro">
+        <ul id="CategoriaList" class="filtros-list">
+            <H1 class="CategoriaDeplegable">Categorias</H1>
+
+        </ul>
+        <ul id="MarcasList" class="filtros-list">
+            <H1 class="MarcaDesplegable">Marcas </H1>
+        </ul>
+    </div>
+    <div id="buscadorDesplegable" class="buscadorDesplegable">
+
+    </div>
+    <main class="mainContainer">
+        <div class="productoDetails">
+            <h2>Proces. Intel CoffeeLake Core I3 9100 3.6 ghz s1151 (6264)</h2>
+            <div class="productImageDetail">
+                <img src="../IMAGES/productos/procesador.webp" alt="">
+                <h3>Oferta!</h3>
+            </div>
+            <div class="detailsContainer">
+                <div class="details">
+                    <h1 class="Price">$1299,99</h1>
+                    <br>
+                    <button class="btnComprar">COMPRAR</button>
+                    <button class="btnAdd">AGREGAR AL CARRITO</button>
+                </div>
+    
+                <div class="Description">
+                    <h4>El procesador Intel Core i7-7700K es una potente unidad de procesamiento diseñada para satisfacer
+                        las necesidades de los entusiastas y usuarios avanzados. Con una arquitectura de cuatro núcleos y
+                        ocho hilos, este chip ofrece un rendimiento excepcional. Funciona a una velocidad base de 4.2 GHz,
+                        que puede aumentar hasta 4.5 GHz gracias a la tecnología Intel Turbo Boost 2.0. Esto lo convierte en
+                        una elección ideal para tareas intensivas en CPU, como juegos, edición de vídeo y diseño gráfico.
+                    </h4>
+                </div>
+                
+                <div class="datosUtiles">
+                    <div class="datosUtiles-unidad">
+                        <div class="icono">
+                            <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/StockAlto.svg" alt="">
+                        </div>
+                        <div class="textoDato">
+                            <h3 class="greenCaption">Stock alto en la web</h3>
+                            <h3 class="GrayCaption">Solo para venta web </h3>
+                        </div>
+                    </div>
+                    <div class="datosUtiles-unidad">
+                        <div class="icono">
+                            <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/SinStock.svg" alt="">
+                        </div>
+                        <div class="textoDato">
+                            <h3 class="redCaption">SIN STOCK EN EL LOCAL</h3>
+                            <h3 class="GrayCaption">Solo para venta presencial</h3>
+                        </div>
+                    </div>
+    
+                    <div class="datosUtiles-unidad">
+                        <div class="icono">
+                            <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/MaximusStore.svg" alt="">
+                        </div>
+                        <div class="textoDato">
+                            <h3 class="GrayCaption">RETIRO <span style="color: #28FF0D">GRATIS!</span></h3>
+                            <h3 class="GrayCaption">En la UNAJ! (Florencio varela)</h3>
+                        </div>
+                    </div>
+                    <div class="datosUtiles-unidad">
+                        <div class="icono">
+                            <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/CamionEnvios.svg" alt="">
+                        </div>
+                        <div class="textoDato">
+                            <h3 class="GrayCaption">Envios a todo el pais</span></h3>
+                            <h3 class="GrayCaption">En la UNAJ! (Florencio varela)</h3>
+                        </div>
+                    </div>
+                    <div class="contactContainer">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </main>
+
+    <div class="isquierdo"></div>
+    <div class="derecho"></div>
+
+    <footer class="footer">
+        <img src="../IMAGES/LOGO.svg" alt="logo del proyecto">
+        <img src="../IMAGES/logoubicacion.png" class="logoubicacion" onclick="DibujarMapa();">
+        <div href="#">Ubicacion</div>
+    </footer>
+</body>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../JS/main.js"></script>
+<script src="../JS/mapa.js"></script>
+<script  src="../JS/buscador.js"></script>
+<script src="../JS/producto.js"></script>
+
+</html>

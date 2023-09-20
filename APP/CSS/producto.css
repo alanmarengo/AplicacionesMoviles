@@ -44,9 +44,9 @@
   
   
   article h3 {
-  word-break: break-all;
-  text-align: center;
-  margin: 3px 3px;
+    word-break: break-all;
+    text-align: center;
+    margin: 3px 3px;
   }
   
   article h4 {
