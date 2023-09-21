@@ -74,18 +74,18 @@ function RenderizarCarritoEnContenedor(){
 function ConstruirHTMLProductoCarrito(producto){
     
  var productoCarro =   `
-        <div id="${producto.id}" class="ItemCarrito">
+        <div id="a${producto.id}" class="ItemCarrito">
         <img src=${producto.imagen} alt="">
         <div class="itemCarritoData">
             <h4>
                 ${producto.nombre}
             </h4>
             <h3>
-                $${producto.precio}
+                $${producto.precio*producto.cantidad}
             </h3>
             <div class="contadores">
-                <button class="ItemCarritoButtonAdd" onlick="RestarCantidad(${producto.id})" >-</button>
-                <h4 id="contador" class="contadorCarrito">${producto.cantidad}</h4><h4>x</h4>
+                <button class="ItemCarritoButtonAdd" onclick="RestarCantidad(${producto.id})" >-</button>
+                <h4 id="contador-${producto.id}" class="contadorCarrito">${producto.cantidad}</h4><h4>x</h4>
                 <button class="ItemCarritoButtonDelete" onclick="SumarCantidad(${producto.id})">+</button>
             </div>
             
@@ -111,36 +111,35 @@ function ModificarCantidadProductoCarroLocalStorage(productoID,cantidad){
     GuardarCarro(JSON.stringify(carro));
 }
 
-function ObtenerContenedorContador(){
-    var contenedorCarrito = $('.CarritoDesplegable');
-    var contador = contenedorCarrito.find(".contadorCarrito");
-    return contador;
+function ObtenerContenedorContador(productoID){
+    var contenedorCarrito = $('#contador-'+productoID);
+    return contenedorCarrito;
 }
 
 function SumarCantidad(productoID){
-    var contador = ObtenerContenedorContador();
-    var contadorActualizado = ObtenerValorContadorProducto();
+    var contador = ObtenerContenedorContador(productoID);
+    var contadorActualizado = ObtenerValorContadorProducto(productoID);
     contadorActualizado++;
     contador.html(contadorActualizado);
     ModificarCantidadProductoCarroLocalStorage(productoID,contadorActualizado);
 }
 
 function RestarCantidad(productoID){
-    var contador = ObtenerContenedorContador();
-    var contadorActualizado = ObtenerValorContadorProducto();
+    var contador = ObtenerContenedorContador(productoID);
+    var contadorActualizado = ObtenerValorContadorProducto(productoID);
     contadorActualizado--;
     contador.html(contadorActualizado);
     ModificarCantidadProductoCarroLocalStorage(productoID,contadorActualizado);
 }
 
-function ObtenerValorContadorProducto(){
-    var contador = ObtenerContenedorContador();
+function ObtenerValorContadorProducto(productoID){
+    var contador = ObtenerContenedorContador(productoID);
     var valorContador = parseInt(contador.html());
     return valorContador;
 }
 function BorrarProductoCarroLocalStorage(productoID){
-    var contenedorCarrito = $('.CarritoDesplegable');
-    contenedorCarrito.remove("#"+productoID);
+    var contenedorCarrito = document.querySelector('.CarritoDesplegable').querySelector("#a"+productoID);
+    contenedorCarrito.remove();
     var nuevoCarro = [];
     var carroActual = ObtenerCarroLocalStorage();
     carroActual.forEach((element)=>{
