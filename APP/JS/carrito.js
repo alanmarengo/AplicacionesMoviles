@@ -13,13 +13,17 @@ function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad){
     }
     else{
         var carroLocalStorage = ObtenerCarroLocalStorage();
-        carroLocalStorage.forEach((element)=>{
-            if(verificarExistenciaDeProducto(id,carroLocalStorage)){
-                element.cantidad++;
-            }else{
-                carroLocalStorage.push(producto);
+        var existeProducto = false;
+        for(const producto of carroLocalStorage){
+            if(producto.id==id){
+                existeProducto = true;
+                producto.cantidad++;
+                break;
             }
-        });
+        }
+        if(!existeProducto){
+            carroLocalStorage.push(producto); 
+        }
         GuardarCarro(JSON.stringify(carroLocalStorage));
     }
 }
@@ -31,17 +35,6 @@ function GuardarCarro(carro){
 function ObtenerCarroLocalStorage(){
     var carro = JSON.parse(localStorage.getItem('carro'));
     return carro;
-}
-
-function verificarExistenciaDeProducto(productoID, productos){
-    var existencia = false;
-    productos.forEach((element)=>{
-        if(element.id==productoID)
-        {
-            existencia=true;
-        }
-    });
-    return existencia;
 }
 
 
