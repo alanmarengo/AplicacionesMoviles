@@ -2,6 +2,7 @@ $(function() {
     RenderizarContenidoProducto();
 });
 
+
 function ObtenerIdProducto(){
     const parametros = new URL(location.href).searchParams;
     const productoId = parametros.get('productoId');
@@ -104,9 +105,35 @@ async function ObtenerProductoPorId(){
 
 
 async function RenderizarContenidoProducto(){
+   
     var producto = await ObtenerProductoPorId();
+    GuardarProductoEnHistorialLocalStorage(producto);
     var productoContainer = $('.mainContainer');
     productoContainer.html("");
     var productoHTML = ConstruirHtmlProducto(producto);
     productoContainer.append(productoHTML);
+
 }
+
+
+
+function GuardarProductoEnHistorialLocalStorage(producto){
+    var historial =[];
+    var producto = {
+        id : producto.productId,
+        precio : producto.price,
+        imagen : producto.images.images[0].url,
+    }
+    if(!VerificarExistenciaHistorialLocalStorage()){
+        historial.push(producto);
+        GuardarHistorial(JSON.stringify(historial));
+    }
+    else{
+        var historialLocalStorage = ObtenerHistorialLocalStorage();
+        if(!ValidarExistenciaProductoHistorial(producto.id,historialLocalStorage)){
+            historialLocalStorage.push(producto);
+            GuardarHistorial(JSON.stringify(historialLocalStorage));
+        }
+    }
+}
+
