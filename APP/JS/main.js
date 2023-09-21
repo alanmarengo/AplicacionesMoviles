@@ -1,4 +1,8 @@
 $(function() {
+  RenderizarContenidoFooterYHeader();
+
+
+
   $(".imagenBuscador").on('click', function(){
     $(".imagenCarrito").css("display","none");
     $(".imagenUsuario").css("display","none");
@@ -82,4 +86,41 @@ $(function() {
     $(".filtro").css("margin-top","-8000px");
     $(".mainContainer").css("filter","brightness(100%)");
   });
+
 });
+
+function RenderizarContenidoFooterYHeader(){
+  $(".header").html("")
+  $(".header").html(ContenidoHeader);
+  $(".footer").html("")
+  $(".footer").html(ContenidoFooter);
+}
+
+
+
+const ContenidoHeader = () => 
+`
+  <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/favoritos.png" >   
+  <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
+  <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
+
+  <div class="BuscadorDiv">
+      <img type="image" id="flecha" class="flechabuscador" src="http://127.0.0.1:5500/APP/IMAGES/flecha2.png" >
+      <input id="buscador-boton"  type="text" class="buscador-input" placeholder="Busca tu producto">
+          <img type="image" id="logobuscador" class="imagenBuscadorInput" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
+      </input>    
+  </div>
+  <div class="logo">
+      <img type="image" src = "http://127.0.0.1:5500/APP/IMAGES/LOGO.svg" alt = "logo del proyecto">          
+  </div>
+  <img type="image" id="logobuscador" class="imagenBuscador" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
+  <img type="image" id="logocarrito" class="imagenCarrito" src="http://127.0.0.1:5500/APP/IMAGES/logocarrito.svg" >
+  <img class="cerrarDesplegable" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
+  `;
+
+const ContenidoFooter=()=>
+  `
+  <img src = "http://127.0.0.1:5500/APP/IMAGES/LOGO.svg" alt = "logo del proyecto">
+  <img src="http://127.0.0.1:5500/APP/IMAGES/Logoubicacion.png" class="logoubicacion" onclick="DibujarMapa();">
+  <div href="#">Ubicacion</div>
+  `;
