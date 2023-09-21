@@ -1,36 +1,91 @@
 $(function() {
-    VerificarTipoYRenderizar();
+    Renderizar();
     
 });
-
-
-async function VerificarTipoYRenderizar(){
-    if(VerificarQuerStringCategoria()!=null){
-        RenderizarContenidoCategoriaDesplegable(VerificarQuerStringCategoria());
-    }
-    if(VerificarQuerStringMarca()!=null){
-        RenderizarContenidoMarcaDesplegable(VerificarQuerStringMarca());
-    }
-    if(VerificarQuerStringCategoria()==null&&VerificarQuerStringMarca()==null){
-        RenderizarContenido(1);
-    }
-    //FALTA LA LOGICA PARA ELIMINAR LOS QUERY STRING DE MARCA Y CATEGORIA
-    //history.pushState(null, "", "index.html");
+const marca =VerificarQuerStringMarca();
+const categoria = VerificarQuerStringCategoria();
+let marcaListado;
+let categoriaListado;
+async function Renderizar(){
+    RenderizarContenido(1,marca,categoria);
 }
 
 function ValidarUbicacionIndex(){
-    return window.location=="http://127.0.0.1:5500/APP/index.html";
+    return window.location.href.includes("index.html");
 }
 
 async function RenderizarContenido(numeropagina,marca,categoria){
-    var productos = await ObtenerProductosInicial(numeropagina,marca,categoria);
-    if(ValidarUbicacionIndex() || VerificarQuerStringCategoria()!=null || VerificarQuerStringMarca()!= null)
-    {
+    const productos = await ObtenerProductosInicial(numeropagina,marca,categoria);
+    categoriaListado = productos.metadata.categoryFilters.categorys;
+    marcaListado = productos.metadata.tradeMarkFilter;
+    if(ValidarUbicacionIndex())
+    {   
         renderizarProductos(productos.product);
+        RenderizarFiltros();
     }
-    renderizarCategoriasDesplegable(productos.metadata.categoryFilters.categorys);
-    renderizarMarcasDesplegable( productos.metadata.tradeMarkFilter);
+    renderizarCategoriasDesplegable(categoriaListado);
+    renderizarMarcasDesplegable(marcaListado);
 }
+
+
+
+
+
+function RenderizarFiltros(){
+ if( marca || categoria){
+    //a este poner :
+     /*
+        display: flex
+        flex-wrap: wrap
+        
+     */
+
+     //al 5h un width: 100%   
+    const filtrosContainer = $('#filtros_container');
+    filtrosContainer.append(`<h5 class = "filtros"> Filtros</h5>`);
+    if(marca){
+        const marcaInfo = marcaListado[0];
+        filtrosContainer.append(ConstuirHtmlMarcaFiltro(marcaInfo.description));
+    }
+    if(categoria){
+        const categoriaInfo = categoriaListado[0];
+        filtrosContainer.append(ConstuirHtmlCategoriaFiltro(categoriaInfo.descripcion));
+    }
+}
+}
+
+
+function BorrarFiltroCategoria(){
+    let url = window.location.href.replace('categoriaID='+categoria,"");
+    window.location.href = url;
+}
+
+function BorrarFiltroMarca(){
+    let url = window.location.href.replace('marcaID='+marca,"");
+    window.location.href = url;
+}
+
+function ConstuirHtmlCategoriaFiltro(descripcion){
+    return `  
+            
+            <div class="">
+                <span> ${descripcion} </span>
+                <button onclick="BorrarFiltroCategoria()"> X </button>
+            </div>
+    `;
+}
+
+function ConstuirHtmlMarcaFiltro(descripcion){
+    return `    
+            <div class="">
+                <span> ${descripcion} </span>
+                <button onclick="BorrarFiltroMarca()"> X </button>
+            </div>
+    `;
+}
+
+
+
 
 function renderizarProductos(productos){
     var productsContainer = $('#ProductsContainer');
@@ -148,7 +203,7 @@ function ConstruirHtmlProductoDesplegable(element){
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
   `<div class= contenedorCategoria>
-  <li id=${element.categoriaId} onclick="FiltrarPorCategoria('${element.categoriaId}');" class ="categoriali"> 
+  <li id=${element.categoriaId} onclick="Filtrar('${element.categoriaId}',${marca});" class ="categoriali"> 
   <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a>
   </li>
   <div>
@@ -160,48 +215,22 @@ function ConstruirHtmlMarca(element){
     var MarcaDesplegable = 
     `
     <div class= contenedorCategoria>
-    <li id=${element.id} onclick="FiltrarPorMarca('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <li id=${element.id} onclick="Filtrar(${categoria},'${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     <div>
     `;
     return MarcaDesplegable;
   }
 
-async function RenderizarContenidoCategoriaDesplegable(idcategoria){
-    await RenderizarContenido(1,null,idcategoria);
-    if(screen.width <= 428){
-    $(".imagenhamburguesacerrar").css("display","none");
-    $(".imagenHamburguesa").css("display","flex");
-    $(".filtro").css("margin-top","-8000px");
-    $(".mainContainer").css("filter","brightness(100%)");
+
+function Filtrar(categoriaID,marcaID){
+    let url = "http://127.0.0.1:5500/APP/index.html?";
+    if(marcaID){
+        url+="marcaID="+marcaID+"&";
     }
-}
-
-
-async function FiltrarPorCategoria(idcategoria){
-    if(!ValidarUbicacionIndex()){
-
-        window.location = "http://127.0.0.1:5500/APP/index.html?categoriaID="+idcategoria;
+    if(categoriaID){
+        url+="categoriaID="+categoriaID;
     }
-    await RenderizarContenidoCategoriaDesplegable(idcategoria);
-}
-
-async function FiltrarPorMarca(marcaID){
-    if(!ValidarUbicacionIndex()){
-
-        window.location = "http://127.0.0.1:5500/APP/index.html?marcaID="+marcaID;
-    }
-    await RenderizarContenidoMarcaDesplegable(marcaID);
-}
-
-
-async function RenderizarContenidoMarcaDesplegable(idMarca){
-    await RenderizarContenido(1,idMarca,null);
-    if(screen.width <= 428){
-    $(".imagenhamburguesacerrar").css("display","none");
-    $(".imagenHamburguesa").css("display","flex");
-    $(".filtro").css("margin-top","-8000px");
-    $(".mainContainer").css("filter","brightness(100%)");
-    }
+    window.location = url;
 }
 
 async function RenderizarContenidoProductoDesplegable(coincidencia){
