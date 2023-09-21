@@ -533,8 +533,15 @@
     font-size: 1.5vh;
   }
   .historialDesplegable{
-    display: flex;
+    position: absolute;
+    display: flex !important;
     flex-direction: column;
+    height: 400px;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    background-color: white;
+    width: 100%;
   }
   .historialDesplegable img{
     max-height: 12vh ;
@@ -552,6 +559,12 @@
   /*Item historial---------------------------------------------------------------------*/
 
   /* Item de Carrito-------------------------------------------------------------------*/
+  .itemCarritoData h3{
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+  
   .CarritoDesplegable{
     position: absolute;
     display: flex !important;
@@ -568,7 +581,7 @@
   .btnBorrar{
     width: 60px;
   }
-  .ItemCarrito h3{
+  .ItemCarrito  h3{
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
@@ -600,7 +613,9 @@
     width: 30px;
   }
 .borrarCarrito img{
-  max-width: 5vh;
+  margin-left: 1vh;
+  margin-bottom: 2vh;
+  max-width: 4vh;
   
 }
 .contadores{
