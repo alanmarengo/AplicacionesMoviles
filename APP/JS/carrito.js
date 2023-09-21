@@ -81,7 +81,7 @@ function ConstruirHTMLProductoCarrito(producto){
                 ${producto.nombre}
             </h4>
             <h3>
-                ${producto.precio}
+                $${producto.precio}
             </h3>
             <div class="contadores">
                 <button class="ItemCarritoButtonAdd" onlick="RestarCantidad(${producto.id})" >-</button>

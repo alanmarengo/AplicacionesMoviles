@@ -486,6 +486,19 @@
     }
 
     /* Item de busqueda----------------------------------------------------------------- */
+    .buscadorDesplegable{
+      position: absolute;
+      display: flex !important;
+      flex-direction: column;
+      height: 100%;
+      max-height: 400px;
+      direction: ltr;
+      overflow: hidden scroll;
+      /* height: -700px; */
+      background-color: white;
+      width: 100%;
+    }
+    
     .itemBusquedaData h3{
       margin-top: 10px;
       color: #7200FF;
@@ -511,7 +524,34 @@
   /* Item de busqueda----------------------------------------------------------------- */
 
 
-  /* Item de Carrito----------------------------------------------------------------- */
+  /*Item historial---------------------------------------------------------------------*/
+ 
+  .historialDesplegable h4{
+    align-self: center;
+    text-align: center ;
+    color: #505050;
+    font-size: 1.5vh;
+  }
+  .historialDesplegable{
+    display: flex;
+    flex-direction: column;
+  }
+  .historialDesplegable img{
+    max-height: 12vh ;
+  }
+  .ItemHistorial{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  /*Item historial---------------------------------------------------------------------*/
+
+  /* Item de Carrito-------------------------------------------------------------------*/
   .CarritoDesplegable{
     position: absolute;
     display: flex !important;
@@ -520,10 +560,9 @@
     max-height: 400px;
     direction: ltr;
     overflow: hidden scroll;
-    /* height: -700px; */
     background-color: white;
     width: 100%;
-    padding: 20px;
+
   }
   
   .btnBorrar{
@@ -538,21 +577,11 @@
     margin-right: 5vh;
     max-height: 12vh ;
   }
-  .buscadorDesplegable{
-    
-    position: absolute;
-    display: flex !important;
-    flex-direction: column;
-    height: 400px;
-    max-height: 400px;
-    direction: ltr;
-    overflow: hidden scroll;
-    /* height: -700px; */
-    background-color: white;
-    width: 100%;
-    padding: 20px;
-  }
-
+  
+.ItemCarrito h4{
+  color: #505050;
+  font-size: 1.5vh;
+}
   .ItemCarrito{
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -563,7 +592,7 @@
     transition: all 0.2s ease 0s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
-  .ItemCarritoButton{
+  .ItemCarritoButtonAdd, .ItemCarritoButtonDelete{
     margin-bottom: 1vh;
     border-color: #28FF0D;
     border-radius: 15px;
@@ -575,9 +604,12 @@
   
 }
 .contadores{
+  margin-left: 6vh;
+  display: flex;
+  color: #7200FF;
   display: flex;
   flex-direction: row;
-  gap: 2vh;
+  gap: 1vh;
 }
   /* Item de Carrito----------------------------------------------------------------- */
 
