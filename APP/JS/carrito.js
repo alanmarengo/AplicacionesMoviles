@@ -14,7 +14,7 @@ function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad){
     else{
         var carroLocalStorage = ObtenerCarroLocalStorage();
         carroLocalStorage.forEach((element)=>{
-            if(element.id==id){
+            if(verificarExistenciaDeProducto(id,carroLocalStorage)){
                 element.cantidad++;
             }else{
                 carroLocalStorage.push(producto);
@@ -31,6 +31,17 @@ function GuardarCarro(carro){
 function ObtenerCarroLocalStorage(){
     var carro = JSON.parse(localStorage.getItem('carro'));
     return carro;
+}
+
+function verificarExistenciaDeProducto(productoID, productos){
+    var existencia = false;
+    productos.forEach((element)=>{
+        if(element.id==productoID)
+        {
+            existencia=true;
+        }
+    });
+    return existencia;
 }
 
 
