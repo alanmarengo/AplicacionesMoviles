@@ -18,7 +18,7 @@ async function  ObtenerPathProduct(){
 function ConstruirHtmlProducto(element){
     var product = 
     `
-    <div class="productoDetails">
+    <div class="productoDetails" id=${element.productId}>
     <h2>${element.name}</h2>
     <div class="productImageDetail">
         <img src=${element.images.images[0].url} alt="">
@@ -29,7 +29,7 @@ function ConstruirHtmlProducto(element){
             <h1 class="Price">$${element.price}</h1>
             <br>
             <button class="btnComprar">COMPRAR</button>
-            <button class="btnAdd">AGREGAR AL CARRITO</button>
+            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage(${element.productId},${element.price},${element.images.images[0].url},${1})">AGREGAR AL CARRITO</button>
         </div>
 
         <div class="Description">
