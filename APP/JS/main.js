@@ -87,6 +87,11 @@ $(function() {
     $(".mainContainer").css("filter","brightness(100%)");
   });
 
+
+  $(".imagenUsuario").on('click', function(){  
+    $(".buscadorDesplegable").css("margin-top","70px");
+
+  });
 });
 
 function RenderizarContenidoFooterYHeader(){
@@ -100,7 +105,7 @@ function RenderizarContenidoFooterYHeader(){
 
 const ContenidoHeader = () => 
 `
-  <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >   
+  <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >
   <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
   <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
 
