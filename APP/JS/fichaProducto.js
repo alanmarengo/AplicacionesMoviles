@@ -29,7 +29,7 @@ function ConstruirHtmlProducto(element){
             <h1 class="Price">$${element.price}</h1>
             <br>
             <button class="btnComprar">COMPRAR</button>
-            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage(${element.productId},${element.price},${element.images.images[0].url},${1})">AGREGAR AL CARRITO</button>
+            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}' )" >AGREGAR AL CARRITO</button>
         </div>
 
         <div class="Description">

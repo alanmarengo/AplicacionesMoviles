@@ -6,6 +6,7 @@ function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad){
         imagen : imagen,
         cantidad : cantidad
     }
+    
     if(!VerificarExistenciaCarroLocalStorage()){
         carro.push(producto);
         GuardarCarro(JSON.stringify(carro));
@@ -57,6 +58,7 @@ function BorrarProductoCarroLocalStorage(productoID){
     );
     GuardarCarro(JSON.stringify(nuevoCarro));
 }
+
 
 
 
