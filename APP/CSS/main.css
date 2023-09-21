@@ -85,7 +85,7 @@
   height: 38px;
   width: 38px;
   position: absolute;
-  margin-left: -260px;
+  margin-left :260px;
   cursor: pointer;
 }
 
@@ -108,12 +108,11 @@
   transition: 250ms;
 }
 
-
 .imagenCarrito{
   height: 38px;
   width: 38px;
   position: absolute;
-  margin-left :260px;
+  margin-left: -260px;
   cursor: pointer;
 }
 
@@ -132,7 +131,7 @@
   height: 43px;
   width: 43px;
   position: absolute;
-  margin-left :260px;
+  margin-left :-260px;
   cursor: pointer;
 }
 
