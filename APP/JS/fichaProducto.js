@@ -30,7 +30,7 @@ function ConstruirHtmlProducto(element){
             <h1 class="Price">$${element.price}</h1>
             <br>
             <button class="btnComprar">COMPRAR</button>
-            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}' )" >AGREGAR AL CARRITO</button>
+            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}','${element.name}' )" >AGREGAR AL CARRITO</button>
         </div>
 
         <div class="Description">
@@ -123,6 +123,7 @@ function GuardarProductoEnHistorialLocalStorage(producto){
         id : producto.productId,
         precio : producto.price,
         imagen : producto.images.images[0].url,
+        nombre : producto.name
     }
     if(!VerificarExistenciaHistorialLocalStorage()){
         historial.push(producto);

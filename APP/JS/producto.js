@@ -14,6 +14,8 @@ async function VerificarTipoYRenderizar(){
     if(VerificarQuerStringCategoria()==null&&VerificarQuerStringMarca()==null){
         RenderizarContenido(1);
     }
+    //FALTA LA LOGICA PARA ELIMINAR LOS QUERY STRING DE MARCA Y CATEGORIA
+    //history.pushState(null, "", "index.html");
 }
 
 function ValidarUbicacionIndex(){

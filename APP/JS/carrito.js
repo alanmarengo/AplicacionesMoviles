@@ -1,10 +1,11 @@
-function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad){
+function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad,nombre){
     var carro =[];
     var producto = {
         id : id,
         precio : precio,
         imagen : imagen,
-        cantidad : cantidad
+        cantidad : cantidad,
+        nombre : nombre
     }
     
     if(!VerificarExistenciaCarroLocalStorage()){
@@ -71,6 +72,7 @@ function RenderizarCarritoEnContenedor(){
 
 
 function ConstruirHTMLProductoCarrito(producto){
+    
  var productoCarro =   `
         <div id="${producto.id}" class="ItemCarrito">
         <img src=${producto.imagen} alt="">
@@ -106,10 +108,17 @@ function ModificarCantidadProductoCarroLocalStorage(productoID,cantidad){
             element.cantidad=cantidad;
         }   
     });
+    GuardarCarro(JSON.stringify(carro));
 }
 
+function ObtenerContenedorContador(){
+    var contenedorCarrito = $('.CarritoDesplegable');
+    var contador = contenedorCarrito.find(".contadorCarrito");
+    return contador;
+}
 
 function SumarCantidad(productoID){
+    var contador = ObtenerContenedorContador();
     var contadorActualizado = ObtenerValorContadorProducto();
     contadorActualizado++;
     contador.html(contadorActualizado);
@@ -117,20 +126,21 @@ function SumarCantidad(productoID){
 }
 
 function RestarCantidad(productoID){
+    var contador = ObtenerContenedorContador();
     var contadorActualizado = ObtenerValorContadorProducto();
     contadorActualizado--;
     contador.html(contadorActualizado);
-    ModificarCantidadProductoCarroLocalStorage(productoID,valorContador);
+    ModificarCantidadProductoCarroLocalStorage(productoID,contadorActualizado);
 }
 
 function ObtenerValorContadorProducto(){
-    var contenedorCarrito = $('.CarritoDesplegable');
-    var contador = contenedorCarrito.find(".contadorCarrito").html();
-    var valorContador = parseInt(contador);
+    var contador = ObtenerContenedorContador();
+    var valorContador = parseInt(contador.html());
     return valorContador;
 }
 function BorrarProductoCarroLocalStorage(productoID){
-    //aca se debe obtener el ID del contenedor de productos del carrito y borrarle el elemento con este ID.
+    var contenedorCarrito = $('.CarritoDesplegable');
+    contenedorCarrito.remove("#"+productoID);
     var nuevoCarro = [];
     var carroActual = ObtenerCarroLocalStorage();
     carroActual.forEach((element)=>{
