@@ -1,4 +1,5 @@
  DibujarMapa =() =>{
+    $(".map").css("display","block");
     $(".CerrarMapa").css("display","block");
     var map = L.map('map').setView([-34.775482,-58.266810],16);
     $('body,html').css({ "position": "fixed", "overflow-y": "scroll" });
