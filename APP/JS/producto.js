@@ -1,10 +1,31 @@
 $(function() {
-    RenderizarContenido(1);
+    VerificarTipoYRenderizar();
+    
 });
+
+
+async function VerificarTipoYRenderizar(){
+    if(VerificarQuerStringCategoria()!=null){
+        RenderizarContenidoCategoriaDesplegable(VerificarQuerStringCategoria());
+    }
+    if(VerificarQuerStringMarca()!=null){
+        RenderizarContenidoMarcaDesplegable(VerificarQuerStringMarca());
+    }
+    if(VerificarQuerStringCategoria()==null&&VerificarQuerStringMarca()==null){
+        RenderizarContenido(1);
+    }
+}
+
+function ValidarUbicacionIndex(){
+    return window.location=="http://127.0.0.1:5500/APP/index.html";
+}
 
 async function RenderizarContenido(numeropagina,marca,categoria){
     var productos = await ObtenerProductosInicial(numeropagina,marca,categoria);
-    renderizarProductos(productos.product);
+    if(ValidarUbicacionIndex() || VerificarQuerStringCategoria()!=null || VerificarQuerStringMarca(9!= null))
+    {
+        renderizarProductos(productos.product);
+    }
     renderizarCategoriasDesplegable(productos.metadata.categoryFilters.categorys);
     renderizarMarcasDesplegable( productos.metadata.tradeMarkFilter);
 }
@@ -26,6 +47,7 @@ function renderizarCategoriasDesplegable(categorias){
         var category = ConstruirHtmlCategoria(element);
         categoryContainer.append(category);
         });
+   
 }
 function renderizarMarcasDesplegable(marcas){
     var trademarkContainer = $('#MarcasList');
@@ -55,7 +77,7 @@ async function ObtenerProductosInicial(numeropagina,marca,categoria){
 }
 
 async function ConstruirPathFiltro(numeropagina,marca,categoria){
-    var path = await ObtenerPathProduct("productosIniciales");
+    var path = await ObtenerPathProduct();
     path+="?";
     path = numeropagina  !== null || numeropagina !== 'undefined' ? (path+"PageNumber="+numeropagina+"&PageSize=20") : (path+"PageNumber=1&PageSize=20");
     path = (categoria > 0 ) ? ( path +"&Categorical="+categoria) : path ;
@@ -64,7 +86,7 @@ async function ConstruirPathFiltro(numeropagina,marca,categoria){
 }
 
 async function ConstruirPathProductoCoincidencia(coincidencia){
-    var path = await ObtenerPathProduct("productosIniciales");
+    var path = await ObtenerPathProduct();
     path+="/GetProductByCoincidence?Coincidence="+coincidencia;
     return path;
 }
@@ -80,7 +102,7 @@ function ConstruirHtmlProducto(element){
 
     var product = 
     `
-    <article class="product">
+    <article id=${element.productId} class="product">
     <div class="productImage">
         <img src= ${element.images[0].url} alt="">
         <h1>Oferta!</h1>
@@ -94,7 +116,7 @@ function ConstruirHtmlProducto(element){
         <h6>$${(element.price)/12}</h6>
     </div>
     <br>
-    <button>VER MAS</button>
+    <button onclick="RedirigirFichaProducto(${element.productId})" >VER MAS</button>
     </article>                   
     `;
 
@@ -104,7 +126,7 @@ function ConstruirHtmlProducto(element){
 
 function ConstruirHtmlProductoDesplegable(element){
    var ProductoDesplegable =  
-   `        <div id=${element.productId} class="itemBusqueda">
+   `        <div id=${element.productId} class="itemBusqueda" onclick="RedirigirFichaProducto(${element.productId})">
                 <img src=${element.image} alt="">
                 <div class="itemBusquedaData">
                     <h4>
@@ -124,7 +146,7 @@ function ConstruirHtmlProductoDesplegable(element){
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
   `<div class= contenedorCategoria>
-  <li id=${element.categoriaId} onclick="RenderizarContenidoCategoriaDesplegable('${element.categoriaId}');" class ="categoriali"> 
+  <li id=${element.categoriaId} onclick="FiltrarPorCategoria('${element.categoriaId}');" class ="categoriali"> 
   <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a>
   </li>
   <div>
@@ -136,7 +158,7 @@ function ConstruirHtmlMarca(element){
     var MarcaDesplegable = 
     `
     <div class= contenedorCategoria>
-    <li id=${element.id} onclick="RenderizarContenidoMarcaDesplegable('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <li id=${element.id} onclick="FiltrarPorMarca('${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     <div>
     `;
     return MarcaDesplegable;
@@ -151,6 +173,24 @@ async function RenderizarContenidoCategoriaDesplegable(idcategoria){
     $(".mainContainer").css("filter","brightness(100%)");
     }
 }
+
+
+async function FiltrarPorCategoria(idcategoria){
+    if(!ValidarUbicacionIndex()){
+
+        window.location = "http://127.0.0.1:5500/APP/index.html?categoriaID="+idcategoria;
+    }
+    await RenderizarContenidoCategoriaDesplegable(idcategoria);
+}
+
+async function FiltrarPorMarca(marcaID){
+    if(!ValidarUbicacionIndex()){
+
+        window.location = "http://127.0.0.1:5500/APP/index.html?marcaID="+marcaID;
+    }
+    await RenderizarContenidoMarcaDesplegable(marcaID);
+}
+
 
 async function RenderizarContenidoMarcaDesplegable(idMarca){
     await RenderizarContenido(1,idMarca,null);
@@ -171,13 +211,10 @@ async function RenderizarContenidoProductoDesplegable(coincidencia){
 }
 
 
-async function  ObtenerPathProduct(servicio){
-    var JSONCONFIG = $.getJSON("./CONFIG/config.json");
+async function  ObtenerPathProduct(){
+    var JSONCONFIG = $.getJSON("http://127.0.0.1:5500/APP/CONFIG/config.json");
     var BodyJson = await JSONCONFIG;
-    switch(servicio){
-        case "productosIniciales":
-            return BodyJson.PathProductBase;
-    }
+    return BodyJson.PathProductBase;
 }
 
 
@@ -186,4 +223,22 @@ async function ObtenerProductosPorCoincidencia(coincidencia){
     var path= await ConstruirPathProductoCoincidencia(coincidencia);
     var products = $.getJSON(path);
     return await products;
+}
+
+
+function RedirigirFichaProducto(productoId){
+    window.location = "http://127.0.0.1:5500/APP/PAGES/producto.html?productoId="+productoId;
+}
+
+
+function VerificarQuerStringCategoria(){
+    const parametros = new URL(location.href).searchParams;
+    const categoriaID = parametros.get('categoriaID');
+    return categoriaID;
+}
+
+function VerificarQuerStringMarca(){
+    const parametros = new URL(location.href).searchParams;
+    const marcaID = parametros.get('marcaID');
+    return marcaID;
 }
