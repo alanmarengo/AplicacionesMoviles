@@ -62,6 +62,7 @@ $(function() {
     $(".productsContainer").css("padding-top","10px");
     $(".imagenCarrito").css("display","none");
     $(".cerrarDesplegable").css("display","flex");
+    RenderizarCarritoEnContenedor();
 
   });
 

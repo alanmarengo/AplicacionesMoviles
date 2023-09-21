@@ -2,6 +2,7 @@ $(function() {
     RenderizarContenidoProducto();
 });
 
+
 function ObtenerIdProducto(){
     const parametros = new URL(location.href).searchParams;
     const productoId = parametros.get('productoId');
@@ -29,7 +30,7 @@ function ConstruirHtmlProducto(element){
             <h1 class="Price">$${element.price}</h1>
             <br>
             <button class="btnComprar">COMPRAR</button>
-            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}' )" >AGREGAR AL CARRITO</button>
+            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}','${element.name}' )" >AGREGAR AL CARRITO</button>
         </div>
 
         <div class="Description">
@@ -104,9 +105,36 @@ async function ObtenerProductoPorId(){
 
 
 async function RenderizarContenidoProducto(){
+   
     var producto = await ObtenerProductoPorId();
+    GuardarProductoEnHistorialLocalStorage(producto);
     var productoContainer = $('.mainContainer');
     productoContainer.html("");
     var productoHTML = ConstruirHtmlProducto(producto);
     productoContainer.append(productoHTML);
+
 }
+
+
+
+function GuardarProductoEnHistorialLocalStorage(producto){
+    var historial =[];
+    var producto = {
+        id : producto.productId,
+        precio : producto.price,
+        imagen : producto.images.images[0].url,
+        nombre : producto.name
+    }
+    if(!VerificarExistenciaHistorialLocalStorage()){
+        historial.push(producto);
+        GuardarHistorial(JSON.stringify(historial));
+    }
+    else{
+        var historialLocalStorage = ObtenerHistorialLocalStorage();
+        if(!ValidarExistenciaProductoHistorial(producto.id,historialLocalStorage)){
+            historialLocalStorage.push(producto);
+            GuardarHistorial(JSON.stringify(historialLocalStorage));
+        }
+    }
+}
+
