@@ -89,8 +89,16 @@ $(function() {
 
 
   $(".imagenUsuario").on('click', function(){  
-    $(".buscadorDesplegable").css("margin-top","70px");
+    $(".historialDesplegable").css("margin-top","70px");
+    $(".imagenUsuario").css("display","none");
+    $(".cerrarDesplegableHistorial").css("display","block");
+  });
 
+
+  $(".cerrarDesplegableHistorial").on('click', function(){  
+    $(".historialDesplegable").css("margin-top","-8000px");
+    $(".imagenUsuario").css("display","block");
+    $(".cerrarDesplegableHistorial").css("display","none");
   });
 });
 
@@ -106,6 +114,7 @@ function RenderizarContenidoFooterYHeader(){
 const ContenidoHeader = () => 
 `
   <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >
+  <img class="cerrarDesplegableHistorial" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
   <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
   <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
 
