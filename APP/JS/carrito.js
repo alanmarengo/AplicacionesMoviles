@@ -13,13 +13,17 @@ function GuardarProductoEnLocalStorage(id,precio,imagen,cantidad){
     }
     else{
         var carroLocalStorage = ObtenerCarroLocalStorage();
-        carroLocalStorage.forEach((element)=>{
-            if(element.id==id){
-                element.cantidad++;
-            }else{
-                carroLocalStorage.push(producto);
+        var existeProducto = false;
+        for(const producto of carroLocalStorage){
+            if(producto.id==id){
+                existeProducto = true;
+                producto.cantidad++;
+                break;
             }
-        });
+        }
+        if(!existeProducto){
+            carroLocalStorage.push(producto); 
+        }
         GuardarCarro(JSON.stringify(carroLocalStorage));
     }
 }
@@ -95,6 +99,7 @@ function ConstruirHTMLProductoCarrito(producto){
 
 
 function ModificarCantidadProductoCarroLocalStorage(productoID,cantidad){
+    //si la cantidad es < 1 , entonces se aplica el borrado.
     var carro = ObtenerCarroLocalStorage();
     carro.forEach((element)=>{
         if(element.id==productoID){
@@ -123,6 +128,17 @@ function ObtenerValorContadorProducto(){
     var contador = contenedorCarrito.find(".contadorCarrito").html();
     var valorContador = parseInt(contador);
     return valorContador;
+}
+function BorrarProductoCarroLocalStorage(productoID){
+    //aca se debe obtener el ID del contenedor de productos del carrito y borrarle el elemento con este ID.
+    var nuevoCarro = [];
+    var carroActual = ObtenerCarroLocalStorage();
+    carroActual.forEach((element)=>{
+        if(element.id!=productoID){
+            nuevoCarro.push(element);
+        }}
+    );
+    GuardarCarro(JSON.stringify(nuevoCarro));
 }
 
 

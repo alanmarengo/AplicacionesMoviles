@@ -22,7 +22,7 @@ function ValidarUbicacionIndex(){
 
 async function RenderizarContenido(numeropagina,marca,categoria){
     var productos = await ObtenerProductosInicial(numeropagina,marca,categoria);
-    if(ValidarUbicacionIndex() || VerificarQuerStringCategoria()!=null || VerificarQuerStringMarca(9!= null))
+    if(ValidarUbicacionIndex() || VerificarQuerStringCategoria()!=null || VerificarQuerStringMarca()!= null)
     {
         renderizarProductos(productos.product);
     }
