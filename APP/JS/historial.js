@@ -38,3 +38,27 @@ function ValidarExistenciaProductoHistorial(productoId,historial){
     return existeProducto;
 }
 
+
+function RenderizarProductosHistorial(){
+    let contenedorProductosHistorial = $(".historialDesplegable");
+    contenedorProductosHistorial.html("");
+    let productosHistorial = ObtenerHistorialLocalStorage();
+    productosHistorial.forEach((element)=>{
+        let productoHistorial = ConstruirHtmlProductoHistorial(element);
+        contenedorProductosHistorial.append(productoHistorial);
+    });
+}
+
+function ConstruirHtmlProductoHistorial(producto){
+    var producto = `
+        <div id="a${producto.id}" class="ItemHistorial">
+        <img src=${producto.imagen} alt="">
+        <div class="itemCarritoData">
+            <h4>
+            ${producto.nombre}
+            </h4>
+        </div>
+        </div> 
+    `;
+    return producto;
+}
