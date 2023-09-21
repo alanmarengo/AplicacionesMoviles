@@ -44,6 +44,7 @@ function VerificarExistenciaCarroLocalStorage(){
 
 
 function ModificarCantidadProductoCarroLocalStorage(productoID,cantidad){
+    //si la cantidad es < 1 , entonces se aplica el borrado.
     var carro = ObtenerCarroLocalStorage();
     carro.forEach((element)=>{
         if(element.id==productoID){
@@ -53,6 +54,7 @@ function ModificarCantidadProductoCarroLocalStorage(productoID,cantidad){
 }
 
 function BorrarProductoCarroLocalStorage(productoID){
+    //aca se debe obtener el ID del contenedor de productos del carrito y borrarle el elemento con este ID.
     var nuevoCarro = [];
     var carroActual = ObtenerCarroLocalStorage();
     carroActual.forEach((element)=>{
