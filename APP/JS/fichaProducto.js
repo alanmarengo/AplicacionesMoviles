@@ -22,7 +22,7 @@ function ConstruirHtmlProducto(element){
     <div class="productoDetails" id=${element.productId}>
     <h2>${element.name}</h2>
     <div class="productImageDetail">
-        <img src=${element.images.images[0].url} alt="">
+        <img class="productImage" src=${element.images.images[0].url} alt="">
         <h3>Oferta!</h3>
     </div>
     <div class="detailsContainer">
@@ -78,10 +78,10 @@ function ConstruirHtmlProducto(element){
                 </div>
             </div>
             <div class="contactContainer">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/f.png" alt="">
+                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/i.png" alt="">
+                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/w.png" alt="">
+                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/s.png" alt="">
             </div>
             
         </div>

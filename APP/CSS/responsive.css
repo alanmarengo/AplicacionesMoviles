@@ -262,8 +262,9 @@
           letter-spacing: 1px;
           margin-bottom: 5px;
           }
+
         .productImage img{
-          width: 150px ;  
+          min-width: 18vh ;  
         }
         
       .categories h3{
@@ -282,7 +283,77 @@
     }
   
   @media (max-width: 767px)  {
+    /* Formulario de envio */
+    .form-register {
+      width: 400px;
+      background: #5B21A5;
+      padding: 30px;
+      margin: auto;
+      margin-top: 100px;
+      border-radius: 4px;
+      font-family: 'calibri';
+      color: #08FF00;
+      box-shadow: 7px 13px 37px #000;
+    }
+    
+    .form-register h4 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    
+    .controls {
+      width: 100%;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #1f53c5;
+      font-family: 'calibri';
+      font-size: 18px;
+      color:#5B21A5;
+    }
+    
+    .form-register p {
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+    }
+    
+    .form-register a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .form-register a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .form-register .botons {
+      width: 100%;
+      background: #7200FF;
+      border: none;
+      padding: 12px;
+      color: white;
+      margin: 16px 0;
+      font-size: 16px;
+    }
+
+
+
     /* Vista de producto responsiva a telefono*/
+    .contacItem{
+      max-width: 5vh;
+    }
+    .contactContainer{
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1vh;
+    }
+    
     .productoDetails{
       border-radius: 20px ;
       margin-left: 1vh;
@@ -296,7 +367,7 @@
       display: flex;
       flex-direction: column;
   }
-  .productoDetails img{
+  .productImage{
       max-width: 80%;
   }
   
@@ -382,7 +453,8 @@
     }
     
     .datosUtiles{
-      margin-left: 10px;
+      gap: 5px;
+      margin: auto;
       display: flex;  
       flex-direction: column;    
     }
@@ -424,6 +496,7 @@
       cursor: pointer;
       width: 100%;
       display: block;
+      min-height: 926px;
     }
     .LogoBanner {
       max-width: 100%;
@@ -469,9 +542,7 @@
     .imagenHamburguesa{
       display: block;
     }
-    .productImage img{
-      width: 100px ;
-    }
+
     .buscadorDesplegable{
       position: absolute;
       display: flex !important;
@@ -526,12 +597,21 @@
 
 
   /*Item historial---------------------------------------------------------------------*/
- 
+ .historyImage{
+  min-height: 10vh;
+  max-height: 10vh;
+  min-width: 10vh;
+  max-width: 10vh;
+ }
+
   .historialDesplegable h4{
+    margin: auto;
     align-self: center;
     text-align: center ;
     color: #505050;
     font-size: 1.5vh;
+    min-width: 250px;
+    max-width: 250px;
   }
   .historialDesplegable{
     position: absolute;
@@ -560,6 +640,8 @@
   /*Item historial---------------------------------------------------------------------*/
 
   /* Item de Carrito-------------------------------------------------------------------*/
+
+  
   .itemCarritoData h3{
     margin-top: 10px;
     color: #7200FF;
@@ -640,7 +722,7 @@
   }
  
   .filtros_container{
-    
+    display: none;
     font-weight: lighter;
     display: flex;
     flex-direction: row;
