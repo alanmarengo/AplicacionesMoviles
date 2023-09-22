@@ -93,6 +93,7 @@ $(function() {
     $(".historialDesplegable").css("margin-top","70px");
     $(".imagenUsuario").css("display","none");
     $(".cerrarDesplegableHistorial").css("display","block");
+    RenderizarProductosHistorial();
   });
 
 
