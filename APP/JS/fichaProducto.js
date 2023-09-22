@@ -81,7 +81,7 @@ function ConstruirHtmlProducto(element){
                 <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/f.png" alt="">
                 <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/i.png" alt="">
                 <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/w.png" alt="">
-                <img id="abrirModal" class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/s.png" alt="">
+                <img id="abrirModal" class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/s.png" alt="" onclick="AbrirFormularioCompartir()">
             </div>
             
         </div>
@@ -137,4 +137,14 @@ function GuardarProductoEnHistorialLocalStorage(producto){
         }
     }
 }
+
+function AbrirFormularioCompartir(){
+    $(".modal").css("display","block");
+}
+
+function CerrarFormularioCompartir(){
+    $(".modal").css("display","none");
+}
+
+
 

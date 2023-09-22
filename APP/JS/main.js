@@ -1,8 +1,6 @@
 $(function() {
   RenderizarContenidoFooterYHeader();
 
-
-
   $(".imagenBuscador").on('click', function(){
     $(".imagenCarrito").css("display","none");
     $(".imagenUsuario").css("display","none");
@@ -52,7 +50,6 @@ $(function() {
     $(".mainContainer").css("filter","brightness(100%)");
     $(".map").css("display","none");
     $('body,html').css({ "position": "", "overflow-y": "" });
-    map.remove();
     }
   });
 
@@ -102,7 +99,10 @@ $(function() {
     $(".imagenUsuario").css("display","block");
     $(".cerrarDesplegableHistorial").css("display","none");
   });
+
 });
+
+
 
 function RenderizarContenidoFooterYHeader(){
   $(".header").html("")
@@ -141,18 +141,3 @@ const ContenidoFooter=()=>
   <div href="#">Ubicacion</div>
   `;
 
-var modal = document.getElementById("ventanaModal");
-var boton = document.getElementById("abrirModal");
-var span = document.getElementsByClassName("cerrar")[0];
-
-boton.addEventListener("click",function() {
-  modal.style.display = "block";
-});
-span.addEventListener("click",function() {
-  modal.style.display = "none";
-});
-window.addEventListener("click",function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
