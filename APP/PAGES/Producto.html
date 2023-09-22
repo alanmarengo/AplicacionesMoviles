@@ -40,17 +40,14 @@
     </div>
     <div id="ventanaModal" class="modal">
         <section class="form-register contenido-modal">
-            <h4>Compartir producto!</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de destino">
+            <h4>Comparti este producto!</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de destino" required>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input id="cerrar" class="botons" type="submit" value="Enviar!">
-          </section>
+            <a id="cerrar" class="botons" type="submit" onclick="CerrarFormularioCompartir()" href="mailto:correo@correo.com?body=ConstruirHTMLProductoCarrito()">Enviar!</a>
+        </section>
     </div>
-    <main class="mainContainer">
-       
-    </main>
-
+    <main class="mainContainer"></main>
     <div class="isquierdo"></div>
     <div class="derecho"></div>
 
@@ -66,5 +63,4 @@
 <script src="../JS/main.js"></script>
 <script src="../JS/mapa.js"></script>
 <script src="../JS/fichaProducto.js"></script>
-
 </html>
