@@ -57,6 +57,9 @@ function ConstruirHtmlProductoHistorial(producto){
             <h4>
             ${producto.nombre}
             </h4>
+            <h3>
+                $${producto.precio}
+            </h3>
         </div>
         <div class="borrarCarrito">
         <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="">
