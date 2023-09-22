@@ -52,11 +52,14 @@ function RenderizarProductosHistorial(){
 function ConstruirHtmlProductoHistorial(producto){
     var producto = `
         <div id="a${producto.id}" class="ItemHistorial">
-        <img src=${producto.imagen} alt="">
+        <img class="historyImage" src=${producto.imagen} alt="">
         <div class="itemCarritoData">
             <h4>
             ${producto.nombre}
             </h4>
+        </div>
+        <div class="borrarCarrito">
+        <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="">
         </div>
         </div> 
     `;

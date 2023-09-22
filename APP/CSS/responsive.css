@@ -47,8 +47,9 @@
       height: auto;
       display: grid;
       position: absolute;
+
     }
-  
+
     .filtro{
       margin-bottom: 20px;
       display: grid;
@@ -156,9 +157,11 @@
       "footer footer footer footer footer footer footer"; 
     }
     }
-    
-  
+
   @media (max-width: 1180px){
+    .LogoBanner{
+      display: none;
+    }
   .footer{
     grid-area: footer;
     width: 100vw;
@@ -261,8 +264,9 @@
           letter-spacing: 1px;
           margin-bottom: 5px;
           }
+
         .productImage img{
-          width: 150px ;  
+          min-width: 18vh ;  
         }
         
       .categories h3{
@@ -281,7 +285,135 @@
     }
   
   @media (max-width: 767px)  {
+    /* Modal*/
+    .modal {
+      display: none;
+      position: fixed; 
+      z-index: 1; 
+      padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+      left: 0;
+      top: 0;
+      width: 100%; /* Ancho completo */
+      height: 100%; /* Algura completa */
+      overflow: auto; /* Se activará el scroll si es necesario */
+      background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+    }
+    .contenido-modal {
+      position: relative; /* Relativo con respecto al contenedor -modal- */
+      background-color: white;
+      margin: auto; /* Centrada */
+      padding: 20px;
+      width: 60%;
+      -webkit-animation-name: animarsuperior;
+      -webkit-animation-duration: 0.5s;
+      animation-name: animarsuperior;
+      animation-duration: 0.5s
+    }
+    .contenido-modal {
+      position: relative; /* Relativo con respecto al contenedor -modal- */
+      background-color: white;
+      margin: auto; /* Centrada */
+      padding: 20px;
+      width: 60%;
+      -webkit-animation-name: animarsuperior;
+      -webkit-animation-duration: 0.5s;
+      animation-name: animarsuperior;
+      animation-duration: 0.5s
+    }
+    @keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+    @keyframes animarsuperior {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+    .close {
+      color: black;
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Modal*/
+
+
+    /* Formulario de envio */
+    .form-register {
+      width: 400px;
+      background: #5B21A5;
+      padding: 30px;
+      margin: auto;
+      margin-top: 100px;
+      border-radius: 4px;
+      font-family: 'calibri';
+      color: #08FF00;
+      box-shadow: 7px 13px 37px #000;
+    }
+    
+    .form-register h4 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    
+    .controls {
+      width: 100%;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #1f53c5;
+      font-family: 'calibri';
+      font-size: 18px;
+      color:#5B21A5;
+    }
+    
+    .form-register p {
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+    }
+    
+    .form-register a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .form-register a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .form-register .botons {
+      width: 100%;
+      background: #7200FF;
+      border: none;
+      padding: 12px;
+      color: white;
+      margin: 16px 0;
+      font-size: 16px;
+    }
+
+
+
     /* Vista de producto responsiva a telefono*/
+    .contacItem{
+      max-width: 5vh;
+    }
+    .contactContainer{
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1vh;
+    }
+    
     .productoDetails{
       border-radius: 20px ;
       margin-left: 1vh;
@@ -295,7 +427,7 @@
       display: flex;
       flex-direction: column;
   }
-  .productoDetails img{
+  .productImage{
       max-width: 80%;
   }
   
@@ -381,7 +513,8 @@
     }
     
     .datosUtiles{
-      margin-left: 10px;
+      gap: 5px;
+      margin: auto;
       display: flex;  
       flex-direction: column;    
     }
@@ -423,6 +556,7 @@
       cursor: pointer;
       width: 100%;
       display: block;
+      min-height: 926px;
     }
     .LogoBanner {
       max-width: 100%;
@@ -468,9 +602,7 @@
     .imagenHamburguesa{
       display: block;
     }
-    .productImage img{
-      width: 100px ;
-    }
+
     .buscadorDesplegable{
       position: absolute;
       display: flex !important;
@@ -525,16 +657,32 @@
 
 
   /*Item historial---------------------------------------------------------------------*/
- 
+ .historyImage{
+  min-height: 10vh;
+  max-height: 10vh;
+  min-width: 10vh;
+  max-width: 10vh;
+ }
+
   .historialDesplegable h4{
+    margin: auto;
     align-self: center;
     text-align: center ;
     color: #505050;
     font-size: 1.5vh;
+    min-width: 250px;
+    max-width: 250px;
   }
   .historialDesplegable{
-    display: flex;
+    position: absolute;
+    display: flex !important;
     flex-direction: column;
+    height: 400px;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    background-color: white;
+    width: 100%;
   }
   .historialDesplegable img{
     max-height: 12vh ;
@@ -552,6 +700,14 @@
   /*Item historial---------------------------------------------------------------------*/
 
   /* Item de Carrito-------------------------------------------------------------------*/
+
+  
+  .itemCarritoData h3{
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+  
   .CarritoDesplegable{
     position: absolute;
     display: flex !important;
@@ -568,7 +724,7 @@
   .btnBorrar{
     width: 60px;
   }
-  .ItemCarrito h3{
+  .ItemCarrito  h3{
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
@@ -600,7 +756,9 @@
     width: 30px;
   }
 .borrarCarrito img{
-  max-width: 5vh;
+  margin-left: 1vh;
+  margin-bottom: 2vh;
+  max-width: 4vh;
   
 }
 .contadores{
@@ -613,6 +771,43 @@
 }
   /* Item de Carrito----------------------------------------------------------------- */
 
+
+
+
+  /*Filtro de categorias-------------------- */
+  .filtros_container h5{
+    margin-left: 1vh;
+    color: #5B21A5;
+    font-size: 1.6vh;
+  }
+ 
+  .filtros_container{
+    display: none;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+    gap: 1vh;
+
+  }
+
+  .categoriaFiltro{
+    color: #ffffffab;
+    background-color: #5B21A5;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+  }
+  .categoriaFiltro button{
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+  }
+
+
+
+  /*------------------------------------------------------*/
     .filtros-list h1{
       margin-bottom: 10px;
     }
