@@ -146,3 +146,5 @@ function CerrarFormularioCompartir(){
     $(".modal").css("display","none");
 }
 
+
+
