@@ -159,9 +159,7 @@
     }
 
   @media (max-width: 1180px){
-    .LogoBanner{
-      display: none;
-    }
+
   .footer{
     grid-area: footer;
     width: 100vw;
@@ -755,6 +753,7 @@
     background-color: #28FF0D;
     width: 30px;
   }
+
 .borrarCarrito img{
   margin-left: 1vh;
   margin-bottom: 2vh;
@@ -762,7 +761,7 @@
   
 }
 .contadores{
-  margin-left: 6vh;
+  margin-left: 4vh;
   display: flex;
   color: #7200FF;
   display: flex;
@@ -887,4 +886,5 @@
     }
       
   }
+  
   
