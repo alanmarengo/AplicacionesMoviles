@@ -68,18 +68,18 @@ function BorrarFiltroMarca(){
 function ConstuirHtmlCategoriaFiltro(descripcion){
     return `  
             
-            <div class="">
+            <div class="categoriaFiltro">
                 <span> ${descripcion} </span>
-                <button onclick="BorrarFiltroCategoria()"> X </button>
+                <button class="butonFiltro" onclick="BorrarFiltroCategoria()"> X </button>
             </div>
     `;
 }
 
 function ConstuirHtmlMarcaFiltro(descripcion){
     return `    
-            <div class="">
+            <div class="categoriaFiltro">
                 <span> ${descripcion} </span>
-                <button onclick="BorrarFiltroMarca()"> X </button>
+                <button class="butonFiltro" onclick="BorrarFiltroMarca()"> X </button>
             </div>
     `;
 }

@@ -47,8 +47,9 @@
       height: auto;
       display: grid;
       position: absolute;
+
     }
-  
+
     .filtro{
       margin-bottom: 20px;
       display: grid;
@@ -628,6 +629,43 @@
 }
   /* Item de Carrito----------------------------------------------------------------- */
 
+
+
+
+  /*Filtro de categorias-------------------- */
+  .filtros_container h5{
+    margin-left: 1vh;
+    color: #5B21A5;
+    font-size: 1.6vh;
+  }
+ 
+  .filtros_container{
+    
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+    gap: 1vh;
+
+  }
+
+  .categoriaFiltro{
+    color: #ffffffab;
+    background-color: #5B21A5;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+  }
+  .categoriaFiltro button{
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+  }
+
+
+
+  /*------------------------------------------------------*/
     .filtros-list h1{
       margin-bottom: 10px;
     }
