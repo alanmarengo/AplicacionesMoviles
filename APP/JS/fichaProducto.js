@@ -21,11 +21,14 @@ function ConstruirHtmlProducto(element){
     var product = 
     `
     <div class="productoDetails" id=${element.productId}>
+    <div>
     <h2>${element.name}</h2>
-    <div class="productImageDetail">
-        <img class="productImage" src=${element.images.images[0].url} alt="">
-        <h3>Oferta!</h3>
+        <div class="productImageDetail">
+            <img class="productImage" src=${element.images.images[0].url} alt="">
+            <h3>Oferta!</h3>
+        </div>
     </div>
+    
     <div class="detailsContainer">
         <div class="details">
             <h1 class="Price">$${element.price}</h1>

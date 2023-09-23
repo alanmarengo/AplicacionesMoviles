@@ -5,6 +5,7 @@
   padding: 0px;
   font-family: 'Roboto', sans-serif;
 }
+
 .separador{
   grid-area: separador;
 }
@@ -130,8 +131,7 @@
 .imagenCarrito{
   height: 38px;
   width: 38px;
-  position: absolute;
-  margin-left: -260px;
+  position: relative;
   cursor: pointer;
 }
 
