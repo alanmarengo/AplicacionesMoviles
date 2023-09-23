@@ -165,9 +165,9 @@ function RenderizarContenidoFooterYHeader(){
 
 
 const ContenidoHeader = () => 
-`
+`<div class ="historialContainer">
   <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >
-
+</div>
   <img class="cerrarDesplegableHistorial" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
   <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
   <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
@@ -181,13 +181,13 @@ const ContenidoHeader = () =>
   <div class="logo">
       <img type="image" src = "http://127.0.0.1:5500/APP/IMAGES/LOGO.svg" alt = "logo del proyecto">          
   </div>
- 
+  <div class ="buscadorContainer">
     <img type="image" id="logobuscador" class="imagenBuscador" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
-
-
+  </div>
+  <div class="carritoContainer">
     <img type="image" id="logocarrito" class="imagenCarrito" src="http://127.0.0.1:5500/APP/IMAGES/logocarrito.svg" >
   <img class="cerrarDesplegable" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
-
+  </div>
   `;
 
 const ContenidoFooter=()=>
