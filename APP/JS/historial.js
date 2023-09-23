@@ -1,5 +1,5 @@
 function BorrarProductoHistorialLocalStorage(productoID){
-    var contenedorHistorial = $('.historialDesplegable');
+    var contenedorHistorial=$('#historialDesplegable');
     var nuevoHistorial = [];
     var historialActual = ObtenerHistorialLocalStorage();
     historialActual.forEach((element)=>{
@@ -8,8 +8,9 @@ function BorrarProductoHistorialLocalStorage(productoID){
         }}
     );
     GuardarHistorial(JSON.stringify(nuevoHistorial));
-    //contenedorCarrito.remove("#"+productoID);
-    //aqui falta todavia HTML Y CSS PARA PODER TERMINAR ESTA PARTE
+    var producto = $('#A'+productoID).remove();
+    console.log(producto)
+    contenedorHistorial.remove(producto);
 }
 
 function VerificarExistenciaHistorialLocalStorage(){
@@ -51,7 +52,7 @@ function RenderizarProductosHistorial(){
 
 function ConstruirHtmlProductoHistorial(producto){
     var producto = `
-        <div id="a${producto.id}" class="ItemHistorial">
+        <div id="A${producto.id}" class="ItemHistorial">
         <img class="historyImage" src=${producto.imagen} alt="">
         <div class="itemCarritoData">
             <h4>
@@ -62,7 +63,7 @@ function ConstruirHtmlProductoHistorial(producto){
             </h3>
         </div>
         <div class="borrarCarrito">
-        <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="">
+        <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoHistorialLocalStorage(${producto.id})">
         </div>
         </div> 
     `;

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/APP/CSS/main.css">
     <link rel="stylesheet" type="text/css" href="/APP/CSS/mapa.css">
-    <link rel="stylesheet" type="text/css" href="/APP/CSS/responsive.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/APP/CSS/responsive.css"> -->
+    <link rel="stylesheet" type="text/css" href="/APP/CSS/vistaProductoStyle.css">
     <title> MVP Layout Mobile </title>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -44,7 +45,8 @@
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de destino" required>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <a id="cerrar" class="botons" type="submit" onclick="CerrarFormularioCompartir()" href="mailto:correo@correo.com?body=">>Enviar!</a>
+            <a id="cerrar" class="botons" type="submit" onclick="ValidarYEnviarCorreo()">>Enviar!</a>
+            <p id="Alertas"></p>
         </section>
     </div>
     <main class="mainContainer"></main>
