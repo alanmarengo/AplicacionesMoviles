@@ -142,8 +142,56 @@ function AbrirFormularioCompartir(){
     $(".modal").css("display","block");
 }
 
-function CerrarFormularioCompartir(){
-    $(".modal").css("display","none");
+async function ValidarYEnviarCorreo(){
+    const nombreUsuario = ObtenerNombreUsuarioFormulario();
+    const CorreoUsuario = ObtenerCorreousuarioFormulario();
+    let validacionInputsFormulario = ValidarInputsFormulario(nombreUsuario,CorreoUsuario);
+    if(validacionInputsFormulario){
+        const producto = await ObtenerProductoPorId()
+        window.location="mailto:"+CorreoUsuario+"?body="+"Hola, mi nombre es:"+nombreUsuario+"."+" En esta ocasion me gustaria compartirte el siguiente producto: nombre: "+producto.name+""+"precio: $"+producto.price;
+        $(".modal").css("display","none");
+    }
+}
+
+
+function ObtenerCorreousuarioFormulario(){
+    const Correo =  $("#correo").val();
+    return Correo;
+    
+}
+
+function ObtenerNombreUsuarioFormulario(){
+    const nombre =  $("#nombres").val();
+    return nombre;
+} 
+
+
+function ValidarInputsFormulario(nombre,correo){
+    let valido = false;
+    let alertas = $("#Alertas").html("");
+    const validacionNombre = validarNombreFormulario(nombre);
+    const validacionCorreo = validarCorreoFormulario(correo);
+    if(!validacionNombre){
+        alertas.append("El nombre es invalido");
+    }
+    if(!validacionCorreo){
+        alertas.append("El correo es invalido");
+    }
+    if(validacionNombre && validacionCorreo){
+        valido = true;
+    }
+    return valido;
+}
+
+
+function validarNombreFormulario(nombre){
+    const longitudNombre = nombre.length;
+    return longitudNombre >= 4 ;
+}
+
+function validarCorreoFormulario(correo){
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    return regexEmail.test(correo);
 }
 
 
