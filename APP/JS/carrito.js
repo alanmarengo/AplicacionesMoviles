@@ -80,13 +80,13 @@ function ConstruirHTMLProductoCarrito(producto){
             <h4>
                 ${producto.nombre}
             </h4>
-            <h3>
+            <h3 id="precio-${producto.id}">
                 $${producto.precio*producto.cantidad}
             </h3>
             <div class="contadores">
-                <button class="ItemCarritoButtonAdd" onclick="RestarCantidad(${producto.id})" >-</button>
+                <button class="ItemCarritoButtonAdd" onclick="RestarCantidad(${producto.id},${producto.precio})" >-</button>
                 <h4 id="contador-${producto.id}" class="contadorCarrito">${producto.cantidad}</h4><h4>x</h4>
-                <button class="ItemCarritoButtonDelete" onclick="SumarCantidad(${producto.id})">+</button>
+                <button class="ItemCarritoButtonDelete" onclick="SumarCantidad(${producto.id},${producto.precio})">+</button>
             </div>
             
         </div>
@@ -116,18 +116,28 @@ function ObtenerContenedorContador(productoID){
     return contenedorCarrito;
 }
 
-function SumarCantidad(productoID){
+function SumarCantidad(productoID,precio){
     var contador = ObtenerContenedorContador(productoID);
     var contadorActualizado = ObtenerValorContadorProducto(productoID);
+    var contenedorPrecio = $('#precio-'+productoID);
     contadorActualizado++;
     contador.html(contadorActualizado);
+    contenedorPrecio.html("");
+    contenedorPrecio.html("$"+precio*contadorActualizado)
     ModificarCantidadProductoCarroLocalStorage(productoID,contadorActualizado);
+
 }
 
-function RestarCantidad(productoID){
+function RestarCantidad(productoID,precio){
     var contador = ObtenerContenedorContador(productoID);
     var contadorActualizado = ObtenerValorContadorProducto(productoID);
-    contadorActualizado--;
+    var contenedorPrecio = $('#precio-'+productoID);
+    if(contadorActualizado > 1){
+        contadorActualizado--;
+        contenedorPrecio.html("");
+        contenedorPrecio.html("$"+precio*contadorActualizado)
+    }
+    
     contador.html(contadorActualizado);
     ModificarCantidadProductoCarroLocalStorage(productoID,contadorActualizado);
 }
