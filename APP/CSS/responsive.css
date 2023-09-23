@@ -1,27 +1,183 @@
 @media (min-width: 1181px) {
-    .imagenUsuario{
-      display: none;
+
+  .paginador{
+    margin-left: -500px;
+  }
+    .filtros_container h5{
+    margin-left: 1vh;
+    color: #5B21A5;
+    font-size: 1.6vh;
+  }
+ 
+  .filtros_container{
+    display: none;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+    gap: 1vh;
+    position: absolute;
+    z-index: 40;
+    top: 0px;
+  }
+
+  .categoriaFiltro{
+    color: #ffffffab;
+    background-color: #5B21A5;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: fit-content;
+  }
+  .categoriaFiltro button{
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+  }
+
+  .LogoBanner{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+
+  }
+
+  .LogoBanner .BannerMobile{
+    display:none;
+  }
+  
+  .LogoBanner .BannerDesktop{
+    display:block;
+  }
+
+  .historyImage{
+    min-height: 10vh;
+    max-height: 10vh;
+    min-width: 10vh;
+    max-width: 10vh;
+   }
+  
+    .historialDesplegable h4{
+      margin: auto;
+      align-self: center;
+      text-align: center ;
+      color: #505050;
+      font-size: 1.5vh;
+      min-width: 250px;
+      max-width: 250px;
     }
-  
-  
-    .LogoBanner{
-      width: 100%;
-      height: 15px;
-      display: flex;
+
+    .historialDesplegable{
       position: absolute;
-      justify-content: center;
-      align-items: center;
-      top:20.80%;
+      height: 400px;
+      max-height: 400px;
+      overflow: auto;
+      background-color: white;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: -100%;
+      z-index: 50;
+      max-width: 700px;
+      box-shadow: 0px 10px 30px 1px rgba(0, 0, 0, 0.337);
+      
     }
+    .hi
+    storialDesplegable img{
+      max-height: 12vh ;
+    }
+    .ItemHistorial{
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      transition: all 0.2s ease 0s;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+    }
+  .itemCarritoData h3{
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+  
+  
+  .btnBorrar{
+    width: 60px;
+  }
+  .ItemCarrito  h3{
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+  .ItemCarrito img{
+    margin-right: 5vh;
+    max-height: 12vh ;
+  }
+  
+.ItemCarrito h4{
+  color: #505050;
+  font-size: 1.5vh;
+}
+  .ItemCarrito{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+  .ItemCarritoButtonAdd, .ItemCarritoButtonDelete{
+    margin-bottom: 1vh;
+    border-color: #28FF0D;
+    border-radius: 15px;
+    background-color: #28FF0D;
+    width: 30px;
+  }
+
+.borrarCarrito img{
+  margin-left: 1vh;
+  margin-bottom: 2vh;
+  max-width: 4vh;
+  
+}
+.contadores{
+  margin-left: 4vh;
+  display: flex;
+  color: #7200FF;
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+}
+  .imagenCarrito{
+    margin-left: 170px;
+  }
+  .cerrarDesplegable{
+    margin-left: 170px;
+  }
+
+  .CarritoDesplegable{
+    height: 400px;
+    max-height: 400px;
+    overflow: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -100%;
+    z-index: 50;
+    max-width: 700px;
+    box-shadow: 0px 10px 30px 1px rgba(0, 0, 0, 0.337);
+  }
+ 
   
     .HeaderSecundario{
-      width: 100%;
+      width: 100vw;
       height: 19px;
       display: flex;
-      position: absolute;
       justify-content: center;
       align-items: center;
-      top:7%;
       background-color: #08FF00;
     }
   
@@ -33,25 +189,28 @@
       background-color: #707070;
       width: 100%;
       position: absolute;
-      margin-top: 140%;
+      margin-top: 145%;
     }
   
     .mainContainer {
       grid-area: mainContainer;
       padding-top: 0px;
       background-color: #ffffff;
-      margin-left: 27.5%;
+      margin-left: 0%;
       cursor: pointer;
       z-index: -1;
       width: 70%;
       height: auto;
       display: grid;
       position: absolute;
+      top: 350px;
+      left: 50%;
+      transform: translateX(-47%);
 
     }
 
     .filtro{
-      margin-bottom: 20px;
+
       display: grid;
       flex-direction: column;
       gap: 20px;
@@ -63,7 +222,7 @@
       height: auto;
       justify-content:left;
       transition: 250ms;
-      margin-top: 330px;
+      margin-top: 400px;
     }
   
     .CategoriaDeplegable{
