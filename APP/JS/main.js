@@ -29,8 +29,8 @@ $(function() {
     $(".logo").css("display","flex");
     $(".BuscadorDiv").css("display","none");
     $(".mainContainer").css("filter","brightness(100%)");
-    if(screen.width <= 428){
     $(".imagenUsuario").css("display","flex");
+    if(screen.width <= 428){
     $(".imagenHamburguesa").css("display","flex");
     }
   });
@@ -56,6 +56,7 @@ $(function() {
     BindFiltros();
     $(".CarritoDesplegable").css("margin-top","-800px");
     $(".mainContainer").css("filter","brightness(100%)");
+    $(".filtro").css("filter","brightness(100%)");
     $(".productsContainer").css("padding-top","50px");
     $(".cerrarDesplegable").css("display","none");
     $(".imagenCarrito").css("display","flex");
@@ -100,8 +101,9 @@ function BindCarro(){
   $(".imagenBuscador").unbind();
   $(".imagenHamburguesa").unbind();
   $(".CarritoDesplegable").css("margin-top","70px");
-  $(".mainContainer").css("filter","brightness(50%)");
-  $(".productsContainer").css("padding-top","10px");
+  if(screen.width <= 428){
+    $(".mainContainer").css("filter","brightness(50%)");
+  }
   $(".imagenCarrito").css("display","none");
   $(".cerrarDesplegable").css("display","flex");
   RenderizarCarritoEnContenedor();
