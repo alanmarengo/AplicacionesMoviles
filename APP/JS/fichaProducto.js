@@ -1,4 +1,5 @@
 $(function() {
+    DesactivarCategoriasFichaProducto();
     RenderizarContenidoProducto();
 });
 
@@ -194,5 +195,11 @@ function validarCorreoFormulario(correo){
     return regexEmail.test(correo);
 }
 
+
+function DesactivarCategoriasFichaProducto(){
+    if(screen.width > 428){
+        $(".filtro").css("display","none");
+    }
+}
 
 

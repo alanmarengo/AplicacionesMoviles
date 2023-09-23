@@ -13,7 +13,9 @@ $(function() {
     if(longidutPalabra>=3){
       $(".buscadorDesplegable").css("margin-top","70px");
       await RenderizarContenidoProductoDesplegable($(this).val());
+      if(screen.width <= 428){
       $(".mainContainer").css("filter","brightness(50%)");
+      }
     }
     else{
       $(".buscadorDesplegable").css("margin-top","-8000px");
@@ -79,6 +81,7 @@ $(function() {
     $(".historialDesplegable").css("margin-top","-8000px");
     $(".imagenUsuario").css("display","block");
     $(".cerrarDesplegableHistorial").css("display","none");
+    $(".mainContainer").css("filter","brightness(100%)");
   });
 
 });
@@ -118,6 +121,9 @@ function BindHistorial(){
     $(".historialDesplegable").css("margin-top","70px");
     $(".imagenUsuario").css("display","none");
     $(".cerrarDesplegableHistorial").css("display","block");
+    if(screen.width <= 428){
+      $(".mainContainer").css("filter","brightness(50%)");
+    }
     RenderizarProductosHistorial();
   });
 
