@@ -63,11 +63,11 @@
 }
 
 
-.CategoriaDeplegable{
+.categoriadesplegable{
   font-size:25px;
   color: #08FF0D;
 }
-.MarcaDesplegable{
+.marcadesplegable{
   font-size:25px;
   color: #08FF0D;
 }
@@ -81,7 +81,7 @@
 }
 
 
-.HeaderSecundario{
+.headersecundario{
   width: 100%;
   height: 15px;
   display: none;
@@ -122,7 +122,7 @@
   cursor: pointer;
 }
 
-.buscadorDesplegable{
+.buscadordesplegable{
   position: absolute;
   height: 314px;
   margin-top: -8000px; /*-800px*/
@@ -132,7 +132,7 @@
   transition: 250ms;
 }
 
-.historialDesplegable{
+.historialdesplegable{
   position: absolute;
   width: 100%;
   height: 314px;
@@ -157,7 +157,7 @@
   cursor: pointer;
 }
 
-.CarritoDesplegable{
+.carritodesplegable{
   position: absolute;
   margin-top: -800px;
   z-index: 1;
@@ -168,7 +168,7 @@
   transition: 250ms;
 }
 
-.CarritoDesplegable .fondoContenedor{
+.carritodesplegable .fondoContenedor{
   position: fixed;
   top:0;
   left: 0;
@@ -215,13 +215,13 @@
   width: 45px;
 }
 
-.LogoBanner{
+.logobanner{
   justify-content: center;
   align-items: center;
 }
 
-.mainContainer {
-  grid-area: mainContainer;
+.maincontainer {
+  grid-area: maincontainer;
   padding-top: 15px;
   background-color: #f6f6f6;
   cursor: pointer;

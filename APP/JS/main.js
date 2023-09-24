@@ -11,25 +11,25 @@ $(function() {
   $(".buscador-input").on('keyup', async function(){
     var longidutPalabra = $(this).val().length;
     if(longidutPalabra>=3){
-      $(".buscadorDesplegable").css("margin-top","80px");
+      $(".buscadordesplegable").css("margin-top","80px");
       await RenderizarContenidoProductoDesplegable($(this).val());
       if(screen.width <= 428){
-      $(".mainContainer").css("filter","brightness(50%)");
+      $(".maincontainer").css("filter","brightness(50%)");
       }
     }
     else{
-      $(".buscadorDesplegable").css("margin-top","-8000px");
-      $(".mainContainer").css("filter","brightness(100%)");
+      $(".buscadordesplegable").css("margin-top","-8000px");
+      $(".maincontainer").css("filter","brightness(100%)");
     }
   });
 
   $(".flechabuscador").on('click', function(){  
     $(".imagenCarrito").css("display","flex");
     $(".imagenBuscador").css("display","flex");
-    $(".buscadorDesplegable").css("margin-top","-8000px");
+    $(".buscadordesplegable").css("margin-top","-8000px");
     $(".logo").css("display","flex");
     $(".BuscadorDiv").removeClass("showConditionalFinder").addClass("hideConditionalFinder");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".maincontainer").css("filter","brightness(100%)");
     $(".imagenUsuario").css("display","flex");
     $(".headerFinder").removeClass("headerFinder").addClass("header")
     $(".header").css("background-color","#70707");
@@ -38,7 +38,7 @@ $(function() {
     }
   });
 
-  $(".CerrarMapa").on('click', function(){  
+  $(".cerrarmapa").on('click', function(){  
     if(screen.width <= 428){
     $(".imagenUsuario").css("display","flex");
     $(".imagenHamburguesa").css("display","flex");
@@ -46,8 +46,8 @@ $(function() {
     $(".imagenBuscador").css("display","flex");
     $(".logo").css({"align-items":"center","justify-content":"center"});
     $(".logo").css("margin-left","5%");
-    $(".CerrarMapa").css("display","none");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".cerrarmapa").css("display","none");
+    $(".maincontainer").css("filter","brightness(100%)");
     $(".map").css("display","none");
     $('body,html').css({ "position": "", "overflow-y": "" });
     }
@@ -57,8 +57,8 @@ $(function() {
     BindHistorial();
     BindBuscador();
     BindFiltros();
-    $(".CarritoDesplegable").css("margin-top","-800px");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".carritodesplegable").css("margin-top","-800px");
+    $(".maincontainer").css("filter","brightness(100%)");
     $(".filtro").css("filter","brightness(100%)");
     $(".cerrarDesplegable").css("display","none");
     $(".imagenCarrito").css("display","flex");
@@ -71,41 +71,30 @@ $(function() {
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
     $(".filtro").addClass("hideFiltro").removeClass("showFiltro");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".maincontainer").css("filter","brightness(100%)");
   });
 
   $(".cerrarDesplegableHistorial").on('click', function(){
     BindCarro();
     BindBuscador();
     BindFiltros();
-    $(".historialDesplegable").css("margin-top","-8000px");
+    $(".historialdesplegable").css("margin-top","-8000px");
     $(".imagenUsuario").css("display","block");
     $(".cerrarDesplegableHistorial").css("display","none");
-    $(".mainContainer").css("filter","brightness(100%)");
+    $(".maincontainer").css("filter","brightness(100%)");
   });
 
 });
 
-function EventoImagenCarrito(){
-  $('.imagenUsuario').unbind();
-  $(".imagenBuscador").unbind();
-  $(".imagenHamburguesa").unbind();
-  $(".CarritoDesplegable").css("margin-top","80px");
-  $(".mainContainer").css("filter","brightness(50%)");
-  $(".productsContainer").css("padding-top","10px");
-  $(".imagenCarrito").css("display","none");
-  $(".cerrarDesplegable").css("display","flex");
-  RenderizarCarritoEnContenedor();
-}
 
 function BindCarro(){
   $(".imagenCarrito").on('click', function(){  
   $('.imagenUsuario').unbind();
   $(".imagenBuscador").unbind();
   $(".imagenHamburguesa").unbind();
-  $(".CarritoDesplegable").css("margin-top","80px");
+  $(".carritodesplegable").css("margin-top","80px");
   if(screen.width <= 428){
-    $(".mainContainer").css("filter","brightness(50%)");
+    $(".maincontainer").css("filter","brightness(50%)");
   }
   $(".imagenCarrito").css("display","none");
   $(".cerrarDesplegable").css("display","flex");
@@ -118,11 +107,11 @@ function BindHistorial(){
     $(".imagenBuscador").unbind();
     $(".imagenHamburguesa").unbind();
     $('.imagenCarrito').unbind();
-    $(".historialDesplegable").css("margin-top","80px");
+    $(".historialdesplegable").css("margin-top","80px");
     $(".imagenUsuario").css("display","none");
     $(".cerrarDesplegableHistorial").css("display","block");
     if(screen.width <= 428){
-      $(".mainContainer").css("filter","brightness(50%)");
+      $(".maincontainer").css("filter","brightness(50%)");
     }
     RenderizarProductosHistorial();
   });
@@ -137,7 +126,7 @@ function BindFiltros(){
   $(".filtro").removeClass("hideFiltro").addClass("showFiltro");
   $(".imagenHamburguesa").css("display","none");
   $(".imagenhamburguesacerrar").css("display","flex");
-  $(".mainContainer").css("filter","brightness(50%)");
+  $(".maincontainer").css("filter","brightness(50%)");
   });
 }
 

@@ -68,18 +68,18 @@ function BorrarFiltroMarca(){
 function ConstuirHtmlCategoriaFiltro(descripcion){
     return `  
             
-            <div class="categoriaFiltro">
+            <div class="filtrocategoria">
                 <span> ${descripcion} </span>
-                <button class="butonFiltro" onclick="BorrarFiltroCategoria()"> X </button>
+                <button class="botonfiltrarcategoria" onclick="BorrarFiltroCategoria()"> X </button>
             </div>
     `;
 }
 
 function ConstuirHtmlMarcaFiltro(descripcion){
     return `    
-            <div class="categoriaFiltro">
+            <div class="filtrocategoria">
                 <span> ${descripcion} </span>
-                <button class="butonFiltro" onclick="BorrarFiltroMarca()"> X </button>
+                <button class="botonfiltrarcategoria" onclick="BorrarFiltroMarca()"> X </button>
             </div>
     `;
 }
@@ -88,18 +88,18 @@ function ConstuirHtmlMarcaFiltro(descripcion){
 
 
 function renderizarProductos(productos){
-    var productsContainer = $('#ProductsContainer');
-    productsContainer.html("");
+    var contenedorproductos = $('#contenedorproductos');
+    contenedorproductos.html("");
     productos.forEach(element => {     
         var product = ConstruirHtmlProducto(element);
-        productsContainer.append(product);
+        contenedorproductos.append(product);
         });
 }
 
 function renderizarCategoriasDesplegable(categorias){
-    var categoryContainer = $('#CategoriaList');
+    var categoryContainer = $('#listacategoria');
     categoryContainer.html("");
-    categoryContainer.append('<H1 class="CategoriaDeplegable">Categorias</H1>');
+    categoryContainer.append('<H1 class="categoriadesplegable">Categorias</H1>');
     categorias.forEach(element => {   
         var category = ConstruirHtmlCategoria(element);
         categoryContainer.append(category);
@@ -107,9 +107,9 @@ function renderizarCategoriasDesplegable(categorias){
    
 }
 function renderizarMarcasDesplegable(marcas){
-    var trademarkContainer = $('#MarcasList');
+    var trademarkContainer = $('#listamarcas');
     trademarkContainer.html("");
-    trademarkContainer.append('<H1 class="MarcaDesplegable">Marcas </H1>');
+    trademarkContainer.append('<H1 class="marcadesplegable">Marcas </H1>');
     marcas.forEach(element => {  
         var trademark = ConstruirHtmlMarca(element);
         trademarkContainer.append(trademark);
@@ -117,7 +117,7 @@ function renderizarMarcasDesplegable(marcas){
 }
 
 function renderizarProductosDespleglables(productos){
-    var productosBuscadorContainer = $('#buscadorDesplegable');
+    var productosBuscadorContainer = $('#buscadordesplegable');
     productosBuscadorContainer.html("");
     productos.forEach(element => {  
         var product = ConstruirHtmlProductoDesplegable(element);
@@ -160,11 +160,11 @@ function ConstruirHtmlProducto(element){
     var product = 
     `
     <article id=${element.productId} class="product">
-    <div class="productImage">
+    <div class="imagenproducto">
         <img src= ${element.images[0].url} alt="">
         <h1>Oferta!</h1>
     </div>
-    <div class="DataProduct">
+    <div class="datosproducto">
         <h3>${textMax}</h3>
         <br>    
         <h4>$${element.price}</h4>
@@ -183,9 +183,9 @@ function ConstruirHtmlProducto(element){
 
 function ConstruirHtmlProductoDesplegable(element){
    var ProductoDesplegable =  
-   `        <div id=${element.productId} class="itemBusqueda" onclick="RedirigirFichaProducto(${element.productId})">
+   `        <div id=${element.productId} class="itembusqueda" onclick="RedirigirFichaProducto(${element.productId})">
                 <img src=${element.image} alt="">
-                <div class="itemBusquedaData">
+                <div class="itembusquedadata">
                     <h4>
                     ${element.name}
                     </h4>
@@ -202,7 +202,7 @@ function ConstruirHtmlProductoDesplegable(element){
 
 function ConstruirHtmlCategoria(element){
   var CategoriaDesplegable = 
-  `<div class= contenedorCategoria>
+  `<div class= contenedorcategoria>
   <li id=${element.categoriaId} onclick="Filtrar('${element.categoriaId}',${marca});" class ="categoriali"> 
   <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a>
   </li>
@@ -212,13 +212,13 @@ function ConstruirHtmlCategoria(element){
 }
 
 function ConstruirHtmlMarca(element){
-    var MarcaDesplegable = 
+    var marcadesplegable = 
     `
-    <div class= contenedorCategoria>
+    <div class= contenedorcategoria>
     <li id=${element.id} onclick="Filtrar(${categoria},'${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     <div>
     `;
-    return MarcaDesplegable;
+    return marcadesplegable;
   }
 
 

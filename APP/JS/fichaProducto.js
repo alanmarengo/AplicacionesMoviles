@@ -20,40 +20,40 @@ async function  ObtenerPathProduct(){
 function ConstruirHtmlProducto(element){
     var product = 
     `
-    <div class="productoDetails" id=${element.productId}>
+    <div class="fichadeproducto" id=${element.productId}>
     <div>
     <h2>${element.name}</h2>
-        <div class="productImageDetail">
-            <img class="productImage" src=${element.images.images[0].url} alt="">
+        <div class="imagenproductodetalle">
+            <img class="imagenproducto" src=${element.images.images[0].url} alt="">
             <h3>Oferta!</h3>
         </div>
     </div>
     
-    <div class="detailsContainer">
-        <div class="details">
-            <h1 class="Price">$${element.price}</h1>
+    <div class="contenedordetalleproducto">
+        <div class="detalleproducto">
+            <h1 class="precioproductoficha">$${element.price}</h1>
             <br>
-            <button class="btnComprar">COMPRAR</button>
-            <button class="btnAdd" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}','${element.name}' )" >AGREGAR AL CARRITO</button>
+            <button class="botoncomprartarjeta">COMPRAR</button>
+            <button class="botonagregaralcarrito" onclick="GuardarProductoEnLocalStorage('${element.productId}','${element.price}','${element.images.images[0].url}','${1}','${element.name}' )" >AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="Description">
+        <div class="descripcionfichaproducto">
             <h4>
             ${element.publication.descripcion}
             </h4>
         </div>
         
-        <div class="datosUtiles">
-            <div class="datosUtiles-unidad">
+        <div class="datosutilesfichaproducto">
+            <div class="datosutilesfichaproducto-unidad">
                 <div class="icono">
                     <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/StockAlto.svg" alt="">
                 </div>
                 <div class="textoDato">
-                    <h3 class="greenCaption">Stock alto en la web</h3>
+                    <h3 class="stockok">Stock alto en la web</h3>
                     <h3 class="GrayCaption">Solo para venta web </h3>
                 </div>
             </div>
-            <div class="datosUtiles-unidad">
+            <div class="datosutilesfichaproducto-unidad">
                 <div class="icono">
                     <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/SinStock.svg" alt="">
                 </div>
@@ -63,7 +63,7 @@ function ConstruirHtmlProducto(element){
                 </div>
             </div>
 
-            <div class="datosUtiles-unidad">
+            <div class="datosutilesfichaproducto-unidad">
                 <div class="icono">
                     <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/MaximusStore.svg" alt="">
                 </div>
@@ -72,7 +72,7 @@ function ConstruirHtmlProducto(element){
                     <h3 class="GrayCaption">En la UNAJ! (Florencio varela)</h3>
                 </div>
             </div>
-            <div class="datosUtiles-unidad">
+            <div class="datosutilesfichaproducto-unidad">
                 <div class="icono">
                     <img src="https://cdn.jsdelivr.net/gh/persano/bannersmaximus@1.1/CamionEnvios.svg" alt="">
                 </div>
@@ -112,7 +112,7 @@ async function RenderizarContenidoProducto(){
    
     var producto = await ObtenerProductoPorId();
     GuardarProductoEnHistorialLocalStorage(producto);
-    var productoContainer = $('.mainContainer');
+    var productoContainer = $('.maincontainer');
     productoContainer.html("");
     var productoHTML = ConstruirHtmlProducto(producto);
     productoContainer.append(productoHTML);

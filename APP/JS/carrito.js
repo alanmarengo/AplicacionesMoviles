@@ -45,7 +45,7 @@ function VerificarExistenciaCarroLocalStorage(){
 
 
 function BorrarProductoCarroLocalStorage(productoID){
-    var contenedorCarrito = $('.CarritoDesplegable');
+    var contenedorCarrito = $('.carritodesplegable');
     var nuevoCarro = [];
     var carroActual = ObtenerCarroLocalStorage();
     carroActual.forEach((element)=>{
@@ -61,7 +61,7 @@ function BorrarProductoCarroLocalStorage(productoID){
 function RenderizarCarritoEnContenedor(){
     var productos = ObtenerCarroLocalStorage();
     if(productos!=null){
-    var contenedorCarrito = $('.CarritoDesplegable');
+    var contenedorCarrito = $('.carritodesplegable');
     contenedorCarrito.html("");
     productos.forEach((element)=>{
         var producto = ConstruirHTMLProductoCarrito(element);
@@ -74,9 +74,9 @@ function RenderizarCarritoEnContenedor(){
 function ConstruirHTMLProductoCarrito(producto){
     
  var productoCarro =   `
-        <div id="a${producto.id}" class="ItemCarrito">
+        <div id="a${producto.id}" class="productocarritodesplegable">
         <img src=${producto.imagen} alt="">
-        <div class="itemCarritoData">
+        <div class="datosproductodesplegable">
             <h4>
                 ${producto.nombre}
             </h4>
@@ -84,14 +84,14 @@ function ConstruirHTMLProductoCarrito(producto){
                 $${producto.precio*producto.cantidad}
             </h3>
             <div class="contadores">
-                <button class="ItemCarritoButtonAdd" onclick="RestarCantidad(${producto.id},${producto.precio})" >-</button>
-                <h4 id="contador-${producto.id}" class="contadorCarrito">${producto.cantidad}</h4><h4>x</h4>
-                <button class="ItemCarritoButtonDelete" onclick="SumarCantidad(${producto.id},${producto.precio})">+</button>
+                <button class="productocarritodesplegableagregar" onclick="RestarCantidad(${producto.id},${producto.precio})" >-</button>
+                <h4 id="contador-${producto.id}" class="contadorcantidadproductocarrito">${producto.cantidad}</h4><h4>x</h4>
+                <button class="productocarritodesplegableborrar" onclick="SumarCantidad(${producto.id},${producto.precio})">+</button>
             </div>
             
         </div>
-        <div class="borrarCarrito">
-            <img class="trashIcon" src="IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoCarroLocalStorage(${producto.id})"> 
+        <div class="borrarproductodesplegable">
+            <img class="iconobasura" src="IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoCarroLocalStorage(${producto.id})"> 
         </div>
         </div>  
 `
@@ -148,7 +148,7 @@ function ObtenerValorContadorProducto(productoID){
     return valorContador;
 }
 function BorrarProductoCarroLocalStorage(productoID){
-    var contenedorCarrito = document.querySelector('.CarritoDesplegable').querySelector("#a"+productoID);
+    var contenedorCarrito = document.querySelector('.carritodesplegable').querySelector("#a"+productoID);
     contenedorCarrito.remove();
     var nuevoCarro = [];
     var carroActual = ObtenerCarroLocalStorage();

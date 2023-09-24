@@ -1,4 +1,4 @@
-.productsContainer{
+.contenedorproductos{
     display: flex;
     justify-content: space-evenly; 
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
   }
   
   
-  .productImage img{
+  .imagenproducto img{
     height: 90%;
     width: 90%;
     object-fit: contain;
@@ -16,7 +16,7 @@
   
   
   
-  .productImage{
+  .imagenproducto{
   position: relative;
   display: inline-block;
   text-align: start;
@@ -24,7 +24,7 @@
   
   
   
-  .productImage h1{
+  .imagenproducto h1{
   position: absolute;
   bottom: 10px;
   left: 10px;

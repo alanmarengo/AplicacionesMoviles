@@ -63,19 +63,19 @@
 
   /* Item de Carrito-------------------------------------------------------------------*/
 
-  .itemCarritoData {
+  .datosproductodesplegable {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .itemCarritoData h3 {
+  .datosproductodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .CarritoDesplegable {
+  .carritodesplegable {
     border-width: 1px;
     border-style: solid;
     border-color: #707070;
@@ -99,23 +99,23 @@
     width: 60px;
   }
 
-  .ItemCarrito h3 {
+  .productocarritodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .ItemCarrito img {
+  .productocarritodesplegable img {
     margin-right: 5vh;
     max-height: 12vh;
   }
 
-  .ItemCarrito h4 {
+  .productocarritodesplegable h4 {
     color: #505050;
     font-size: 1.5vh;
   }
 
-  .ItemCarrito {
+  .productocarritodesplegable {
     margin-top: 1vh;
     margin-bottom: 1vh;
     width: 100% !important;
@@ -126,8 +126,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
 
-  .ItemCarritoButtonAdd,
-  .ItemCarritoButtonDelete {
+  .productocarritodesplegableagregar,
+  .productocarritodesplegableborrar {
     margin-bottom: 1vh;
     border-color: #28FF0D;
     border-radius: 15px;
@@ -135,7 +135,7 @@
     width: 30px;
   }
 
-  .borrarCarrito img {
+  .borrarproductodesplegable img {
     max-width: 4vh;
   }
 
@@ -149,7 +149,7 @@
 
   /* Item de Carrito----------------------------------------------------------------- */
   /* Item de busqueda----------------------------------------------------------------- */
-  .buscadorDesplegable {
+  .buscadordesplegable {
     border-width: 1px;
     border-style: solid;
     border-color: #707070;
@@ -168,33 +168,33 @@
     width: 100%;
   }
 
-  .itemBusquedaData h3 {
+  .itembusquedadata h3 {
 
     margin-top: 10px;
     color: #7200FF;
   }
 
-  .itemBusquedaData h4 {
+  .itembusquedadata h4 {
     white-space: pre-wrap;
     word-wrap: break-all;
   }
 
-  .itemBusqueda img {
+  .itembusqueda img {
     max-height: 12vh;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     display: flex;
     flex-direction: column;
   }
 
-  .itemBusquedaData {
+  .itembusquedadata {
 
     text-align: center;
     margin-right: 2vr;
   }
 
-  .itemBusqueda {
+  .itembusqueda {
     align-items: center;
     justify-content: center;
     width: 100% !important;
@@ -210,14 +210,14 @@
   /* Item de busqueda----------------------------------------------------------------- */
 
   /*Item historial---------------------------------------------------------------------*/
-  .historyImage {
+  .imagenproductohistorial {
     min-height: 10vh;
     max-height: 10vh;
     min-width: 10vh;
     max-width: 10vh;
   }
 
-  .historialDesplegable h4 {
+  .historialdesplegable h4 {
     margin: auto;
     align-self: center;
     text-align: center;
@@ -227,7 +227,7 @@
     max-width: 250px;
   }
 
-  .historialDesplegable {
+  .historialdesplegable {
     align-items: center;
     right: 0;
     position: absolute;
@@ -244,11 +244,11 @@
     border-color: #707070;
   }
 
-  .historialDesplegable img {
+  .historialdesplegable img {
     max-height: 6vh;
   }
 
-  .ItemHistorial {
+  .itemhistorial {
     margin-top: 1vh;
     margin-bottom: 1vh;
     display: flex;
@@ -369,11 +369,11 @@
     font-size: 2vh;
   }
 
-  .contenedorCategoria li img {
+  .contenedorcategoria li img {
     display: none;
   }
 
-  .categoriaFiltro {
+  .filtrocategoria {
     color: #ffffffab;
     background-color: #5B21A5;
     border-radius: 20px;
@@ -382,13 +382,13 @@
     height: fit-content;
   }
 
-  .categoriaFiltro button {
+  .filtrocategoria button {
     background-color: transparent;
     border: none;
     color: #ccc;
   }
 
-  .contenedorCategoria li img {
+  .contenedorcategoria li img {
     display: none;
   }
 
@@ -405,7 +405,7 @@
   }
 
 
-  .productImage {
+  .imagenproducto {
     max-width: 80%;
   }
   .imagenBuscador {
@@ -415,7 +415,7 @@
     margin-left: 350px;
     cursor: pointer;
   }
-  .productoDetails h2 {
+  .fichadeproducto h2 {
     font-size: 2.5vh;
     word-break: break-all;
     text-align: center;
@@ -423,10 +423,10 @@
     padding-bottom: 2vh;
     border-bottom: solid 1px #2e2e2e;
   }
-  .productImageDetail {
+  .imagenproductodetalle {
     display: block;
   }
-  .productImageDetail h3 {
+  .imagenproductodetalle h3 {
     position: relative;
     margin-left: 10px;
     padding-left: 10px;
@@ -441,14 +441,14 @@
     width: 100%;
     display: flex;
   }
-  .details {
+  .detalleproducto {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
   }
 
-  .btnComprar {
+  .botoncomprartarjeta {
     bottom: 0px;
     position: relative;
     vertical-align: text-bottom;
@@ -463,12 +463,12 @@
     margin-bottom: 5px;
   }
 
-  .Price {
+  .precioproductoficha {
     margin-top: 3vh;
     font-size: 5vh;
     color: #5B21A5;
   }
-  .btnAdd {
+  .botonagregaralcarrito {
     bottom: 0px;
     position: relative;
     vertical-align: text-bottom;
@@ -482,7 +482,7 @@
     letter-spacing: 1px;
     margin-bottom: 5px;
   }
-  .Description {
+  .descripcionfichaproducto {
     color: #505050;
     margin: 1vh 1vh 1vh 1vh;
   }
@@ -496,13 +496,13 @@
 
 
   }
-  .datosUtiles {
+  .datosutilesfichaproducto {
     gap: 5px;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
-  .datosUtiles-unidad {
+  .datosutilesfichaproducto-unidad {
     color: #228cff;
     display: flex;
     flex-direction: row;
@@ -515,7 +515,7 @@
     border-bottom: solid 1px #bbb9b9;
 
   }
-  .greenCaption {
+  .stockok {
     white-space: nowrap;
     color: #28FF0D;
   }
@@ -523,7 +523,7 @@
     margin-left: 40px;
     grid-area: textoDato;
   }
-  .GrayCaption {
+  .stockoff {
     white-space: nowrap;
     font-size: 1.3 vh;
     color: #505050;
@@ -533,7 +533,7 @@
     color: #ffb260;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     position: absolute;
     height: 400px;
     max-height: 400px;
@@ -548,21 +548,21 @@
     box-shadow: 0px 10px 30px 1px rgba(0, 0, 0, 0.337);
   }
 
-  .itemBusquedaData h3 {
+  .itembusquedadata h3 {
     margin-top: 10px;
     color: #7200FF;
   }
 
-  .itemBusqueda img {
+  .itembusqueda img {
     max-height: 12vh;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     display: flex;
     flex-direction: column;
   }
 
-  .itemBusqueda {
+  .itembusqueda {
     width: 100% !important;
     display: flex;
     align-items: center;
@@ -578,24 +578,24 @@
   }
 
 
-  .LogoBanner {
+  .logobanner {
       display: grid;
       grid-area: baner;
   }
-  .BannerMobile{
+  .bannermobile{
     display: none;
   }
 
 
 
-  .historyImage {
+  .imagenproductohistorial {
     min-height: 10vh;
     max-height: 10vh;
     min-width: 10vh;
     max-width: 10vh;
   }
 
-  .historialDesplegable h4 {
+  .historialdesplegable h4 {
     margin: auto;
     align-self: center;
     text-align: center;
@@ -605,7 +605,7 @@
     max-width: 250px;
   }
 
-  .historialDesplegable {
+  .historialdesplegable {
     display: flex;
     justify-content: space-evenly;
     max-width: 60vh;
@@ -626,7 +626,7 @@
     max-height: 12vh;
   }
 
-  .ItemHistorial {
+  .itemhistorial {
     justify-content: space-between;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -638,7 +638,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
 
-  .itemCarritoData h3 {
+  .datosproductodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
@@ -649,23 +649,23 @@
     width: 60px;
   }
 
-  .ItemCarrito h3 {
+  .productocarritodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .ItemCarrito img {
+  .productocarritodesplegable img {
     margin-right: 5vh;
     max-height: 12vh;
   }
 
-  .ItemCarrito h4 {
+  .productocarritodesplegable h4 {
     color: #505050;
     font-size: 1.5vh;
   }
 
-  .ItemCarrito {
+  .productocarritodesplegable {
     margin-top: 1vh;
     margin-bottom: 1vh;
     width: 100% !important;
@@ -676,8 +676,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
 
-  .ItemCarritoButtonAdd,
-  .ItemCarritoButtonDelete {
+  .productocarritodesplegableagregar,
+  .productocarritodesplegableborrar {
     margin-bottom: 1vh;
     border-color: #28FF0D;
     border-radius: 15px;
@@ -685,7 +685,7 @@
     width: 30px;
   }
 
-  .borrarCarrito img {
+  .borrarproductodesplegable img {
     margin-left: 1vh;
     margin-bottom: 2vh;
     max-width: 4vh;
@@ -702,7 +702,7 @@
   }
 
 
-  .CarritoDesplegable {
+  .carritodesplegable {
     position: absolute;
     right: 0px;
     height: 400px;
@@ -715,7 +715,7 @@
   }
 
 
-  .HeaderSecundario {
+  .headersecundario {
     display: grid;
     grid-area: banersecundario;
     background-color: #08FF00;
@@ -747,12 +747,12 @@
     margin-top: 400px;
   }
 
-  .CategoriaDeplegable {
+  .categoriadesplegable {
     font-size: 25px;
     color: #5B21A5;
   }
 
-  .MarcaDesplegable {
+  .marcadesplegable {
     font-size: 25px;
     color: #5B21A5;
   }
@@ -819,7 +819,7 @@
     background-color: #28FF0D;
   }
 
-  .productsContainer {
+  .contenedorproductos {
     justify-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -841,7 +841,7 @@
       "header header header header"
       "banersecundario banersecundario banersecundario banersecundario"
       ". baner baner ."
-      ". categori mainContainer ."
+      ". categori maincontainer ."
       "footer footer footer footer"; 
   }
 }
@@ -914,19 +914,19 @@
 
   /* Item de Carrito-------------------------------------------------------------------*/
 
-  .itemCarritoData {
+  .datosproductodesplegable {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .itemCarritoData h3 {
+  .datosproductodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .CarritoDesplegable {
+  .carritodesplegable {
     border-width: 1px;
     border-style: solid;
     border-color: #707070;
@@ -950,23 +950,23 @@
     width: 60px;
   }
 
-  .ItemCarrito h3 {
+  .productocarritodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .ItemCarrito img {
+  .productocarritodesplegable img {
     margin-right: 5vh;
     max-height: 12vh;
   }
 
-  .ItemCarrito h4 {
+  .productocarritodesplegable h4 {
     color: #505050;
     font-size: 1.5vh;
   }
 
-  .ItemCarrito {
+  .productocarritodesplegable {
     margin-top: 1vh;
     margin-bottom: 1vh;
     width: 100% !important;
@@ -977,8 +977,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
 
-  .ItemCarritoButtonAdd,
-  .ItemCarritoButtonDelete {
+  .productocarritodesplegableagregar,
+  .productocarritodesplegableborrar {
     margin-bottom: 1vh;
     border-color: #28FF0D;
     border-radius: 15px;
@@ -986,7 +986,7 @@
     width: 30px;
   }
 
-  .borrarCarrito img {
+  .borrarproductodesplegable img {
     max-width: 4vh;
   }
 
@@ -1000,7 +1000,7 @@
 
   /* Item de Carrito----------------------------------------------------------------- */
   /* Item de busqueda----------------------------------------------------------------- */
-  .buscadorDesplegable {
+  .buscadordesplegable {
     border-width: 1px;
     border-style: solid;
     border-color: #707070;
@@ -1019,33 +1019,33 @@
     width: 100%;
   }
 
-  .itemBusquedaData h3 {
+  .itembusquedadata h3 {
 
     margin-top: 10px;
     color: #7200FF;
   }
 
-  .itemBusquedaData h4 {
+  .itembusquedadata h4 {
     white-space: pre-wrap;
     word-wrap: break-all;
   }
 
-  .itemBusqueda img {
+  .itembusqueda img {
     max-height: 12vh;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     display: flex;
     flex-direction: column;
   }
 
-  .itemBusquedaData {
+  .itembusquedadata {
 
     text-align: center;
     margin-right: 2vr;
   }
 
-  .itemBusqueda {
+  .itembusqueda {
     align-items: center;
     justify-content: center;
     width: 100% !important;
@@ -1061,14 +1061,14 @@
   /* Item de busqueda----------------------------------------------------------------- */
 
   /*Item historial---------------------------------------------------------------------*/
-  .historyImage {
+  .imagenproductohistorial {
     min-height: 10vh;
     max-height: 10vh;
     min-width: 10vh;
     max-width: 10vh;
   }
 
-  .historialDesplegable h4 {
+  .historialdesplegable h4 {
     margin: auto;
     align-self: center;
     text-align: center;
@@ -1078,7 +1078,7 @@
     max-width: 250px;
   }
 
-  .historialDesplegable {
+  .historialdesplegable {
     align-items: center;
     right: 0;
     position: absolute;
@@ -1095,11 +1095,11 @@
     border-color: #707070;
   }
 
-  .historialDesplegable img {
+  .historialdesplegable img {
     max-height: 6vh;
   }
 
-  .ItemHistorial {
+  .itemhistorial {
     margin-top: 1vh;
     margin-bottom: 1vh;
     display: flex;
@@ -1220,11 +1220,11 @@
     font-size: 2vh;
   }
 
-  .contenedorCategoria li img {
+  .contenedorcategoria li img {
     display: none;
   }
 
-  .categoriaFiltro {
+  .filtrocategoria {
     color: #ffffffab;
     background-color: #5B21A5;
     border-radius: 20px;
@@ -1233,17 +1233,17 @@
     height: fit-content;
   }
 
-  .categoriaFiltro button {
+  .filtrocategoria button {
     background-color: transparent;
     border: none;
     color: #ccc;
   }
 
-  .BannerMobile {
+  .bannermobile {
     display: none;
   }
 
-  .BannerDesktop {
+  .bannerdesktop {
     display: none;
   }
 
@@ -1301,17 +1301,17 @@
     grid-template-rows: 10% 1fr 10%;
     grid-template:
       "header header"
-      "categoriesContainer mainContainer"
+      "categoriesContainer maincontainer"
       "footer footer"
     ;
   }
 
-  .mainContainer {
+  .maincontainer {
     width: 100%;
     padding-top: 0px;
   }
 
-  .productsContainer {
+  .contenedorproductos {
     padding-top: 0px;
     justify-items: center;
     display: grid;
@@ -1323,8 +1323,8 @@
     position: relative;
   }
 
-  .DataProduct h3,
-  .DataProduct h4 {
+  .datosproducto h3,
+  .datosproducto h4 {
     white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1345,7 +1345,7 @@
     background: #fff;
   }
 
-  .product DataProduct {
+  .product datosproducto {
     max-height: 1em;
     overflow: hidden;
     display: flex;
@@ -1366,7 +1366,7 @@
     margin-bottom: 5px;
   }
 
-  .productImage img {
+  .imagenproducto img {
     min-width: 18vh;
   }
 
@@ -1388,7 +1388,7 @@
 }
 
 @media (max-width: 767px) {
-  .BannerDesktop{
+  .bannerdesktop{
     display: none;
   }
   /* header------------------------ */
@@ -1417,7 +1417,7 @@
   #logoHamburguesa {
     display: block;
   }
-  .BannerMobile{
+  .bannermobile{
     display: flex;
     background-size: cover;
     position: relative;
@@ -1628,7 +1628,7 @@
     gap: 1vh;
   }
 
-  .productoDetails {
+  .fichadeproducto {
     border-radius: 20px;
     margin-left: 1vh;
     margin-right: 1vh;
@@ -1642,11 +1642,11 @@
     flex-direction: column;
   }
 
-  .productImage {
+  .imagenproducto {
     max-width: 80%;
   }
 
-  .productoDetails h2 {
+  .fichadeproducto h2 {
     font-size: 2.5vh;
     word-break: break-all;
     text-align: center;
@@ -1655,11 +1655,11 @@
     border-bottom: solid 1px #2e2e2e;
   }
 
-  .productImageDetail {
+  .imagenproductodetalle {
     display: block;
   }
 
-  .productImageDetail h3 {
+  .imagenproductodetalle h3 {
     position: relative;
     margin-left: 10px;
     padding-left: 10px;
@@ -1669,14 +1669,14 @@
   }
 
   .productContainer {
-    grid-area: mainContainer;
+    grid-area: maincontainer;
     background-color: #f6f6f6;
     cursor: pointer;
     width: 100%;
     display: flex;
   }
 
-  .details {
+  .detalleproducto {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1684,7 +1684,7 @@
 
   }
 
-  .btnComprar {
+  .botoncomprartarjeta {
     bottom: 0px;
     position: relative;
     vertical-align: text-bottom;
@@ -1699,13 +1699,13 @@
     margin-bottom: 5px;
   }
 
-  .Price {
+  .precioproductoficha {
     margin-top: 3vh;
     font-size: 5vh;
     color: #5B21A5;
   }
 
-  .btnAdd {
+  .botonagregaralcarrito {
     bottom: 0px;
     position: relative;
     vertical-align: text-bottom;
@@ -1720,7 +1720,7 @@
     margin-bottom: 5px;
   }
 
-  .Description {
+  .descripcionfichaproducto {
     color: #505050;
     margin: 1vh 1vh 1vh 1vh;
   }
@@ -1736,14 +1736,14 @@
 
   }
 
-  .datosUtiles {
+  .datosutilesfichaproducto {
     gap: 5px;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
 
-  .datosUtiles-unidad {
+  .datosutilesfichaproducto-unidad {
     color: #228cff;
     display: flex;
     flex-direction: row;
@@ -1757,7 +1757,7 @@
 
   }
 
-  .greenCaption {
+  .stockok {
     white-space: nowrap;
     color: #28FF0D;
   }
@@ -1767,7 +1767,7 @@
     grid-area: textoDato;
   }
 
-  .GrayCaption {
+  .stockoff {
     white-space: nowrap;
     font-size: 1.3 vh;
     color: #505050;
@@ -1779,8 +1779,8 @@
   }
 
   /*----------------------------------------*/
-  .mainContainer {
-    grid-area: mainContainer;
+  .maincontainer {
+    grid-area: maincontainer;
     padding-top: 15px;
     background-color: #f6f6f6;
     cursor: pointer;
@@ -1789,7 +1789,7 @@
     min-height: 926px;
   }
 
-  .LogoBanner {
+  .logobanner {
     max-width: 100%;
     height: 30%;
     grid-area: banner;
@@ -1808,7 +1808,7 @@
       grid-template:
           "header "
           "banner"
-          "mainContainer "
+          "maincontainer "
           "footer "; */
   }
 
@@ -1816,7 +1816,7 @@
     display: block;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     position: absolute;
     display: flex !important;
     flex-direction: column;
@@ -1837,7 +1837,7 @@
     position: relative;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     max-width: 100%;
     position: absolute;
     display: flex !important;
@@ -1856,17 +1856,17 @@
     color: #7200FF;
   }
 
-  .itemBusqueda img {
+  .itembusqueda img {
     margin-left: 10px;
     max-height: 12vh;
   }
 
-  .buscadorDesplegable {
+  .buscadordesplegable {
     display: flex;
     flex-direction: column;
   }
 
-  .itemBusqueda {
+  .itembusqueda {
     width: 100%;
     display: grid;
     grid-template-columns: 10vh 1fr;
@@ -1881,14 +1881,14 @@
 
 
   /*Item historial---------------------------------------------------------------------*/
-  .historyImage {
+  .imagenproductohistorial {
     min-height: 10vh;
     max-height: 10vh;
     min-width: 10vh;
     max-width: 10vh;
   }
 
-  .historialDesplegable h4 {
+  .historialdesplegable h4 {
     margin: auto;
     align-self: center;
     text-align: center;
@@ -1898,7 +1898,7 @@
     max-width: 250px;
   }
 
-  .historialDesplegable {
+  .historialdesplegable {
     position: absolute;
     display: flex !important;
     flex-direction: column;
@@ -1910,11 +1910,11 @@
     width: 100%;
   }
 
-  .historialDesplegable img {
+  .historialdesplegable img {
     max-height: 12vh;
   }
 
-  .ItemHistorial {
+  .itemhistorial {
     align-items: center;
     justify-content: center;
     gap: 1fr;
@@ -1932,13 +1932,13 @@
   /* Item de Carrito-------------------------------------------------------------------*/
 
 
-  .itemCarritoData h3 {
+  .datosproductodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .CarritoDesplegable {
+  .carritodesplegable {
     left: 0px;
     position: absolute;
     display: flex !important;
@@ -1957,23 +1957,23 @@
     width: 60px;
   }
 
-  .ItemCarrito h3 {
+  .productocarritodesplegable h3 {
     margin-top: 10px;
     color: #7200FF;
     margin-bottom: 10px;
   }
 
-  .ItemCarrito img {
+  .productocarritodesplegable img {
     margin-right: 5vh;
     max-height: 12vh;
   }
 
-  .ItemCarrito h4 {
+  .productocarritodesplegable h4 {
     color: #505050;
     font-size: 1.5vh;
   }
 
-  .ItemCarrito {
+  .productocarritodesplegable {
     margin-top: 1vh;
     margin-bottom: 1vh;
     width: 100% !important;
@@ -1984,8 +1984,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
 
-  .ItemCarritoButtonAdd,
-  .ItemCarritoButtonDelete {
+  .productocarritodesplegableagregar,
+  .productocarritodesplegableborrar {
     margin-bottom: 1vh;
     border-color: #28FF0D;
     border-radius: 15px;
@@ -1993,7 +1993,7 @@
     width: 30px;
   }
 
-  .borrarCarrito img {
+  .borrarproductodesplegable img {
     margin-left: 1vh;
     margin-bottom: 2vh;
     max-width: 4vh;
@@ -2056,7 +2056,7 @@
 
   }
 
-  .categoriaFiltro {
+  .filtrocategoria {
     color: #ffffffab;
     background-color: #5B21A5;
     border-radius: 1vh;
@@ -2064,7 +2064,7 @@
     padding-right: 1vh;
   }
 
-  .categoriaFiltro button {
+  .filtrocategoria button {
     background-color: transparent;
     border: none;
     color: #ccc;
@@ -2077,13 +2077,13 @@
     margin-bottom: 10px;
   }
 
-  .contenedorCategoria li a {
+  .contenedorcategoria li a {
 
     padding-bottom: 14px;
 
   }
 
-  .contenedorCategoria {
+  .contenedorcategoria {
     display: flex;
     flex-direction: row;
     align-items: center !important;
@@ -2107,7 +2107,7 @@
     width: 0px;
   }
 
-  .productsContainer {
+  .contenedorproductos {
     justify-items: center;
     display: grid;
     gap: 15px;
@@ -2132,7 +2132,7 @@
     background: #fff;
   }
 
-  .product DataProduct {
+  .product datosproducto {
     display: flex;
   }
 
