@@ -166,38 +166,38 @@ function RenderizarContenidoFooterYHeader(){
 
 const ContenidoHeader = () => 
 `<div class ="historialContainer">
-  <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >
-  <img class="cerrarDesplegableHistorial" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
+  <img type="image" id="logoUsuario" class="imagenUsuario" src="IMAGES/historial.png" >
+  <img class="cerrarDesplegableHistorial" src="IMAGES/CerrarDesplegable.png">
 </div>
   <div class="hamburgesaContainer">
-    <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
-    <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
+    <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="IMAGES/iconohamburguesa.svg" >
+    <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="IMAGES/CerrarDesplegable.png" >
   </div>
 
 
 
   <div class="BuscadorDiv hideConditionalFinder">
-      <img type="image" id="flecha" class="flechabuscador" src="http://127.0.0.1:5500/APP/IMAGES/flecha2.png" >
+      <img type="image" id="flecha" class="flechabuscador" src="IMAGES/flecha2.png" >
       <input id="buscador-boton"  type="text" class="buscador-input" placeholder="Busca tu producto">
-          <img type="image" id="logobuscador" class="imagenBuscadorInput" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
+          <img type="image" id="logobuscador" class="imagenBuscadorInput" src="IMAGES/logobuscador.svg" >
       </input>    
   </div>
   <div class="logo">
-      <img type="image" src = "http://127.0.0.1:5500/APP/IMAGES/LOGO.svg" alt = "logo del proyecto">          
+      <img type="image" src = "IMAGES/LOGO.svg" alt = "logo del proyecto">          
   </div>
   <div class ="buscadorContainer">
-    <img type="image" id="logobuscador" class="imagenBuscador" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
+    <img type="image" id="logobuscador" class="imagenBuscador" src="IMAGES/logobuscador.svg" >
   </div>
   <div class="carritoContainer">
-    <img type="image" id="logocarrito" class="imagenCarrito" src="http://127.0.0.1:5500/APP/IMAGES/logocarrito.svg" >
-  <img class="cerrarDesplegable" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
+    <img type="image" id="logocarrito" class="imagenCarrito" src="IMAGES/logocarrito.svg" >
+  <img class="cerrarDesplegable" src="IMAGES/CerrarDesplegable.png">
   </div>
   `;
 
 const ContenidoFooter=()=>
   `
-  <img src = "http://127.0.0.1:5500/APP/IMAGES/LOGO.svg" alt = "logo del proyecto">
-  <img src="http://127.0.0.1:5500/APP/IMAGES/Logoubicacion.png" class="logoubicacion" onclick="DibujarMapa();">
+  <img src = "IMAGES/LOGO.svg" alt = "logo del proyecto">
+  <img src="IMAGES/Logoubicacion.png" class="logoubicacion" onclick="DibujarMapa();">
   <div href="#">Ubicacion</div>
   <div class="mapaDesktop">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.6262233157468!2d-58.269671625550146!3d-34.774419574429004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32eb0350b768f%3A0xbd0aa21eac3ef032!2sUniversidad%20Nacional%20Arturo%20Jauretche!5e0!3m2!1ses!2sar!4v1695551869387!5m2!1ses!2sar" 
