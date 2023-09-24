@@ -11,7 +11,7 @@ function BorrarProductoHistorialLocalStorage(productoID){
     var producto = $('#A'+productoID).remove();
     contenedorHistorial.remove(producto);
 }
-
+//COMENTARIO PARA ARREGLAR MAIN
 function VerificarExistenciaHistorialLocalStorage(){
     return (JSON.parse(localStorage.getItem('historial')) != null);
 }
