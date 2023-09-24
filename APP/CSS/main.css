@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/*Mapa*/
+.mapaDesktop iframe {
+  display: none;
+    width: 50%;
+    height: 190px;
+    margin-left: 600px;
+    margin-top: -30px;
+
+}
+/*Mapa*/
+
 .hideConditionalFinder{
   display: none ;
 }
@@ -204,14 +216,8 @@
 }
 
 .LogoBanner{
-  position: absolute;
   justify-content: center;
   align-items: center;
-  top:6.5%;
-}
-
-.LogoBanner .BannerDesktop{
-  display:none;
 }
 
 .mainContainer {
