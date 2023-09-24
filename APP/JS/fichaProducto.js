@@ -153,7 +153,7 @@ async function ValidarYEnviarCorreo(){
     if(validacionInputsFormulario){
         const producto = await ObtenerProductoPorId()
         window.location="mailto:"+CorreoUsuario+"?body="+"Hola, mi nombre es:"+nombreUsuario+"."+" En esta ocasion me gustaria compartirte el siguiente producto: nombre: "+producto.name+""+"precio: $"+producto.price;
-        $(".modal").css("display","none");
+        CerrarFormularioCompartir();
     }
 }
 
@@ -169,6 +169,10 @@ function ObtenerNombreUsuarioFormulario(){
     return nombre;
 } 
 
+function CerrarFormularioCompartir(){
+    let modal = $(".modal");
+    modal.css("display","none")
+}
 
 function ValidarInputsFormulario(nombre,correo){
     let valido = false;
