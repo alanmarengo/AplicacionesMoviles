@@ -9,7 +9,6 @@ function BorrarProductoHistorialLocalStorage(productoID){
     );
     GuardarHistorial(JSON.stringify(nuevoHistorial));
     var producto = $('#A'+productoID).remove();
-    console.log(producto)
     contenedorHistorial.remove(producto);
 }
 
@@ -63,7 +62,7 @@ function ConstruirHtmlProductoHistorial(producto){
             </h3>
         </div>
         <div class="borrarCarrito">
-        <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoHistorialLocalStorage(${producto.id})">
+        <img class="trashIcon" src="IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoHistorialLocalStorage(${producto.id})">
         </div>
         </div> 
     `;

@@ -223,7 +223,7 @@ function ConstruirHtmlMarca(element){
 
 
 function Filtrar(categoriaID,marcaID){
-    let url = "http://127.0.0.1:5500/APP/index.html?";
+    let url = "index.html?";
     if(marcaID){
         url+="marcaID="+marcaID+"&";
     }
@@ -243,7 +243,7 @@ async function RenderizarContenidoProductoDesplegable(coincidencia){
 
 
 async function  ObtenerPathProduct(){
-    var JSONCONFIG = $.getJSON("http://127.0.0.1:5500/APP/CONFIG/config.json");
+    var JSONCONFIG = $.getJSON("./CONFIG/config.json");
     var BodyJson = await JSONCONFIG;
     return BodyJson.PathProductBase;
 }
@@ -258,7 +258,7 @@ async function ObtenerProductosPorCoincidencia(coincidencia){
 
 
 function RedirigirFichaProducto(productoId){
-    window.location = "http://127.0.0.1:5500/APP/PAGES/producto.html?productoId="+productoId;
+    window.location = "producto.html?productoId="+productoId;
 }
 
 

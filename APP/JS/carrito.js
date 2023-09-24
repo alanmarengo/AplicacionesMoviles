@@ -91,7 +91,7 @@ function ConstruirHTMLProductoCarrito(producto){
             
         </div>
         <div class="borrarCarrito">
-            <img class="trashIcon" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoCarroLocalStorage(${producto.id})"> 
+            <img class="trashIcon" src="IMAGES/ICONS/TachoBasura.png" alt="" onclick="BorrarProductoCarroLocalStorage(${producto.id})"> 
         </div>
         </div>  
 `

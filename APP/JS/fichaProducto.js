@@ -12,7 +12,7 @@ function ObtenerIdProducto(){
 
 
 async function  ObtenerPathProduct(){
-    var JSONCONFIG = $.getJSON("../CONFIG/config.json");
+    var JSONCONFIG = $.getJSON("./CONFIG/config.json");
     var BodyJson = await JSONCONFIG;
     return BodyJson.PathProductBase;
 }
@@ -82,10 +82,10 @@ function ConstruirHtmlProducto(element){
                 </div>
             </div>
             <div class="contactContainer">
-                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/f.png" alt="">
-                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/i.png" alt="">
-                <img class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/w.png" alt="">
-                <img id="abrirModal" class="contacItem" src="http://127.0.0.1:5500/APP/IMAGES/ICONS/MEDIA ICONS/s.png" alt="" onclick="AbrirFormularioCompartir()">
+                <img class="contacItem" src="IMAGES/ICONS/MEDIA ICONS/f.png" alt="">
+                <img class="contacItem" src="IMAGES/ICONS/MEDIA ICONS/i.png" alt="">
+                <img class="contacItem" src="IMAGES/ICONS/MEDIA ICONS/w.png" alt="">
+                <img id="abrirModal" class="contacItem" src="IMAGES/ICONS/MEDIA ICONS/s.png" alt="" onclick="AbrirFormularioCompartir()">
             </div>
             
         </div>
