@@ -86,6 +86,12 @@ $(function() {
 
 });
 
+function RedirigirIndex(){
+  if(!ValidarUbicacionIndex()){
+    window.location = "index.html";
+  }
+}
+
 function EventoImagenCarrito(){
   $('.imagenUsuario').unbind();
   $(".imagenBuscador").unbind();
@@ -183,7 +189,7 @@ const ContenidoHeader = () =>
       </input>    
   </div>
   <div class="logo">
-      <img type="image" src = "IMAGES/LOGO.svg" alt = "logo del proyecto">          
+      <img type="image" src = "IMAGES/LOGO.svg" alt = "logo del proyecto" onclick="RedirigirIndex()">          
   </div>
   <div class ="buscadorContainer">
     <img type="image" id="logobuscador" class="imagenBuscador" src="IMAGES/logobuscador.svg" >
