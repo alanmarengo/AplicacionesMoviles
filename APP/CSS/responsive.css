@@ -1,4 +1,389 @@
 @media (min-width: 1181px) {
+
+  /* Formulario de envio */
+  .form-register {
+    width: 400px;
+    background-color: #5B21A5;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #08FF00;
+    box-shadow: 7px 13px 37px #000;
+  }
+
+  .form-register h4 {
+    font-size: 22px;
+
+  }
+
+  .controls {
+    width: 95%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: #5B21A5;
+  }
+
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .form-register .botons {
+    text-align: center;
+    background: #7200FF;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  /* Item de Carrito-------------------------------------------------------------------*/
+
+  .itemCarritoData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemCarritoData h3 {
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+
+  .CarritoDesplegable {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    right: 0px;
+    width: 150vh;
+    max-width: 50vh;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    /* height: -700px; */
+    background-color: white;
+    width: 100%;
+
+  }
+
+  .btnBorrar {
+    width: 60px;
+  }
+
+  .ItemCarrito h3 {
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+
+  .ItemCarrito img {
+    margin-right: 5vh;
+    max-height: 12vh;
+  }
+
+  .ItemCarrito h4 {
+    color: #505050;
+    font-size: 1.5vh;
+  }
+
+  .ItemCarrito {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  .ItemCarritoButtonAdd,
+  .ItemCarritoButtonDelete {
+    margin-bottom: 1vh;
+    border-color: #28FF0D;
+    border-radius: 15px;
+    background-color: #28FF0D;
+    width: 30px;
+  }
+
+  .borrarCarrito img {
+    max-width: 4vh;
+  }
+
+  .contadores {
+    display: flex;
+    color: #7200FF;
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+  }
+
+  /* Item de Carrito----------------------------------------------------------------- */
+  /* Item de busqueda----------------------------------------------------------------- */
+  .buscadorDesplegable {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    left: 22vh;
+    width: 150vh;
+    max-width: 66vh;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    /* height: -700px; */
+    background-color: white;
+    width: 100%;
+  }
+
+  .itemBusquedaData h3 {
+
+    margin-top: 10px;
+    color: #7200FF;
+  }
+
+  .itemBusquedaData h4 {
+    white-space: pre-wrap;
+    word-wrap: break-all;
+  }
+
+  .itemBusqueda img {
+    max-height: 12vh;
+  }
+
+  .buscadorDesplegable {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .itemBusquedaData {
+
+    text-align: center;
+    margin-right: 2vr;
+  }
+
+  .itemBusqueda {
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    text-align: center;
+    height: 400px !important;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  /* Item de busqueda----------------------------------------------------------------- */
+
+  /*Item historial---------------------------------------------------------------------*/
+  .historyImage {
+    min-height: 10vh;
+    max-height: 10vh;
+    min-width: 10vh;
+    max-width: 10vh;
+  }
+
+  .historialDesplegable h4 {
+    margin: auto;
+    align-self: center;
+    text-align: center;
+    color: #505050;
+    font-size: 1.5vh;
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  .historialDesplegable {
+    align-items: center;
+    right: 0;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 400px;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    background-color: white;
+    width: 50vh;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #707070;
+  }
+
+  .historialDesplegable img {
+    max-height: 6vh;
+  }
+
+  .ItemHistorial {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  /*Item historial---------------------------------------------------------------------*/
+  /* Header props --------------------------------------------------------------------------------------------*/
+  .header {
+    grid-area: header;
+    align-items: center;
+    background-color: #707070;
+    height: 80px;
+    align-content: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 16vh 1fr 48px 48px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo buscador carro historial";
+  }
+
+  .BuscadorDiv {
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    grid-area: buscador;
+  }
+
+  .buscadorContainer {
+    display: block;
+  }
+
+  .hideConditionalFinder {
+    display: flex;
+  }
+
+  .buscador-input {
+    margin-left: 4vh;
+    width: 80%;
+  }
+
+  .flechabuscador {
+    display: none;
+  }
+
+  .logo {
+    display: grid;
+    grid-area: logo;
+    position: absolute;
+    margin-left: 0px;
+  }
+
+  .carritoContainer {
+    align-self: center flex-end;
+    grid-area: carro;
+  }
+
+  .imagenUsuario {
+    margin-left: 0px;
+    position: relative;
+  }
+
+  .historialContainer {
+
+    margin-right: 1vh;
+    display: grid;
+    grid-area: historial;
+  }
+
+  /*buscador */
+  .buscador-input {
+    display: flex;
+  }
+
+  .imagenBuscador {
+    position: relative;
+  }
+
+  .buscadorContainer {
+    display: none;
+  }
+
+  .imagenBuscadorInput {
+    position: relative;
+  }
+
+  .hamburgesaContainer {
+    display: none;
+  }
+
+  .headerFinder {
+    grid-area: header;
+    width: 100%;
+    justify-content: center;
+    align-items: center center;
+    display: flex
+  }
+
+
+
+  /* Header props --------------------------------------------------------------------------------------------*/
+  .filtros_container {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .filtros {
+
+    display: flex;
+    font-size: 2vh;
+  }
+
+  .contenedorCategoria li img {
+    display: none;
+  }
+
+  .categoriaFiltro {
+    color: #ffffffab;
+    background-color: #5B21A5;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: fit-content;
+  }
+
+  .categoriaFiltro button {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+  }
+
   .contenedorCategoria li img {
     display: none;
   }
@@ -33,8 +418,6 @@
   .productImage {
     max-width: 80%;
   }
-
-
   .imagenBuscador {
     height: 38px;
     width: 38px;
@@ -42,7 +425,6 @@
     margin-left: 350px;
     cursor: pointer;
   }
-
   .productoDetails h2 {
     font-size: 2.5vh;
     word-break: break-all;
@@ -51,11 +433,9 @@
     padding-bottom: 2vh;
     border-bottom: solid 1px #2e2e2e;
   }
-
   .productImageDetail {
     display: block;
   }
-
   .productImageDetail h3 {
     position: relative;
     margin-left: 10px;
@@ -64,7 +444,6 @@
     max-width: 10vh;
     border-radius: 11vh;
   }
-
   .productContainer {
     grid-area: mainContainer;
     background-color: #f6f6f6;
@@ -72,13 +451,11 @@
     width: 100%;
     display: flex;
   }
-
   .details {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
-
   }
 
   .btnComprar {
@@ -101,7 +478,6 @@
     font-size: 5vh;
     color: #5B21A5;
   }
-
   .btnAdd {
     bottom: 0px;
     position: relative;
@@ -116,12 +492,10 @@
     letter-spacing: 1px;
     margin-bottom: 5px;
   }
-
   .Description {
     color: #505050;
     margin: 1vh 1vh 1vh 1vh;
   }
-
   .icono {
     opacity: 0.6;
     display: flex;
@@ -132,14 +506,12 @@
 
 
   }
-
   .datosUtiles {
     gap: 5px;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
-
   .datosUtiles-unidad {
     color: #228cff;
     display: flex;
@@ -153,24 +525,20 @@
     border-bottom: solid 1px #bbb9b9;
 
   }
-
   .greenCaption {
     white-space: nowrap;
     color: #28FF0D;
   }
-
   .textoDato {
     margin-left: 40px;
     grid-area: textoDato;
   }
-
   .GrayCaption {
     white-space: nowrap;
     font-size: 1.3 vh;
     color: #505050;
   }
-
-  .redCaption {
+ .redCaption {
     white-space: nowrap;
     color: #ffb260;
   }
@@ -219,7 +587,7 @@
     margin-left: -500px;
   }
 
-  
+
   .LogoBanner {
     left: 50%;
     transform: translateX(-50%);
@@ -232,6 +600,7 @@
   }
 
   .LogoBanner .BannerDesktop {
+    margin-top: 9px;
     display: block;
   }
 
@@ -345,13 +714,6 @@
     gap: 1vh;
   }
 
-  .imagenCarrito {
-    margin-left: 50px;
-  }
-
-  .cerrarDesplegable {
-    margin-left: 170px;
-  }
 
   .CarritoDesplegable {
     height: 400px;
@@ -367,6 +729,7 @@
 
 
   .HeaderSecundario {
+    grid-area: Separador;
     width: 100vw;
     height: 19px;
     display: flex;
@@ -376,14 +739,14 @@
   }
 
   .footer {
-    grid-area: footer;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #707070;
     width: 100%;
-    position: absolute;
-    margin-top: 145%;
+    position: fixed;
+    bottom: 0px;
+    
   }
 
   .mainContainer {
@@ -440,13 +803,16 @@
 
 
   .product {
+    display: grid !important;
+    max-height: 25em;
+    grid-template-rows: auto 1fr auto;
     border-radius: 20px;
     align-items: center;
+    justify-items: center;
     background-color: #cecbcb;
-    display: flex;
-    flex-direction: column;
     transition: box-shadow .3s;
     width: 95%;
+    height: 100%;
     border: 1px solid #ccc;
     background: #fff;
   }
@@ -500,18 +866,8 @@
   }
 
   .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 20px 1.2fr 0.6fr 1fr 1fr 5%;
-    gap: 0px 0px;
-    grid-template-areas:
-      "header header header header header header header"
-      "Separador Separador Separador Separador Separador Separador Separador"
-      "derecho Banner Banner Banner Banner Banner "
-      "  mainContainer mainContainer mainContainer mainContainer "
-      "  mainContainer mainContainer mainContainer mainContainer "
-      "  mainContainer mainContainer mainContainer mainContainer "
-      "footer footer footer footer footer footer footer";
+   display: flex;
+   flex-direction: column;
   }
 }
 
@@ -523,68 +879,376 @@
 
 */
 @media (max-width: 1180px) {
-  /* Header props --------------------------------------------------------------------------------------------*/
-  .header{
-  height: 80px;
-  align-content: center;
-  display: grid;
-  grid-auto-columns: 1fr; 
-  grid-auto-rows: 1fr; 
-  grid-template-columns: 1fr 1fr 48px auto; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "logo buscador carro historial"; 
+
+  /* Formulario de envio */
+  .form-register {
+    width: 400px;
+    background-color: #5B21A5;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #08FF00;
+    box-shadow: 7px 13px 37px #000;
   }
-  .logo{
+
+  .form-register h4 {
+    font-size: 22px;
+
+  }
+
+  .controls {
+    width: 95%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: #5B21A5;
+  }
+
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .form-register .botons {
+    text-align: center;
+    background: #7200FF;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  /* Item de Carrito-------------------------------------------------------------------*/
+
+  .itemCarritoData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemCarritoData h3 {
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+
+  .CarritoDesplegable {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    right: 0px;
+    width: 150vh;
+    max-width: 50vh;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    /* height: -700px; */
+    background-color: white;
+    width: 100%;
+
+  }
+
+  .btnBorrar {
+    width: 60px;
+  }
+
+  .ItemCarrito h3 {
+    margin-top: 10px;
+    color: #7200FF;
+    margin-bottom: 10px;
+  }
+
+  .ItemCarrito img {
+    margin-right: 5vh;
+    max-height: 12vh;
+  }
+
+  .ItemCarrito h4 {
+    color: #505050;
+    font-size: 1.5vh;
+  }
+
+  .ItemCarrito {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  .ItemCarritoButtonAdd,
+  .ItemCarritoButtonDelete {
+    margin-bottom: 1vh;
+    border-color: #28FF0D;
+    border-radius: 15px;
+    background-color: #28FF0D;
+    width: 30px;
+  }
+
+  .borrarCarrito img {
+    max-width: 4vh;
+  }
+
+  .contadores {
+    display: flex;
+    color: #7200FF;
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+  }
+
+  /* Item de Carrito----------------------------------------------------------------- */
+  /* Item de busqueda----------------------------------------------------------------- */
+  .buscadorDesplegable {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    left: 22vh;
+    width: 150vh;
+    max-width: 66vh;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    /* height: -700px; */
+    background-color: white;
+    width: 100%;
+  }
+
+  .itemBusquedaData h3 {
+
+    margin-top: 10px;
+    color: #7200FF;
+  }
+
+  .itemBusquedaData h4 {
+    white-space: pre-wrap;
+    word-wrap: break-all;
+  }
+
+  .itemBusqueda img {
+    max-height: 12vh;
+  }
+
+  .buscadorDesplegable {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .itemBusquedaData {
+
+    text-align: center;
+    margin-right: 2vr;
+  }
+
+  .itemBusqueda {
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    text-align: center;
+    height: 400px !important;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  /* Item de busqueda----------------------------------------------------------------- */
+
+  /*Item historial---------------------------------------------------------------------*/
+  .historyImage {
+    min-height: 10vh;
+    max-height: 10vh;
+    min-width: 10vh;
+    max-width: 10vh;
+  }
+
+  .historialDesplegable h4 {
+    margin: auto;
+    align-self: center;
+    text-align: center;
+    color: #505050;
+    font-size: 1.5vh;
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  .historialDesplegable {
+    align-items: center;
+    right: 0;
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    height: 400px;
+    max-height: 400px;
+    direction: ltr;
+    overflow: hidden scroll;
+    background-color: white;
+    width: 50vh;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #707070;
+  }
+
+  .historialDesplegable img {
+    max-height: 6vh;
+  }
+
+  .ItemHistorial {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+  }
+
+  /*Item historial---------------------------------------------------------------------*/
+  /* Header props --------------------------------------------------------------------------------------------*/
+  .header {
+    align-items: center;
+    background-color: #707070;
+    height: 80px;
+    align-content: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 16vh 1fr 48px 48px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo buscador carro historial";
+  }
+
+  .BuscadorDiv {
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    grid-area: buscador;
+  }
+
+  .buscadorContainer {
+    display: block;
+  }
+
+  .hideConditionalFinder {
+    display: flex;
+  }
+
+  .buscador-input {
+    margin-left: 4vh;
+    width: 80%;
+  }
+
+  .flechabuscador {
+    display: none;
+  }
+
+  .logo {
     display: grid;
     grid-area: logo;
     position: absolute;
     margin-left: 0px;
   }
-  .carritoContainer{
+
+  .carritoContainer {
     align-self: center flex-end;
     grid-area: carro;
   }
-  .imagenUsuario{
+
+  .imagenUsuario {
     margin-left: 0px;
     position: relative;
   }
-  .historialContainer{
-    
+
+  .historialContainer {
+
     margin-right: 1vh;
     display: grid;
     grid-area: historial;
   }
-  .imagenBuscador{
+
+  /*buscador */
+  .buscador-input {
+    display: flex;
+  }
+
+  .imagenBuscador {
     position: relative;
   }
-  .buscadorContainer{
-    grid-area: buscador;
+
+  .buscadorContainer {
+    display: none;
   }
-  .imagenBuscadorInput{
+
+  .imagenBuscadorInput {
     position: relative;
   }
-.BuscadorDiv{
-  
-}
+
+  .hamburgesaContainer {
+    display: none;
+  }
+
+  .headerFinder {
+    grid-area: header;
+    width: 100%;
+    justify-content: center;
+    align-items: center center;
+    display: flex
+  }
 
 
 
   /* Header props --------------------------------------------------------------------------------------------*/
-  .filtros_container{
+  .filtros_container {
     display: flex;
     flex-direction: row;
     gap: 1vh;
     margin-bottom: 1vh;
   }
+
   .filtros {
+
+    display: flex;
     font-size: 2vh;
   }
+
   .contenedorCategoria li img {
     display: none;
   }
-  .categoriaFiltro{
+
+  .categoriaFiltro {
     color: #ffffffab;
     background-color: #5B21A5;
     border-radius: 20px;
@@ -592,11 +1256,13 @@
     padding-right: 10px;
     height: fit-content;
   }
-  .categoriaFiltro button{
+
+  .categoriaFiltro button {
     background-color: transparent;
     border: none;
     color: #ccc;
   }
+
   .BannerMobile {
     display: none;
   }
@@ -616,9 +1282,10 @@
   }
 
   .filtro {
-    position: absolute;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 3vh;
     flex-direction: column;
-    margin-top: 70px;
     width: 100%;
     grid-area: categoriesContainer;
   }
@@ -746,50 +1413,90 @@
 }
 
 @media (max-width: 767px) {
+
+  /* header------------------------ */
   .header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
     background-color: #707070;
-    margin-top: 0px;
-    position: relative;
+    height: 80px;
+    align-content: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 50px 50px 1fr 50px 50px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "hamburgesa carro logo historial buscador";
   }
+
+  .logo {
+    display: grid;
+    grid-area: logo;
+    position: relative;
+    margin-left: 0px;
+  }
+
   #logoHamburguesa {
     display: block;
   }
-  .imagenHamburguesa {
-    height: 38px;
-    width: 38px;
-    position: absolute;
-    margin-left: -350px;
-    cursor: pointer;
+
+  .carritoContainer {
+    align-self: center flex-end;
+    grid-area: carro;
   }
-  .imagenCarrito {
-    height: 38px;
-    width: 38px;
-    position: absolute;
-    margin-left: -260px;
-    cursor: pointer;
-  }
-  .logo img {
-    height: 60px;
-    cursor: pointer;
-  }
+
   .imagenUsuario {
-    height: 38px;
-    width: 38px;
-    position: absolute;
-    margin-left: 260px;
-    cursor: pointer;
+    margin-left: 0px;
+    position: relative;
   }
+
+  .historialContainer {
+    align-self: center self-end;
+    margin-right: 1vh;
+    display: grid;
+    grid-area: historial;
+  }
+
   .imagenBuscador {
-    height: 38px;
-    width: 38px;
-    position: absolute;
-    margin-left: 350px;
-    cursor: pointer;
+    position: relative;
   }
+
+  .hideConditionalFinder {
+    display: none;
+  }
+
+  .hamburgesaContainer {
+    display: flex;
+  }
+
+  .buscadorContainer {
+    grid-area: buscador;
+  }
+
+  .buscador-input {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .imagenBuscadorInput {
+    position: relative;
+  }
+
+  .hamburgesaContainer {
+    grid-area: hamburgesa;
+  }
+
+  .buscadorContainer {
+    display: block;
+  }
+
+  .flechabuscador {
+    display: block;
+  }
+
+  /* header------------------------- */
+
   /* Modal*/
   .modal {
     display: none;
@@ -812,7 +1519,6 @@
   .contenido-modal {
     position: relative;
     /* Relativo con respecto al contenedor -modal- */
-    background-color: white;
     margin: auto;
     /* Centrada */
     padding: 20px;
@@ -823,19 +1529,6 @@
     animation-duration: 0.5s
   }
 
-  .contenido-modal {
-    position: relative;
-    /* Relativo con respecto al contenedor -modal- */
-    background-color: white;
-    margin: auto;
-    /* Centrada */
-    padding: 20px;
-    width: 60%;
-    -webkit-animation-name: animarsuperior;
-    -webkit-animation-duration: 0.5s;
-    animation-name: animarsuperior;
-    animation-duration: 0.5s
-  }
 
   @keyframes animatetop {
     from {
@@ -881,7 +1574,7 @@
   /* Formulario de envio */
   .form-register {
     width: 400px;
-    background: #5B21A5;
+    background-color: #5B21A5;
     padding: 30px;
     margin: auto;
     margin-top: 100px;
@@ -893,11 +1586,11 @@
 
   .form-register h4 {
     font-size: 22px;
-    margin-bottom: 20px;
+
   }
 
   .controls {
-    width: 100%;
+    width: 95%;
     background: #ffffff;
     padding: 10px;
     border-radius: 4px;
@@ -926,7 +1619,7 @@
   }
 
   .form-register .botons {
-    width: 100%;
+    text-align: center;
     background: #7200FF;
     border: none;
     padding: 12px;
@@ -1130,16 +1823,6 @@
     height: 100%;
   }
 
-  .header {
-    grid-area: header;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: #707070;
-    margin-top: 0px;
-  }
-
   .grid-container {
     width: 100%;
     gap: 0px;
@@ -1169,30 +1852,38 @@
     overflow: hidden scroll;
     /* height: -700px; */
     background-color: white;
-    width: 90%;
-    padding: 20px;
+    max-width: 100%;
   }
 
   /* Item de busqueda----------------------------------------------------------------- */
+  .BuscadorDiv {
+    width: 100%;
+    align-items: center;
+    height: 80px;
+    position: relative;
+  }
+
   .buscadorDesplegable {
+    max-width: 100%;
     position: absolute;
     display: flex !important;
     flex-direction: column;
     height: 100%;
+    left: 0px;
     max-height: 400px;
     direction: ltr;
     overflow: hidden scroll;
     /* height: -700px; */
     background-color: white;
-    width: 100%;
   }
 
-  .itemBusquedaData h3 {
+  .itemBusqcuedaData h3 {
     margin-top: 10px;
     color: #7200FF;
   }
 
   .itemBusqueda img {
+    margin-left: 10px;
     max-height: 12vh;
   }
 
@@ -1202,8 +1893,9 @@
   }
 
   .itemBusqueda {
-    width: 100% !important;
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10vh 1fr;
     align-items: center;
     text-align: center;
     height: 400px !important;
@@ -1249,10 +1941,13 @@
   }
 
   .ItemHistorial {
+    align-items: center;
+    justify-content: center;
+    gap: 1fr;
+    width: 100%;
     margin-top: 1vh;
     margin-bottom: 1vh;
     display: flex;
-    align-items: center;
     text-align: center;
     transition: all 0.2s ease 0s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
@@ -1270,6 +1965,7 @@
   }
 
   .CarritoDesplegable {
+    left: 0px;
     position: absolute;
     display: flex !important;
     flex-direction: column;
@@ -1279,6 +1975,7 @@
     overflow: hidden scroll;
     background-color: white;
     width: 100%;
+    max-width: 100%;
 
   }
 
@@ -1344,6 +2041,30 @@
 
 
   /*Filtro de categorias-------------------- */
+  .hideFiltro {
+    margin-top: -8000px;
+  }
+
+  .showFiltro {
+    margin-top: 80px;
+  }
+
+  .filtro {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #5B21A5;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    transition: 250ms;
+  }
+
   .filtros_container h5 {
     margin-left: 1vh;
     color: #5B21A5;
@@ -1399,21 +2120,6 @@
 
   }
 
-  .filtro {
-    margin-bottom: 20px;
-    display: grid;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    background-color: #5B21A5;
-    width: 100%;
-    height: auto;
-    justify-content: left;
-    transition: 250ms;
-    margin-top: -8000px;
-  }
 
   #logoHamburguesa {
     display: block;

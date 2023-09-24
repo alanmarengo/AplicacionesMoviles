@@ -24,7 +24,7 @@
     </div>
     <img class="CerrarMapa" src="../IMAGES/CerrarDesplegable.png">
     <div id="carritoHeaderDesplegable" class="CarritoDesplegable"></div>
-    <div id="filtrosDesplegables" class="filtro">
+    <div id="filtrosDesplegables" class="filtro hideFiltro">
         <ul id="CategoriaList" class="filtros-list">
             <H1 class="CategoriaDeplegable">Categorias</H1>
 
@@ -41,17 +41,21 @@
     </div>
     <div id="ventanaModal" class="modal">
         <section class="form-register contenido-modal">
-            <h4>Comparti este producto!</h4>
+            <div class="modalTextheader">
+                <h4>Comparti este producto!</h4>
+                <button class="cerrarModal">x</button>
+            </div>
+            
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de destino" required>
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <a id="cerrar" class="botons" type="submit" onclick="ValidarYEnviarCorreo()">>Enviar!</a>
-            <p id="Alertas"></p>
+            <div class="modalText">
+                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                <a id="cerrar" class="botons" type="submit" onclick="ValidarYEnviarCorreo()">Enviar!</a>
+                <p id="Alertas"></p>
+            </div>
         </section>
     </div>
     <main class="mainContainer"></main>
-    <div class="isquierdo"></div>
-    <div class="derecho"></div>
 
     <footer class="footer">
     </footer>

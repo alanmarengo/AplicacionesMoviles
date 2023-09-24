@@ -86,29 +86,35 @@
       background-color: rgba(0, 0, 0, 0.5);
       /* Color negro con opacidad del 50% */
     }
+  .modalText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .modalTextheader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .cerrarModal{
+    margin-left: 8vh;
+    align-self: center ;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: larger;
+  }
+
+
   
     .contenido-modal {
       position: relative;
       /* Relativo con respecto al contenedor -modal- */
-      background-color: white;
       margin: auto;
       /* Centrada */
       padding: 20px;
-      width: 60%;
-      -webkit-animation-name: animarsuperior;
-      -webkit-animation-duration: 0.5s;
-      animation-name: animarsuperior;
-      animation-duration: 0.5s
-    }
-  
-    .contenido-modal {
-      position: relative;
-      /* Relativo con respecto al contenedor -modal- */
-      background-color: white;
-      margin: auto;
-      /* Centrada */
-      padding: 20px;
-      width: 60%;
       -webkit-animation-name: animarsuperior;
       -webkit-animation-duration: 0.5s;
       animation-name: animarsuperior;
@@ -539,9 +545,7 @@
     .imagenHamburguesa {
       display: none;
     }
-  .grid-container{
-    background-color: #F6F6F6;
-  }
+ 
    
     .isquierdo {
       grid-area: isquierdo;
@@ -571,15 +575,10 @@
     }
   
     .grid-container {
+     background-color: #F6F6F6;
       width: 100vw;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: 20% 80% !important;
-      grid-template-rows: 10% 1fr 10% !important;
-      grid-template:
-        "header header"
-        "mainContainer mainContainer"
-        "footer footer"
+      display: flex;
+      flex-direction: column
       ;
     }
   

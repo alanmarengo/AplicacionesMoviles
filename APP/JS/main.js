@@ -11,7 +11,7 @@ $(function() {
   $(".buscador-input").on('keyup', async function(){
     var longidutPalabra = $(this).val().length;
     if(longidutPalabra>=3){
-      $(".buscadorDesplegable").css("margin-top","70px");
+      $(".buscadorDesplegable").css("margin-top","80px");
       await RenderizarContenidoProductoDesplegable($(this).val());
       if(screen.width <= 428){
       $(".mainContainer").css("filter","brightness(50%)");
@@ -26,13 +26,14 @@ $(function() {
   $(".flechabuscador").on('click', function(){  
     $(".imagenCarrito").css("display","flex");
     $(".imagenBuscador").css("display","flex");
-    $(".header").css("background-color","#707070");
     $(".buscadorDesplegable").css("margin-top","-8000px");
     $(".logo").css("display","flex");
-    $(".BuscadorDiv").css("display","none");
+    $(".BuscadorDiv").removeClass("showConditionalFinder").addClass("hideConditionalFinder");
     $(".mainContainer").css("filter","brightness(100%)");
     $(".imagenUsuario").css("display","flex");
-    if(screen.width <= 428){
+    $(".headerFinder").removeClass("headerFinder").addClass("header")
+    $(".header").css("background-color","#70707");
+    if(screen.width <= 767){
     $(".imagenHamburguesa").css("display","flex");
     }
   });
@@ -59,7 +60,6 @@ $(function() {
     $(".CarritoDesplegable").css("margin-top","-800px");
     $(".mainContainer").css("filter","brightness(100%)");
     $(".filtro").css("filter","brightness(100%)");
-    $(".productsContainer").css("padding-top","50px");
     $(".cerrarDesplegable").css("display","none");
     $(".imagenCarrito").css("display","flex");
   });
@@ -70,7 +70,7 @@ $(function() {
     BindBuscador();
     $(".imagenhamburguesacerrar").css("display","none");
     $(".imagenHamburguesa").css("display","flex");
-    $(".filtro").css("margin-top","-8000px");
+    $(".filtro").addClass("hideFiltro").removeClass("showFiltro");
     $(".mainContainer").css("filter","brightness(100%)");
   });
 
@@ -90,7 +90,7 @@ function EventoImagenCarrito(){
   $('.imagenUsuario').unbind();
   $(".imagenBuscador").unbind();
   $(".imagenHamburguesa").unbind();
-  $(".CarritoDesplegable").css("margin-top","70px");
+  $(".CarritoDesplegable").css("margin-top","80px");
   $(".mainContainer").css("filter","brightness(50%)");
   $(".productsContainer").css("padding-top","10px");
   $(".imagenCarrito").css("display","none");
@@ -103,7 +103,7 @@ function BindCarro(){
   $('.imagenUsuario').unbind();
   $(".imagenBuscador").unbind();
   $(".imagenHamburguesa").unbind();
-  $(".CarritoDesplegable").css("margin-top","70px");
+  $(".CarritoDesplegable").css("margin-top","80px");
   if(screen.width <= 428){
     $(".mainContainer").css("filter","brightness(50%)");
   }
@@ -118,7 +118,7 @@ function BindHistorial(){
     $(".imagenBuscador").unbind();
     $(".imagenHamburguesa").unbind();
     $('.imagenCarrito').unbind();
-    $(".historialDesplegable").css("margin-top","70px");
+    $(".historialDesplegable").css("margin-top","80px");
     $(".imagenUsuario").css("display","none");
     $(".cerrarDesplegableHistorial").css("display","block");
     if(screen.width <= 428){
@@ -134,7 +134,7 @@ function BindFiltros(){
   $('.imagenCarrito').unbind();
   $('.imagenUsuario').unbind();
   $(".imagenBuscador").unbind();
-  $(".filtro").css("margin-top","70px");
+  $(".filtro").removeClass("hideFiltro").addClass("showFiltro");
   $(".imagenHamburguesa").css("display","none");
   $(".imagenhamburguesacerrar").css("display","flex");
   $(".mainContainer").css("filter","brightness(50%)");
@@ -148,8 +148,8 @@ function BindBuscador(){
     $(".imagenHamburguesa").css("display","none");
     $(".imagenBuscador").css("display","none");
     $(".logo").css("display","none");
-    $(".BuscadorDiv").css("display","grid");
-    $(".header").css("background-color","#5B21A5");
+    $(".BuscadorDiv").removeClass("hideConditionalFinder").addClass("showConditionalFinder");
+    $(".header").removeClass("header").addClass("headerFinder")
   });
 }
 
@@ -167,12 +167,16 @@ function RenderizarContenidoFooterYHeader(){
 const ContenidoHeader = () => 
 `<div class ="historialContainer">
   <img type="image" id="logoUsuario" class="imagenUsuario" src="http://127.0.0.1:5500/APP/IMAGES/historial.png" >
-</div>
   <img class="cerrarDesplegableHistorial" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png">
-  <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
-  <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
+</div>
+  <div class="hamburgesaContainer">
+    <img type="image" id="logoHamburguesa" class="imagenHamburguesa" src="http://127.0.0.1:5500/APP/IMAGES/iconohamburguesa.svg" >
+    <img type="imgage" id="checkhamburguesacerrar" class="imagenhamburguesacerrar" src="http://127.0.0.1:5500/APP/IMAGES/CerrarDesplegable.png" >
+  </div>
 
-  <div class="BuscadorDiv">
+
+
+  <div class="BuscadorDiv hideConditionalFinder">
       <img type="image" id="flecha" class="flechabuscador" src="http://127.0.0.1:5500/APP/IMAGES/flecha2.png" >
       <input id="buscador-boton"  type="text" class="buscador-input" placeholder="Busca tu producto">
           <img type="image" id="logobuscador" class="imagenBuscadorInput" src="http://127.0.0.1:5500/APP/IMAGES/logobuscador.svg" >
