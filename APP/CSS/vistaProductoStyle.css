@@ -852,16 +852,14 @@
   
     .productoDetails {
       height: 650px;
+      max-width: 80%;
       border-radius: 20px;
-      margin-left: 1vh;
-      margin-right: 1vh;
-      margin-bottom: 1vh;
       background-color: #ffffff;
       gap: 15px;
-      max-width: 100%;
       border: solid 1px #505050;
       align-items: center;
       display: grid;
+      align-self:center;
       grid-template-columns: 1fr 1fr;
       grid-template: 
         "image details";
@@ -1329,9 +1327,10 @@
       display: none;
     }
   
+  
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 767px) {
 
     .grid-container {
         width: 100%;

@@ -855,6 +855,7 @@
 */
 @media (max-width: 1180px) {
 
+  
   /* Formulario de envio */
   .form-register {
     width: 400px;
@@ -867,6 +868,7 @@
     color: #08FF00;
     box-shadow: 7px 13px 37px #000;
   }
+
 
   .form-register h4 {
     font-size: 22px;
