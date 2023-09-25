@@ -15,7 +15,11 @@
     <header class="header">
     </header>
     <div class="headersecundario"> APLICACIONES MOVILES</div>
-
+  
+    <div class="logobanner">
+        <img class="bannermobile" src="IMAGES/BANNERMOBILEPERSONALIZADO.png" alt = "Banner principal">   
+        <img class="bannerdesktop" src = "IMAGES/logobanner.svg" alt = "Banner principal Desktop">   
+    </div> 
 
     <div class="map" id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.6262233157468!2d-58.269671625550146!3d-34.774419574429004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32eb0350b768f%3A0xbd0aa21eac3ef032!2sUniversidad%20Nacional%20Arturo%20Jauretche!5e0!3m2!1ses!2sar!4v1695551869387!5m2!1ses!2sar" 
@@ -48,9 +52,17 @@
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de destino" required>
             <div class="modalText">
-                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-                <a id="cerrar" class="botons" type="submit" onclick="ValidarYEnviarCorreo()">Enviar!</a>
-                <p id="Alertas"></p>
+                <div class="textomodalinferior">
+                    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                </div>
+                <div class="botonmodalinferior">
+
+                    <a id="cerrar" class="botons" type="submit" onclick="ValidarYEnviarCorreo()">Enviar!</a>
+                </div>
+                <div class="aletasmodalinferior">
+                    
+                    <p id="Alertas"></p>
+                </div>
             </div>
         </section>
     </div>
