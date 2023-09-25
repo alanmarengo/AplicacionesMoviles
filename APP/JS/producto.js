@@ -2,12 +2,16 @@ $(function() {
     Renderizar();
     
 });
-const marca =VerificarQuerStringMarca();
+const marca = VerificarQuerStringMarca();
 const categoria = VerificarQuerStringCategoria();
+const numeroPagina = VerificarQueryStringNumeroPagina();
 let marcaListado;
 let categoriaListado;
 async function Renderizar(){
-    RenderizarContenido(1,marca,categoria);
+    if(numeroPagina===null){
+        RenderizarContenido(1,marca,categoria);
+    }
+    RenderizarContenido(numeroPagina,marca,categoria);
 }
 
 function ValidarUbicacionIndex(){
@@ -22,26 +26,18 @@ async function RenderizarContenido(numeropagina,marca,categoria){
     {   
         renderizarProductos(productos.product);
         RenderizarFiltros();
+        RenderizarPaginado(parseInt(productos.metadata.cantPage));
     }
     renderizarCategoriasDesplegable(categoriaListado);
     renderizarMarcasDesplegable(marcaListado);
 }
 
 
-
-
-
 function RenderizarFiltros(){
- if( marca || categoria){
-    //a este poner :
-     /*
-        display: flex
-        flex-wrap: wrap
-        
-     */
+ if( marca || categoria || numeroPagina){
 
-     //al 5h un width: 100%   
-    const filtrosContainer = $('#filtros_container');
+    let filtrosContainer = $('#filtros_container');
+    filtrosContainer.html("");
     filtrosContainer.append(`<h5 class = "filtros"> Filtros</h5>`);
     if(marca){
         const marcaInfo = marcaListado[0];
@@ -50,6 +46,9 @@ function RenderizarFiltros(){
     if(categoria){
         const categoriaInfo = categoriaListado[0];
         filtrosContainer.append(ConstuirHtmlCategoriaFiltro(categoriaInfo.descripcion));
+    }
+    if(numeroPagina>0){
+        filtrosContainer.append(ConstuirHtmlPaginaFiltro(numeroPagina));
     }
 }
 }
@@ -62,6 +61,11 @@ function BorrarFiltroCategoria(){
 
 function BorrarFiltroMarca(){
     let url = window.location.href.replace('marcaID='+marca,"");
+    window.location.href = url;
+}
+
+function BorrarFiltroPaginado(){
+    let url = window.location.href.replace('numeroPagina='+numeroPagina,"");
     window.location.href = url;
 }
 
@@ -84,8 +88,31 @@ function ConstuirHtmlMarcaFiltro(descripcion){
     `;
 }
 
+function ConstuirHtmlPaginaFiltro(numeropagina){
+    return `    
+    <div class="filtrocategoria">
+        <span> numeroPagina-${numeropagina} </span>
+        <button class="botonfiltrarcategoria" onclick="BorrarFiltroPaginado()"> X </button>
+    </div>
+`;
+}
 
+function ConstruirHtmlPaginado(numeroPagina){
+    return `<a id="pagina-${numeroPagina}" onclick="Filtrar(${categoria},${marca},'${numeroPagina}')"> ${numeroPagina} </a>`;
+}
 
+function RenderizarPaginado(cantidadPaginas){
+    let cantidadPaginasAux = parseInt(cantidadPaginas);
+    cantidadPaginasAux = cantidadPaginas = 0 ? 1 : ( cantidadPaginas > 6  ? 6 : cantidadPaginas);
+    var contenedorpaginador = $('#paginador');
+    contenedorpaginador.html("");
+    contenedorpaginador.append(`<a href=""> << </a>`);
+    for(i=0;i<=cantidadPaginasAux ;i++){
+        const pagina = ConstruirHtmlPaginado(i+1);
+        contenedorpaginador.append(pagina);
+    }
+    contenedorpaginador.append(`<a href=""> >> </a>`);
+}
 
 function renderizarProductos(productos){
     var contenedorproductos = $('#contenedorproductos');
@@ -136,7 +163,7 @@ async function ObtenerProductosInicial(numeropagina,marca,categoria){
 async function ConstruirPathFiltro(numeropagina,marca,categoria){
     var path = await ObtenerPathProduct();
     path+="?";
-    path = numeropagina  !== null || numeropagina !== 'undefined' ? (path+"PageNumber="+numeropagina+"&PageSize=20") : (path+"PageNumber=1&PageSize=20");
+    path = numeropagina  >= 1 ? (path+"PageNumber="+numeropagina+"&PageSize=20") : (path+"PageNumber=1&PageSize=20");
     path = (categoria > 0 ) ? ( path +"&Categorical="+categoria) : path ;
     path = (marca > 0 ) ? ( path +"&TradeMark="+marca) : path ;
     return path;
@@ -201,9 +228,13 @@ function ConstruirHtmlProductoDesplegable(element){
 
 
 function ConstruirHtmlCategoria(element){
+    let numeropaginaaux = numeroPagina;
+  if(numeropaginaaux>1){
+        numeropaginaaux = 1;
+  }  
   var CategoriaDesplegable = 
   `<div class= contenedorcategoria>
-  <li id=${element.categoriaId} onclick="Filtrar('${element.categoriaId}',${marca});" class ="categoriali"> 
+  <li id=${element.categoriaId} onclick="Filtrar('${element.categoriaId}',${marca},'${numeropaginaaux}');" class ="categoriali"> 
   <img src="IMAGES/logocarrito.svg"> <a class="categoria">${element.descripcion} </a>
   </li>
   <div>
@@ -212,23 +243,30 @@ function ConstruirHtmlCategoria(element){
 }
 
 function ConstruirHtmlMarca(element){
+    let numeropaginaaux = numeroPagina;
+    if(numeropaginaaux>1){
+          numeropaginaaux = 1;
+    }  
     var marcadesplegable = 
     `
     <div class= contenedorcategoria>
-    <li id=${element.id} onclick="Filtrar(${categoria},'${element.id}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
+    <li id=${element.id} onclick="Filtrar(${categoria},'${element.id}','${numeropaginaaux}');"> <img src="IMAGES/logocarrito.svg"> <a class="marca">${element.description}</a></li>
     <div>
     `;
     return marcadesplegable;
   }
 
 
-function Filtrar(categoriaID,marcaID){
+function Filtrar(categoriaID,marcaID,numeroPagina){
     let url = "index.html?";
     if(marcaID){
         url+="marcaID="+marcaID+"&";
     }
     if(categoriaID){
-        url+="categoriaID="+categoriaID;
+        url+="categoriaID="+categoriaID+"&";
+    }
+    if(numeroPagina>=1){
+        url+="numeroPagina="+numeroPagina;
     }
     window.location = url;
 }
@@ -272,4 +310,10 @@ function VerificarQuerStringMarca(){
     const parametros = new URL(location.href).searchParams;
     const marcaID = parametros.get('marcaID');
     return marcaID;
+}
+
+function VerificarQueryStringNumeroPagina(){
+    const parametros = new URL(location.href).searchParams;
+    const numeroPagina = parametros.get('numeroPagina');
+    return numeroPagina;
 }
