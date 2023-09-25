@@ -21,7 +21,7 @@ function ConstruirHtmlProducto(element){
     var product = 
     `
     <div class="fichadeproducto" id=${element.productId}>
-    <div>
+    <div class="imagenydescripciondeproducto">
     <h2>${element.name}</h2>
         <div class="imagenproductodetalle">
             <img class="imagenproducto" src=${element.images.images[0].url} alt="">
