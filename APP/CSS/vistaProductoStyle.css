@@ -1,5 +1,9 @@
 @media (min-width: 1181px) {
-            /* Formulario de envio */
+            
+    .bannerdesktop{
+        display: none;
+    }
+    /* Formulario de envio */
             .form-register {
                 width: 80%;
                 height: 400px;
@@ -435,6 +439,7 @@
         margin-bottom: 1vh;
         width: 100% !important;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
         transition: all 0.2s ease 0s;
@@ -1037,6 +1042,7 @@
       }
     
       .footer {
+        margin-top:60px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2008,7 +2014,7 @@
         display: block;
       }
       .bannermobile{
-        display: flex;
+        display: none;
         background-size: cover;
         position: relative;
         flex-flow: row;
