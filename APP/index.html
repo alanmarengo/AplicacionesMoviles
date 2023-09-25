@@ -9,48 +9,47 @@
     <link rel="stylesheet" type="text/css" href="/APP/CSS/responsive.css">
     <title> MVP  Layout Mobile </title>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body class="grid-container">
     <header class="header">
     </header> 
-    <div class="HeaderSecundario"> APLICACIONES MOVILES</div>
+    <div class="headersecundario"> APLICACIONES MOVILES</div>
   
-    <div class="LogoBanner">
-        <img class="BannerMobile" src="IMAGES/BANNERMOBILEPERSONALIZADO.png" alt = "Banner principal">   
-        <img class="BannerDesktop" src = "IMAGES/logobanner.svg" alt = "Banner principal Desktop">   
+    <div class="logobanner">
+        <img class="bannermobile" src="IMAGES/BANNERMOBILEPERSONALIZADO.png" alt = "Banner principal">   
+        <img class="bannerdesktop" src = "IMAGES/logobanner.svg" alt = "Banner principal Desktop">   
     </div> 
 
     <div class="map" id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.6262233157468!2d-58.269671625550146!3d-34.774419574429004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32eb0350b768f%3A0xbd0aa21eac3ef032!2sUniversidad%20Nacional%20Arturo%20Jauretche!5e0!3m2!1ses!2sar!4v1695551869387!5m2!1ses!2sar" 
         width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <img class="CerrarMapa" src="IMAGES/CerrarDesplegable.png">
+    <img class="cerrarmapa" src="IMAGES/CerrarDesplegable.png">
     
-    <div id="carritoHeaderDesplegable" class="CarritoDesplegable">
+    <div id="carritodesplegable" class="carritodesplegable">
 
     </div>
 
-        <div id="filtrosDesplegables" class="filtro hideFiltro">
-            <ul id="CategoriaList" class="filtros-list">
-                <H1 class="CategoriaDeplegable">Categorias</H1>
+        <div id="filtrosdesplegables" class="filtro hideFiltro">
+            <ul id="listacategoria" class="filtros-list">
+                <H1 class="categoriadesplegable">Categorias</H1>
                 
             </ul>
-            <ul id="MarcasList" class="filtros-list">
-                <H1 class="MarcaDesplegable">Marcas </H1>
+            <ul id="listamarcas" class="filtros-list">
+                <H1 class="marcadesplegable">Marcas </H1>
             </ul>
         </div>
-        <div id="buscadorDesplegable" class="buscadorDesplegable">
+        <div id="buscadordesplegable" class="buscadordesplegable">
             
         </div>
-        <div id="historialDesplegable" class="historialDesplegable">
+        <div id="historialdesplegable" class="historialdesplegable">
         </div>
 
-    <main class="mainContainer">
+    <main class="maincontainer">
         <div id="filtros_container" class="filtros_container">
 
         </div>
-        <div id ="ProductsContainer" class="productsContainer">          
+        <div id ="contenedorproductos" class="contenedorproductos">          
               
         </div>
         <div id="paginador" class="paginador">
@@ -67,7 +66,6 @@
     <footer class="footer">
     </footer>
   </body> 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="./JS/historial.js"></script>
   <script  src="./JS/main.js"></script> 

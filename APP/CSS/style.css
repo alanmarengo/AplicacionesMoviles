@@ -31,11 +31,11 @@
   width: 30px;
 }
 
-.CategoriaDeplegable{
+.categoriadesplegable{
   font-size:25px;
   color: #08FF0D;
 }
-.MarcaDesplegable{
+.marcadesplegable{
   font-size:25px;
   color: #08FF0D;
 }
@@ -50,7 +50,7 @@
 
 
 
-.HeaderSecundario{
+.headersecundario{
   width: 100%;
   height: 15px;
   display: none;
@@ -70,7 +70,7 @@
   margin-top: 16.5%;
   overflow-y: hidden;
 }
-.CerrarMapa{
+.cerrarmapa{
   height: 44px;
   width: 44px;
   position: fixed;
@@ -115,7 +115,7 @@
   cursor: pointer;
 }
 
-.buscadorDesplegable{
+.buscadordesplegable{
   position: absolute;
   width: 100%;
   height: 314px;
@@ -135,7 +135,7 @@
   cursor: pointer;
 }
 
-.CarritoDesplegable{
+.carritodesplegable{
   position: absolute;
   margin-top: -800px;
   z-index: 1;
@@ -184,15 +184,15 @@
   width: 45px;
 }
 
-.LogoBanner{
+.logobanner{
   position: absolute;
   justify-content: center;
   align-items: center;
   top:6.5%;
 }
 
-.mainContainer {
-  grid-area: mainContainer;
+.maincontainer {
+  grid-area: maincontainer;
   padding-top: 15px;
   margin-top: 200px;
   background-color: #ffffff;
@@ -202,7 +202,7 @@
   display: block;
 }
 
-.productsContainer{
+.contenedorproductos{
   padding-top: 50px;
   display: flex;
   justify-content: space-evenly; 
@@ -212,7 +212,7 @@
 }
 
 
-.productImage img{
+.imagenproducto img{
   height: 90%;
   width: 90%;
   object-fit: contain;
@@ -221,7 +221,7 @@
 
 
 
-.productImage{
+.imagenproducto{
 position: relative;
 display: inline-block;
 text-align: start;
@@ -229,7 +229,7 @@ text-align: start;
 
 
 
-.productImage h1{
+.imagenproducto h1{
 position: absolute;
 bottom: 10px;
 left: 10px;
@@ -333,7 +333,7 @@ ul{
   }
 
 
-  .LogoBanner{
+  .logobanner{
     width: 100%;
     height: 15px;
     display: flex;
@@ -343,7 +343,7 @@ ul{
     top:20.80%;
   }
 
-  .HeaderSecundario{
+  .headersecundario{
     width: 100%;
     height: 19px;
     display: flex;
@@ -365,8 +365,8 @@ ul{
     margin-top: 140%;
   }
 
-  .mainContainer {
-    grid-area: mainContainer;
+  .maincontainer {
+    grid-area: maincontainer;
     padding-top: 0px;
     background-color: #ffffff;
     margin-left: 27.5%;
@@ -395,11 +395,11 @@ ul{
     margin-top: 330px;
   }
 
-  .CategoriaDeplegable{
+  .categoriadesplegable{
     font-size:25px;
     color: #5B21A5;
   }
-  .MarcaDesplegable{
+  .marcadesplegable{
     font-size:25px;
     color: #5B21A5;
   }
@@ -461,7 +461,7 @@ ul{
     background-color: #28FF0D;
   }
 
-  .productsContainer{
+  .contenedorproductos{
     justify-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -480,9 +480,9 @@ ul{
     "header header header header header header header"
     "Separador Separador Separador Separador Separador Separador Separador"
     "derecho Banner Banner Banner Banner Banner isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
-    "derecho categoriesContainer mainContainer mainContainer mainContainer mainContainer isquierdo"
+    "derecho categoriesContainer maincontainer maincontainer maincontainer maincontainer isquierdo"
+    "derecho categoriesContainer maincontainer maincontainer maincontainer maincontainer isquierdo"
+    "derecho categoriesContainer maincontainer maincontainer maincontainer maincontainer isquierdo"
     "footer footer footer footer footer footer footer"; 
   }
   }
@@ -533,15 +533,15 @@ ul{
       grid-template-rows: 10% 1fr 10%; 
       grid-template: 
         "header header"
-        "categoriesContainer mainContainer"     
+        "categoriesContainer maincontainer"     
         "footer footer" 
         ;
     }
-  .mainContainer{
+  .maincontainer{
     width: 100%;
     padding-top: 0px;
   }
-    .productsContainer{
+    .contenedorproductos{
       padding-top: 0px;
       justify-items: center;
       display: grid;
@@ -552,7 +552,7 @@ ul{
       width: 100%;
       position: relative;
     }
-    .DataProduct h3, .DataProduct h4 {
+    .datosproducto h3, .datosproducto h4 {
       white-space: pre-wrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -572,7 +572,7 @@ ul{
       border: 1px solid #ccc;
       background: #fff;
       }
-      .product DataProduct{
+      .product datosproducto{
         max-height: 1em;
         overflow: hidden;
         display: flex;
@@ -591,7 +591,7 @@ ul{
         letter-spacing: 1px;
         margin-bottom: 5px;
         }
-      .productImage img{
+      .imagenproducto img{
         width: 150px ;  
       }
       
@@ -614,7 +614,7 @@ ul{
   .map{
     width: 50%;
   }
-  .LogoBanner{
+  .logobanner{
     grid-area: banner;
     width: 100%;
   }
@@ -627,19 +627,19 @@ ul{
     grid-template:
         "header header"
         "banner banner"
-        "mainContainer mainContainer"
+        "maincontainer maincontainer"
         "footer footer";
 
   .imagenHamburguesa{
     display: block;
   }
-  .CarritoDesplegable{
+  .carritodesplegable{
     display: block !important;
   }
-  .productImage img{
+  .imagenproducto img{
     width: 100px ;
   }
-  .buscadorDesplegable{
+  .buscadordesplegable{
     position: absolute;
     display: flex !important;
     flex-direction: column;
@@ -652,14 +652,14 @@ ul{
     width: 90%;
     padding: 20px;
   }
-  .itemBusquedaData h3{
+  .itembusquedadata h3{
     margin-top: 10px;
     color: #7200FF;
   }
-  .itemBusqueda img{
+  .itembusqueda img{
     max-height: 100px ;
   }
-  .itemBusqueda{
+  .itembusqueda{
     width: 100% !important;
     gap: 10px; 
     display: flex;
@@ -670,20 +670,20 @@ ul{
     transition: all 0.2s ease 0s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
   }
-  .buscadorDesplegable img{
+  .buscadordesplegable img{
     width: 25%;
   }
 
   .filtros-list h1{
     margin-bottom: 10px;
   }
-  .contenedorCategoria li a{
+  .contenedorcategoria li a{
 
     padding-bottom: 14px;
 
   }
 
-  .contenedorCategoria{
+  .contenedorcategoria{
     display: flex;
     flex-direction: row;
     align-items: center !important;
@@ -718,7 +718,7 @@ ul{
   .categoriesContainer{
     width: 0px;
   }
-  .productsContainer{
+  .contenedorproductos{
     justify-items: center;
     display: grid;
     gap: 15px;
@@ -742,7 +742,7 @@ ul{
     border: 1px solid #ccc;
     background: #fff;
     }
-    .product DataProduct{
+    .product datosproducto{
       display: flex;
     }
     article button{
