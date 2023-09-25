@@ -606,7 +606,11 @@
 
 
   .paginador {
-    margin-left: -500px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    gap: 5px;
+    font-size: larger;
   }
 
 
