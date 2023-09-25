@@ -1,4 +1,36 @@
 @media (min-width: 1181px) {
+  .grid-container {
+    background-color: #F6F6F6;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr auto auto 1fr; 
+    grid-template-rows: 80px auto auto 1.8fr 80px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header header"
+      "banersecundario banersecundario banersecundario banersecundario"
+      ". baner baner ."
+      ". filtro maincontainer ."
+      "footer footer footer footer"; 
+  }
+  .maincontainer{
+    grid-area: maincontainer;
+  }
+  .product {
+    display: grid !important;
+    max-height: 53vh;
+    grid-template-rows: auto 1fr auto;
+    border-radius: 20px;
+    align-items: center;
+    justify-items: center;
+    background-color: #cecbcb;
+    transition: box-shadow .3s;
+    width: 95%;
+    height: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
 /*mapa*/
 .mapaDesktop iframe {
   display: block;
@@ -733,13 +765,11 @@
   .filtro {
 
     display: grid;
-    grid-area: categori;
     flex-direction: column;
+    grid-area: filtro;
     gap: 20px;
     position: absolute;
-    z-index: -1;
     left: 40px;
-    background-color: #ffffff;
     width: 10%;
     height: auto;
     justify-content: left;
@@ -763,23 +793,6 @@
 
   .marca {
     color: #28FF0D;
-  }
-
-
-
-  .product {
-    display: grid !important;
-    max-height: 25em;
-    grid-template-rows: auto 1fr auto;
-    border-radius: 20px;
-    align-items: center;
-    justify-items: center;
-    background-color: #cecbcb;
-    transition: box-shadow .3s;
-    width: 95%;
-    height: 100%;
-    border: 1px solid #ccc;
-    background: #fff;
   }
 
   .a {
@@ -830,20 +843,7 @@
     margin-bottom: 10px;
   }
 
-  .grid-container {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 1fr; 
-    grid-template-columns: 1fr auto auto 1fr; 
-    grid-template-rows: 80px auto auto 1.8fr 80px; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header header header header"
-      "banersecundario banersecundario banersecundario banersecundario"
-      ". baner baner ."
-      ". categori maincontainer ."
-      "footer footer footer footer"; 
-  }
+  
 }
 
 /* Tareas por hacer */
@@ -855,6 +855,7 @@
 */
 @media (max-width: 1180px) {
 
+  
   /* Formulario de envio */
   .form-register {
     width: 400px;
@@ -867,6 +868,7 @@
     color: #08FF00;
     box-shadow: 7px 13px 37px #000;
   }
+
 
   .form-register h4 {
     font-size: 22px;
@@ -1246,10 +1248,17 @@
   .bannerdesktop {
     display: none;
   }
-
+  .mapaDesktop iframe{
+    display: block;
+    margin-left: 400px;
+  }
   .footer {
-    grid-area: footer;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #707070;
+    width: 100%;
+    height: 200px;
   }
 
   .imagenHamburguesa {
@@ -1388,7 +1397,10 @@
 }
 
 @media (max-width: 767px) {
-  .bannerdesktop{
+  .mapaDesktop iframe{
+   display: none;
+  }
+  .BannerDesktop{
     display: none;
   }
   /* header------------------------ */
@@ -1815,6 +1827,7 @@
   .imagenHamburguesa {
     display: block;
   }
+
 
   .buscadordesplegable {
     position: absolute;
