@@ -1,5 +1,14 @@
 @media (min-width: 1181px) {
-            
+
+  .buscador-input {
+    width: 45%;
+  }
+  .imagenBuscadorInput {
+    height: 35px;
+    left :106.9vh;
+    position: absolute;
+  }
+
     .bannerdesktop{
         display: none;
     }
@@ -268,10 +277,8 @@
             display: flex;
             height: 4vh;
             width: 4vh;
-            position: absolute;
+            position: relative;
             grid-area: icono;
-        
-        
           }
         
           .datosutilesfichaproducto {
@@ -279,6 +286,7 @@
             margin: auto;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
           }
         
           .datosutilesfichaproducto-unidad {
@@ -473,7 +481,7 @@
         border-width: 1px;
         border-style: solid;
         border-color: #707070;
-        left: 22vh;
+        left: 60vh;
         width: 150vh;
         max-width: 66vh;
         position: absolute;
@@ -488,8 +496,14 @@
         width: 100%;
       }
     
-      .itembusquedadata h3 {
+      
+      .buscadordesplegable {
+        display: flex;
+        flex-direction: column;
+      }
     
+      .itembusquedadata h3 {
+
         margin-top: 10px;
         color: #7200FF;
       }
@@ -526,6 +540,8 @@
         transition: all 0.2s ease 0s;
         border-bottom: 1px solid rgba(0, 0, 0, 0.196);
       }
+    
+      /* Item de busqueda----------------------------------------------------------------- */
     
       /* Item de busqueda----------------------------------------------------------------- */
     
@@ -611,11 +627,6 @@
         display: flex;
       }
     
-      .buscador-input {
-        margin-left: 4vh;
-        width: 80%;
-      }
-    
       .flechabuscador {
         display: none;
       }
@@ -628,7 +639,8 @@
       }
     
       .carritoContainer {
-        align-self: center flex-end;
+        height: 38px;
+        width: 38px;
         grid-area: carro;
       }
     
@@ -638,7 +650,8 @@
       }
     
       .historialContainer {
-    
+        height: 38px;
+        width: 38px;
         margin-right: 1vh;
         display: grid;
         grid-area: historial;
@@ -658,7 +671,9 @@
       }
     
       .imagenBuscadorInput {
-        position: relative;
+        height: 35px;
+        left :106.9vh;
+        position: absolute;
       }
     
       .hamburgesaContainer {
@@ -722,6 +737,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1vh;
+        margin-bottom: 2vh;
       }
     
     
@@ -806,16 +822,7 @@
         color: #505050;
         margin: 1vh 1vh 1vh 1vh;
       }
-      .icono {
-        opacity: 0.6;
-        display: flex;
-        height: 4vh;
-        width: 4vh;
-        position: absolute;
-        grid-area: icono;
-    
-    
-      }
+
       .datosutilesfichaproducto {
         gap: 5px;
         margin: auto;
@@ -1337,6 +1344,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
       }
     
       .fichadeproducto {
@@ -1583,9 +1592,9 @@
         border-width: 1px;
         border-style: solid;
         border-color: #707070;
-        left: 22vh;
-        width: 150vh;
-        max-width: 66vh;
+        left: 28vh;
+        width: 200vh;
+        max-width: 85vh;
         position: absolute;
         display: flex !important;
         flex-direction: column;
@@ -1738,6 +1747,7 @@
       }
     
       .carritoContainer {
+        height: 38px;
         align-self: center flex-end;
         grid-area: carro;
       }
@@ -1768,8 +1778,11 @@
       }
     
       .imagenBuscadorInput {
-        position: relative;
-      }
+        width: 35px;
+        height: 35px;
+         position: absolute;
+        left: 92vh;
+       }
     
       .hamburgesaContainer {
         display: none;
@@ -1977,8 +1990,17 @@
     }
     
     @media (max-width: 767px) {
-
-
+      .headerFinder {
+        grid-area: header;
+        width: 100%;
+        justify-content: center;
+        align-items: center center;
+        display: flex
+      }
+      .cerrarDesplegableHistorial{
+         height: 38px;     
+         width: 38px;
+        }
 
 
       .mapaDesktop iframe{
@@ -2047,9 +2069,13 @@
         display: none;
       }
     
-      .hamburgesaContainer {
-        display: flex;
-      }
+     .hamburgesaContainer {
+
+         margin-left: 1vh; 
+         height: 38px; 
+         width: 38px;     
+         display: flex;
+         }
     
       .buscadorContainer {
         grid-area: buscador;
@@ -2063,6 +2089,11 @@
       .imagenBuscadorInput {
         position: relative;
       }
+   
+      .imagenhamburguesacerrar{
+           height: 39px;
+           width: 39px;
+       }
     
       .hamburgesaContainer {
         grid-area: hamburgesa;
@@ -2451,6 +2482,7 @@
     
       /* Item de busqueda----------------------------------------------------------------- */
       .BuscadorDiv {
+        margin-right: 40px;
         width: 100%;
         align-items: center;
         height: 80px;
@@ -2475,7 +2507,11 @@
         margin-top: 10px;
         color: #7200FF;
       }
-    
+    .itembusquedadata h4{
+      margin-left: 2vh;
+      white-space: normal;
+      text-align: center;
+    }
       .itembusqueda img {
         margin-left: 10px;
         max-height: 12vh;

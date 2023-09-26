@@ -216,7 +216,6 @@
 }
 
 .logobanner{
-  justify-content: center;
   align-items: center;
 }
 
@@ -244,7 +243,12 @@ color: #28FF0D;
 margin-left: 250px;
 margin-top: 33px;
 }
-
+.derecho{
+  display: none;
+}
+.izquierdo{
+  display: none;
+}
 .logoubicacion{
   display: flex;
   width: 38px;
