@@ -460,6 +460,7 @@
 
 
   .imagenproducto {
+    height: 300px;
     max-width: 80%;
   }
   .imagenBuscador {
